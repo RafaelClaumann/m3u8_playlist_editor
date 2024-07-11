@@ -26,6 +26,18 @@ def remove_unwanted_groups(channels: list, groups: list):
         else:
             i += 1
 
+def rename_group(channels: list, old_group, new_group: str):
+    group_pattern = r'group-title="{}"'
+    i = 0
+    while i < len(channels):
+        if channels[i].startswith("#EXTINF:"):
+            if re.search(group_pattern.format(re.escape(old_group)), channels[i]):
+                channels[i] = channels[i].replace(f'group-title="{old_group}"', f'group-title="{new_group}"')
+            else:
+                i += 1
+        else:
+            i += 1
+
 def main():
     f = open("sample_playlist.m3u8", "r")
     
@@ -34,6 +46,7 @@ def main():
 
     remove_low_quality_channels(channels=channels)
     remove_unwanted_groups(channels=channels, groups=unwanted_groups)
+    rename_group(channels=channels, old_group="Coletânea | Rambo", new_group="VOD | Rambo")
 
     f = open("output_playlist.m3u8", "w")
     f.write("\n".join(channels))
