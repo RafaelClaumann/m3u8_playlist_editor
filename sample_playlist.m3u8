@@ -1,20 +1,20 @@
 #EXTM3U
-#EXTINF:0 tvg-name="Channel FHD" tvg-id="channel.br" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL FHD
+#EXTINF:0 tvg-name="Channel FHD" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL FHD
 http://watch.com/channelfhd
 
-#EXTINF:0 tvg-name="Channel H265" tvg-id="channel.br" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL H265
+#EXTINF:0 tvg-name="Channel H265" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL H265
 http://watch.com/channelh265
 
-#EXTINF:0 tvg-id="channel.br" tvg-name="CHANNEL HD" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL HD
+#EXTINF:0 tvg-id="channel.br" tvg-name="CHANNEL HD" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL HD
 http://watch.com/channelhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="CHANNEL HD²" tvg-id="chanel.br"  tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="CHANNEL HD²" tvg-id="chanel.br"  group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL HD²
 http://watch.com/channelhd2
 
-#EXTINF:0 tvg-name="CHANNEL SD" tvg-id="channel.br" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL SD
+#EXTINF:0 tvg-name="CHANNEL SD" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL SD
 http://watch.com/channelsd
 
-#EXTINF:0 tvg-name="CHANNEL SD²" tvg-id="channel.br" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL SD²
+#EXTINF:0 tvg-name="CHANNEL SD²" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL SD²
 http://watch.com/121/channelsd2
 
 #EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 4K" tvg-logo="logo.png" group-title="CANAIS 4K",CHANNEL MAX 01 4K
