@@ -63,14 +63,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-[
-    '#EXTM3U',
-    '#EXTINF:0 tvg-name="Channel FHD" tvg-id="channel.br" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL FHD',
-    'http://watch.com/channelfhd',
-    '',
-    '#EXTINF:0 tvg-name="Channel H265" tvg-id="channel.br" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL H265',
-    'http://watch.com/channelh265',
-    '',
-]
