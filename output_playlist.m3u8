@@ -1,9 +1,13 @@
 #EXTM3U
-#EXTINF:0 tvg-name="Channel FHD" tvg-id="channel.br" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL FHD
+#EXTINF:0 tvg-name="Channel FHD" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL FHD
 http://watch.com/channelfhd
 
-#EXTINF:0 tvg-id="channel.br" tvg-name="CHANNEL HD" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL HD
+
+#EXTINF:0 tvg-id="channel.br" tvg-name="CHANNEL HD" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL HD
 http://watch.com/channelhd
+
+
+
 
 #EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 4K" tvg-logo="logo.png" group-title="CANAIS 4K",CHANNEL MAX 01 4K
 http://pwponline.click:80/9808/channelmax4k.m3u8
@@ -13,6 +17,10 @@ http://pwponline.click:80/9808/channelmaxfhd.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 HD" tvg-logo="logo.png" group-title="PAY-PER-VIEW",CHANNEL MAX 01 HD
 http://pwponline.click:80/9808/channelmaxhd.m3u8
+
+
+
+
 
 #EXTINF:-1 tvg-id="discovery.br" tvg-name="DISCOVERY FHD" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY FHD
 http://watch.m3u8/discoveryfhd.m3u8

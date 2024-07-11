@@ -38,6 +38,14 @@ def rename_group(channels: list, old_group, new_group: str):
         else:
             i += 1
 
+def list_all_groups(channels: list):
+    groups = []
+    for channel in channels:
+        if channel.startswith("#EXTINF:"):
+            result = re.search(r'group-title="([^"]*)"', channel)
+            groups.append(result.group(1))
+    return set(groups)
+
 def main():
     f = open("sample_playlist.m3u8", "r")
     
@@ -47,6 +55,7 @@ def main():
     remove_low_quality_channels(channels=channels)
     remove_unwanted_groups(channels=channels, groups=unwanted_groups)
     rename_group(channels=channels, old_group="Coletânea | Rambo", new_group="VOD | Rambo")
+    print(list_all_groups(channels=channels))
 
     f = open("output_playlist.m3u8", "w")
     f.write("\n".join(channels))
@@ -54,3 +63,14 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+[
+    '#EXTM3U',
+    '#EXTINF:0 tvg-name="Channel FHD" tvg-id="channel.br" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL FHD',
+    'http://watch.com/channelfhd',
+    '',
+    '#EXTINF:0 tvg-name="Channel H265" tvg-id="channel.br" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL H265',
+    'http://watch.com/channelh265',
+    '',
+]
