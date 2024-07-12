@@ -9,8 +9,6 @@ http://watch.com/channelhd
 
 
 
-#EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 4K" tvg-logo="logo.png" group-title="CANAIS 4K",CHANNEL MAX 01 4K
-http://pwponline.click:80/9808/channelmax4k.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 FHD" tvg-logo="logo.png" group-title="PAY-PER-VIEW",CHANNEL MAX 01 FHD
 http://pwponline.click:80/9808/channelmaxfhd.m3u8
@@ -25,7 +23,7 @@ http://pwponline.click:80/9808/channelmaxhd.m3u8
 #EXTINF:-1 tvg-id="discovery.br" tvg-name="DISCOVERY FHD" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY FHD
 http://watch.m3u8/discoveryfhd.m3u8
 
-#EXTINF:-1 tvg-name="Rambo IV (2008)" tvg-logo="movie.png" group-title="VOD | Rambo",Rambo IV (2008)
+#EXTINF:-1 tvg-name="Rambo IV (2008)" tvg-logo="movie.png" group-title="Coletânea | Rambo",Rambo IV (2008)
 http://watch.com/movie/98989.mp4
 
 #EXTINF:-1 tvg-name="Procurando Nemo (2003)" tvg-logo="movie.png" group-title="Filmes | Animação / Infantil",Procurando Nemo (2003)
