@@ -2,7 +2,7 @@ import services as svc
 import helpers
 
 def main():
-    channels = helpers.read_file("sample_playlist.m3u8")
+    channels = helpers.read_file("files/sample_playlist.m3u8")
 
     while True:
         print("Choose an option:")
@@ -51,7 +51,7 @@ def main():
         else:
             print("Invalid option.")
 
-        helpers.save_file("output_playlist.m3u8", channels)
+        helpers.save_file("files/output_playlist.m3u8", channels)
         print('\n')
 
 

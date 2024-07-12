@@ -1,0 +1,54 @@
+#EXTM3U
+#EXTINF:0 tvg-name="Channel FHD" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL FHD
+http://watch.com/channelfhd
+
+#EXTINF:0 tvg-name="Channel H265" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL H265
+http://watch.com/channelh265
+
+#EXTINF:0 tvg-id="channel.br" tvg-name="CHANNEL HD" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL HD
+http://watch.com/channelhd
+
+#EXTINF:0 tvg-logo="logo.png" tvg-name="CHANNEL HD²" tvg-id="chanel.br"  group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL HD²
+http://watch.com/channelhd2
+
+#EXTINF:0 tvg-name="CHANNEL SD" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL SD
+http://watch.com/channelsd
+
+#EXTINF:0 tvg-name="CHANNEL SD²" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL SD²
+http://watch.com/121/channelsd2
+
+#EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 4K" tvg-logo="logo.png" group-title="CANAIS 4K",CHANNEL MAX 01 4K
+http://pwponline.click:80/9808/channelmax4k.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 FHD" tvg-logo="logo.png" group-title="PAY-PER-VIEW",CHANNEL MAX 01 FHD
+http://pwponline.click:80/9808/channelmaxfhd.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 HD" tvg-logo="logo.png" group-title="PAY-PER-VIEW",CHANNEL MAX 01 HD
+http://pwponline.click:80/9808/channelmaxhd.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 HD²" tvg-logo="logo.png" group-title="PAY-PER-VIEW",CHANNEL MAX 01 HD²
+http://pwponline.click:80/9808/channelmaxhd2.m3u8
+
+#EXTINF:-1 tvg-id="cnn.br" tvg-name="NOTICIAS 01" tvg-logo="logo.png" group-title="NOTICIAS",NOTICIAS 01 FHD
+http://watch.m3u8/1260573/noticias01fhd.m3u8
+
+#EXTINF:-1 tvg-id="cnn.br" tvg-name="NOTICIAS 02" tvg-logo="logo.png" group-title="NOTICIAS",NOTICIAS 02 FHD
+http://watch.m3u8/1260573/noticias02fhd.m3u8
+
+#EXTINF:-1 tvg-id="cnn.br" tvg-name="NOTICIAS 03" tvg-logo="logo.png" group-title="NOTICIAS",NOTICIAS 03 FHD
+http://watch.m3u8/1260573/noticias03fhd.m3u8
+
+#EXTINF:-1 tvg-id="discovery.br" tvg-name="DISCOVERY FHD" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY FHD
+http://watch.m3u8/discoveryfhd.m3u8
+
+#EXTINF:-1 tvg-name="Rambo IV (2008)" tvg-logo="movie.png" group-title="Coletânea | Rambo",Rambo IV (2008)
+http://watch.com/movie/98989.mp4
+
+#EXTINF:-1 tvg-name="Procurando Nemo (2003)" tvg-logo="movie.png" group-title="Filmes | Animação / Infantil",Procurando Nemo (2003)
+http://watch.com/movie/1231312.mp4
+
+#EXTINF:-1 tvg-name="The Last of Us (2023) S01E09" tvg-logo="serie.png" group-title="Séries | Max",The Last of Us (2023) S01E09
+http://watch.com/series/0098943.mp4
+
+#EXTINF:-1 tvg-name="The Last of Us (2023) S01E08" tvg-logo="serie.png" group-title="Séries | Max",The Last of Us (2023) S01E08
+http://watch.com/series/5313.mp4
