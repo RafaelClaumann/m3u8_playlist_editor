@@ -44,4 +44,4 @@ def list_all_groups(channels: list):
         if channel.startswith("#EXTINF:"):
             result = re.search(r'group-title="([^"]*)"', channel)
             groups.append(result.group(1))
-    return set(groups)
+    return list(set(grupos))
