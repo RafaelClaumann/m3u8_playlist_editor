@@ -38,7 +38,7 @@ def rename_group(channels: list, old_group, new_group: str):
         else:
             i += 1
 
-def list_all_groups(channels: list):
+def list_groups(channels: list):
     groups = []
     for channel in channels:
         if channel.startswith("#EXTINF:"):
