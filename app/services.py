@@ -1,4 +1,6 @@
 import re
+import json
+from collections import Counter
 
 def remove_low_quality_channels(channels: list):
     quality_pattern = r'.*tvg-name=.*\".*\b(H265|HD²|SD²|SD)\".*,'
@@ -48,4 +50,9 @@ def list_groups(channels: list):
         if channel.startswith("#EXTINF:"):
             result = re.search(r'group-title="([^"]*)"', channel)
             groups.append(result.group(1))
+
+    dict_groups = dict(Counter(groups))
+    json_output = json.dumps(dict_groups, indent=4, ensure_ascii=False)
+    print(json_output)
+
     return list(set(groups))
