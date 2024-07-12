@@ -1,47 +1,52 @@
 import services as svc
 
+def read_file(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        lines = file.read().split('\n')
+    return lines
+
+def save_file(file_path, lines):
+    with open(file_path, 'w', encoding='utf-8') as file:
+        file.write("\n".join(lines))
+
 def main():
-    input_playlist = open("sample_playlist.m3u8", "r")
-    channels = input_playlist.read().split('\n')
-    input_playlist.close()
+
+    channels = read_file("sample_playlist.m3u8")
 
     while True:
-        print("Escolha uma opção:")
+        print("Choose an option:")
         print("1. Remove low quality channels")
         print("2. Remove unwanted groups")
         print("3. Rename group")
         print("4. List groups")
-        print("5. Sair")
+        print("5. Exit")
         
-        escolha = input("Digite o número da opção desejada: ")
+        escolha = input("Enter the number of the desired option: ")
         
         if escolha == '1':
             svc.remove_low_quality_channels(channels=channels)
 
         elif escolha == '2':
-            input_str = input("Digite os elementos do array separados por vírgula: ")
+            input_str = input("Write unwanted group names separated by comma: ")
             unwanted_groups = input_str.strip().split(',')
             svc.remove_unwanted_groups(channels=channels, groups=unwanted_groups)
             
         elif escolha == '3':
-            old_group_input = input("Nome do grupo a ser substituido: ")
-            new_group_input = input("Nome do novo grupo: ")
-            svc.rename_group(channels=channels, old_group=old_group_input, new_group=new_group_input)
+            input_str = input("Write old_group_name and new_group_name separated by comma: ")
+            group_names = input_str.strip().split(',')
+            svc.rename_group(channels=channels, old_group=group_names[0], new_group=group_names[1])
 
         elif escolha == '4':
             print(svc.list_all_groups(channels=channels))
 
         elif escolha == '5':
-            print("Saindo...")
+            print("Exiting...")
             break
 
         else:
-            print("Opção inválida. Tente novamente.")
-    
+            print("Invalid option.")
 
-    output_playlist = open("output_playlist.m3u8", "w")
-    output_playlist.write("\n".join(channels))
-    output_playlist.close()
+        save_file("output_playlist.m3u8", channels)
 
 
 if __name__ == "__main__":
