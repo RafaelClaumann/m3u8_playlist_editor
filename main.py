@@ -1,65 +1,48 @@
-import re
-
-def remove_low_quality_channels(channels: list):
-    quality_pattern = r'.*tvg-name=.*\".*\b(H265|HD²|SD²|SD)\".*,'
-    i = 0
-    while i < len(channels):
-        if channels[i].startswith("#EXTINF:"):
-            if re.search(quality_pattern, channels[i]):
-                del channels[i]
-                del channels[i]
-            else:
-                i += 1
-        else:
-            i += 1
-
-def remove_unwanted_groups(channels: list, groups: list):
-    group_pattern = r'group-title="{}"'
-    i = 0
-    while i < len(channels):
-        if channels[i].startswith("#EXTINF:"):
-            for group in groups:
-                if re.search(group_pattern.format(re.escape(group)), channels[i]):
-                    del channels[i]
-                    del channels[i]
-            i += 1  
-        else:
-            i += 1
-
-def rename_group(channels: list, old_group, new_group: str):
-    group_pattern = r'group-title="{}"'
-    i = 0
-    while i < len(channels):
-        if channels[i].startswith("#EXTINF:"):
-            if re.search(group_pattern.format(re.escape(old_group)), channels[i]):
-                channels[i] = channels[i].replace(f'group-title="{old_group}"', f'group-title="{new_group}"')
-            else:
-                i += 1
-        else:
-            i += 1
-
-def list_all_groups(channels: list):
-    groups = []
-    for channel in channels:
-        if channel.startswith("#EXTINF:"):
-            result = re.search(r'group-title="([^"]*)"', channel)
-            groups.append(result.group(1))
-    return set(groups)
+import services as svc
 
 def main():
-    f = open("sample_playlist.m3u8", "r")
+    input_playlist = open("sample_playlist.m3u8", "r")
+    channels = input_playlist.read().split('\n')
+    input_playlist.close()
+
+    while True:
+        print("Escolha uma opção:")
+        print("1. Remove low quality channels")
+        print("2. Remove unwanted groups")
+        print("3. Rename group")
+        print("4. List groups")
+        print("5. Sair")
+        
+        escolha = input("Digite o número da opção desejada: ")
+        
+        if escolha == '1':
+            svc.remove_low_quality_channels(channels=channels)
+
+        elif escolha == '2':
+            input_str = input("Digite os elementos do array separados por vírgula: ")
+            unwanted_groups = input_str.strip().split(',')
+            svc.remove_unwanted_groups(channels=channels, groups=unwanted_groups)
+            
+        elif escolha == '3':
+            old_group_input = input("Nome do grupo a ser substituido: ")
+            new_group_input = input("Nome do novo grupo: ")
+            svc.rename_group(channels=channels, old_group=old_group_input, new_group=new_group_input)
+
+        elif escolha == '4':
+            print(svc.list_all_groups(channels=channels))
+
+        elif escolha == '5':
+            print("Saindo...")
+            break
+
+        else:
+            print("Opção inválida. Tente novamente.")
     
-    channels = f.read().split('\n')
-    unwanted_groups = ["NOTICIAS"]
 
-    remove_low_quality_channels(channels=channels)
-    remove_unwanted_groups(channels=channels, groups=unwanted_groups)
-    rename_group(channels=channels, old_group="Coletânea | Rambo", new_group="VOD | Rambo")
-    print(list_all_groups(channels=channels))
+    output_playlist = open("output_playlist.m3u8", "w")
+    output_playlist.write("\n".join(channels))
+    output_playlist.close()
 
-    f = open("output_playlist.m3u8", "w")
-    f.write("\n".join(channels))
-    f.close
 
 if __name__ == "__main__":
     main()
