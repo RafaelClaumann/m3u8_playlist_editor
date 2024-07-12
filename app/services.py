@@ -14,17 +14,21 @@ def remove_low_quality_channels(channels: list):
             i += 1
 
 def remove_unwanted_groups(channels: list, groups: list):
-    group_pattern = r'group-title="{}"'
-    i = 0
-    while i < len(channels):
-        if channels[i].startswith("#EXTINF:"):
-            for group in groups:
-                if re.search(group_pattern.format(re.escape(group)), channels[i]):
-                    del channels[i]
-                    del channels[i]
-            i += 1  
-        else:
-            i += 1
+    for group in groups:
+        group_pattern = rf'group-title="{group}"'
+        print("Removing group:", group_pattern)
+
+        indices_to_remove = []
+        for i in range(len(channels)):
+            if channels[i].startswith("#EXTINF:") and re.search(group_pattern, channels[i]):
+                indices_to_remove.append(i)
+                if i + 1 < len(channels):
+                    indices_to_remove.append(i + 1)
+
+        for index in sorted(set(indices_to_remove), reverse=True):
+            del channels[index]
+        
+        print("Group removed:", group_pattern)
 
 def rename_group(channels: list, old_group, new_group: str):
     group_pattern = r'group-title="{}"'
