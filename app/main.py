@@ -28,16 +28,10 @@ def main():
 
             print("\nChoose one or more groups to remove based on the integer value on the left side of the group name. ")
             input_str = input("Write numbers separated by comma(write -1 to cancel): ")
-            group_ids = list(map(int, input_str.strip().split(',')))
+            ids = list(map(int, input_str.strip().split(',')))
 
-            if sorted(group_ids)[0] != -1:
-                selected_groups = []
-                for i in sorted(group_ids, reverse=True):
-                    if 0 <= i < len(groups):
-                        selected_groups.append(groups[i])
-                        del groups[i]
-                
-                svc.remove_unwanted_groups(groups_to_remove=selected_groups)
+            if sorted(ids)[0] != -1:
+                svc.remove_unwanted_groups(group_ids=ids)
             
         elif escolha == '3':
             input_str = input("Write old_group_name and new_group_name separated by comma: ")
