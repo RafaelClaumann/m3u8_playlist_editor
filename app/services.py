@@ -23,17 +23,16 @@ class Services:
 
     def remove_low_quality_channels(self):
         quality_pattern = r'.*tvg-name=.*\".*\b(H265|HD²|SD²|SD).*\".*,'
-        i = 0
-        while i < len(self.channels_list):
+        indices_to_remove = []
+        for i in range(len(self.channels_list)):
             if self.channels_list[i].startswith("#EXTINF:"):
                 if re.search(quality_pattern,self.channels_list[i]):
-                    self.channels_list[i] = ''
-                    self.channels_list[i + 1] = ''
-                    i = i + 2
-                else:
-                    i += 1
-            else:
-                i += 1
+                    indices_to_remove.append(i)
+                    if i + 1 < len(self.channels_list):
+                        indices_to_remove.append(i + 1)
+            
+            for index in sorted(set(indices_to_remove), reverse=True):
+                self.channels_list[index] = ''
 
     def remove_unwanted_groups(self, groups_to_remove: list):
         for group in groups_to_remove:
