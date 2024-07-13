@@ -1,5 +1,6 @@
-import services as svcs
+import json
 import helpers
+import services as svcs
 
 def main():
     svc = svcs.Services("../files/sample_playlist.m3u8")
@@ -10,7 +11,8 @@ def main():
         print("2. Remove unwanted groups")
         print("3. Rename group")
         print("4. List groups")
-        print("5. Exit")
+        print("5. Groups info")
+        print("6. Exit")
         
         escolha = input("Enter the number of the desired option: ")
         
@@ -43,9 +45,14 @@ def main():
             svc.rename_group(old_group=group_names[0], new_group=group_names[1])
 
         elif escolha == '4':
-            print(svc.get_groups())
+            groups_dict = svc.get_groups()
+            print(json.dumps(groups_dict, indent=4, ensure_ascii=False))
 
         elif escolha == '5':
+            groups_info_dict = svc.get_groups_info()
+            print(json.dumps(groups_info_dict, indent=4, ensure_ascii=False))
+
+        elif escolha == '6':
             print("Exiting...")
             break
 

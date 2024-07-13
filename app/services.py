@@ -1,22 +1,25 @@
 import re
-import json
 import helpers
-from collections import Counter
 
 class Services:
 
     channels_list = []
     groups_list = []
+    groups_info = {}
 
     def __init__(self, playlist_path: str):
         self.channels_list = helpers.read_file(playlist_path)
         self.groups_list = self.__parse_groups()
+        self.groups_info = self.__parse_groups_info()
 
     def get_channels_list(self):
         return self.channels_list
 
     def get_groups(self):
         return self.groups_list
+
+    def get_groups_info(self):
+        return self.groups_info
 
     def remove_low_quality_channels(self):
         quality_pattern = r'.*tvg-name=.*\".*\b(H265|HD²|SD²|SD).*\".*,'
@@ -70,3 +73,30 @@ class Services:
                 groups.append(result.group(1))
 
         return list(set(groups))
+
+    def __parse_groups_info(self):
+        infos = {}
+        for group in self.groups_list:
+            counter = 0
+            first_element = 0
+            last_element = 0
+
+            for index, channel in enumerate(self.channels_list):
+                if channel.startswith("#EXTINF:"):
+                    if rf'group-title="{group}"' in channel:
+
+                        if index > first_element and first_element == 0:
+                            first_element = index
+                        
+                        if index > last_element:
+                            last_element = index
+                        
+                        counter += 1
+                        
+            infos[group] = {
+                'total_channels': counter,
+                'first_element': first_element,
+                'last_element': last_element
+            }
+        
+        return infos
