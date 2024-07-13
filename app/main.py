@@ -1,9 +1,9 @@
 import json
 import helpers
-import services as svcs
+import services
 
 def main():
-    svc = svcs.Services("../files/sample_playlist.m3u8")
+    svc = services.Services("../files/sample_playlist.m3u8")
 
     while True:
         print("Choose an option:")
