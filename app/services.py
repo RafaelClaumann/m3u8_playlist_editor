@@ -3,13 +3,14 @@ import json
 from collections import Counter
 
 def remove_low_quality_channels(channels: list):
-    quality_pattern = r'.*tvg-name=.*\".*\b(H265|HD²|SD²|SD)\".*,'
+    quality_pattern = r'.*tvg-name=.*\".*\b(H265|HD²|SD²|SD).*\".*,'
     i = 0
     while i < len(channels):
         if channels[i].startswith("#EXTINF:"):
             if re.search(quality_pattern, channels[i]):
-                del channels[i]
-                del channels[i]
+                channels[i] = ''
+                channels[i + 1] = ''
+                i = i + 2
             else:
                 i += 1
         else:
@@ -28,7 +29,7 @@ def remove_unwanted_groups(channels: list, groups: list):
                     indices_to_remove.append(i + 1)
 
         for index in sorted(set(indices_to_remove), reverse=True):
-            del channels[index]
+            channels[index] = ''
         
         print("Group removed:", group_pattern)
 
