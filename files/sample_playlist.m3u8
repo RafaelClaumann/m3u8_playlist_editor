@@ -36,6 +36,9 @@ http://watch.com/033261059/086882386/1473451.m3u8
 #EXTINF:0 tvg-name="Channel FHD" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL FHD
 http://watch.com/channelfhd
 
+#EXTINF:0 tvg-name="Channel FHD²" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL FHD²
+http://watch.com/channelfhd2
+
 #EXTINF:0 tvg-name="Channel H265" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL H265
 http://watch.com/channelh265
 
