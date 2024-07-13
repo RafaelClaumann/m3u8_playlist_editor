@@ -10,7 +10,7 @@ class Services:
 
     def __init__(self, playlist_path: str):
         self.channels_list = helpers.read_file(playlist_path)
-        self.groups_list = self.list_groups()
+        self.groups_list = self.__parse_groups()
 
     def get_channels_list(self):
         return self.channels_list
@@ -62,7 +62,7 @@ class Services:
             else:
                 i += 1
 
-    def list_groups(self):
+    def __parse_groups(self):
         groups = []
         for channel in self.channels_list:
             if channel.startswith("#EXTINF:"):
