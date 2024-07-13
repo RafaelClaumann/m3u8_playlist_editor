@@ -1,8 +1,8 @@
-import services as svc
+import services as svcs
 import helpers
 
 def main():
-    channels = helpers.read_file("../files/sample_playlist.m3u8")
+    svc = svcs.Services("../files/sample_playlist.m3u8")
 
     while True:
         print("Choose an option:")
@@ -15,12 +15,12 @@ def main():
         escolha = input("Enter the number of the desired option: ")
         
         if escolha == '1':
-            svc.remove_low_quality_channels(channels=channels)
+            svc.remove_low_quality_channels()
 
         elif escolha == '2':
             print("Groups found in the channel list: \n")
 
-            groups = svc.list_groups(channels=channels)
+            groups = svc.get_groups()
             for i in range(len(groups)): 
                 print(f"\t[{i}] - {groups[i]}")
 
@@ -35,15 +35,15 @@ def main():
                         selected_groups.append(groups[i])
                         del groups[i]
                 
-                svc.remove_unwanted_groups(channels=channels, groups=selected_groups)
+                svc.remove_unwanted_groups(groups_to_remove=selected_groups)
             
         elif escolha == '3':
             input_str = input("Write old_group_name and new_group_name separated by comma: ")
             group_names = input_str.strip().split(',')
-            svc.rename_group(channels=channels, old_group=group_names[0], new_group=group_names[1])
+            svc.rename_group(old_group=group_names[0], new_group=group_names[1])
 
         elif escolha == '4':
-            print(svc.list_groups(channels=channels))
+            print(svc.get_groups())
 
         elif escolha == '5':
             print("Exiting...")
@@ -52,9 +52,9 @@ def main():
         else:
             print("Invalid option.")
 
+        channels = svc.get_channels_list()
         helpers.save_file("../files/output_playlist.m3u8", channels)
         print('\n')
-
 
 if __name__ == "__main__":
     main()
