@@ -89,6 +89,10 @@ A simple CLI to edit M3U8 playlists that allows you to manage and modify playlis
     Channels from group [ group-title="MOVIES" ] removed.
    ```
 
+## Demonstration
+![editando_canais](https://github.com/user-attachments/assets/3d20e054-4f46-4413-b6c9-24f4d944afe5)
+
+
 ## Playlist Format
 This is the file structure that this scripts can parse.
    ```txt
