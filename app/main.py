@@ -10,9 +10,8 @@ def main():
         print("1. Remove low quality channels")
         print("2. Remove unwanted groups")
         print("3. Rename group")
-        print("4. List groups")
-        print("5. Groups info")
-        print("6. Exit")
+        print("4. List channels info")
+        print("5. Exit")
         
         escolha = input("Enter the number of the desired option: ")
         
@@ -22,9 +21,9 @@ def main():
         elif escolha == '2':
             print("Groups found in the channel list: \n")
 
-            groups = svc.get_groups()
-            for i in range(len(groups)): 
-                print(f"\t[{i}] - {groups[i]}")
+            groups = svc.get_groups_info()
+            for index, group in groups.items():
+                print(f"[{index}] - {group['title']}")      
 
             print("\nChoose one or more groups to remove based on the integer value on the left side of the group name. ")
             input_str = input("Write numbers separated by comma(write -1 to cancel): ")
@@ -39,14 +38,9 @@ def main():
             svc.rename_group(old_group=group_names[0], new_group=group_names[1])
 
         elif escolha == '4':
-            groups_dict = svc.get_groups()
-            print(json.dumps(groups_dict, indent=4, ensure_ascii=False))
+            print(json.dumps(svc.get_groups_info(), indent=4, ensure_ascii=False))
 
         elif escolha == '5':
-            groups_info_dict = svc.get_groups_info()
-            print(json.dumps(groups_info_dict, indent=4, ensure_ascii=False))
-
-        elif escolha == '6':
             print("Exiting...")
             break
 

@@ -4,108 +4,78 @@ import helpers
 class Services:
 
     channels_list = []
-    groups_list = []
     groups_info = {}
 
     def __init__(self, playlist_path: str):
         self.channels_list = helpers.read_file(playlist_path)
-        self.groups_list = self.__parse_groups()
         self.groups_info = self.__parse_groups_info()
 
     def get_channels_list(self):
         return self.channels_list
-
-    def get_groups(self):
-        return self.groups_list
 
     def get_groups_info(self):
         return self.groups_info
 
     def remove_low_quality_channels(self):
         quality_pattern = r'.*tvg-name=.*\".*\b(H265|HD²|SD²|SD).*\".*,'
-        indices_to_remove = []
-        for i in range(len(self.channels_list)):
-            if self.channels_list[i].startswith("#EXTINF:"):
-                if re.search(quality_pattern,self.channels_list[i]):
-                    indices_to_remove.append(i)
-                    if i + 1 < len(self.channels_list):
-                        indices_to_remove.append(i + 1)
-            
-            for index in sorted(set(indices_to_remove), reverse=True):
-                self.channels_list[index] = ''
+        self.__remove_channels(quality_pattern)
+        self.groups_info = self.__parse_groups_info()
 
     def remove_unwanted_groups(self, group_ids: list):
+        for group_id in group_ids:
+            group_title = self.groups_info[group_id]['title']
 
-        selected_groups = []
-        for i in sorted(group_ids, reverse=True):
-            if 0 <= i < len(self.groups_list):
-                selected_groups.append(self.groups_list[i])
-                self.groups_info.pop(self.groups_list[i])
-                del self.groups_list[i]
+            print(f'Removing channels from group [ group-title="{group_title}" ].')
+            group_pattern = r'#EXTINF:.*group-title="{}"'.format(re.escape(group_title))
+            self.__remove_channels(group_pattern)
+            print(f'Channels from group [ group-title="{group_title}" ] removed.')
         
-        for group in selected_groups:
-            group_pattern = r'group-title="{}"'.format(re.escape(group))
-            print(f'Removing group: group-title="{group}"', )
+        for group_id in sorted(set(group_ids), reverse=True):
+            self.groups_info.pop(group_id)
 
-            indices_to_remove = []
-            for i in range(len(self.channels_list)):
-                if self.channels_list[i].startswith("#EXTINF:"):
-                    if re.search(group_pattern, self.channels_list[i]):
-                        indices_to_remove.append(i)
-                        if i + 1 < len(self.channels_list):
-                            indices_to_remove.append(i + 1)
+    def __remove_channels(self, pattern: str):
+        channels_to_remove = []
+        for i in range(len(self.channels_list)):
+            if re.search(pattern, self.channels_list[i]):
+                channels_to_remove.append(i)
+                if i + 1 < len(self.channels_list):
+                    channels_to_remove.append(i + 1)
+        
+        for index in sorted(set(channels_to_remove), reverse=True):
+            self.channels_list[index] = ''
 
-            for index in sorted(set(indices_to_remove), reverse=True):
-                self.channels_list[index] = ''
-            
-            print(f'Group removed: group-title="{group}"', )
-
-    def rename_group(self, old_group, new_group: str):
-        group_pattern = r'group-title="{}"'
-        i = 0
-        while i < len(self.channels_list):
-            if self.channels_list[i].startswith("#EXTINF:"):
-                if re.search(group_pattern.format(re.escape(old_group)), self.channels_list[i]):
-                    self.channels_list[i] = self.channels_list[i].replace(f'group-title="{old_group}"', f'group-title="{new_group}"')
-                else:
-                    i += 1
-            else:
-                i += 1
-
-    def __parse_groups(self):
-        groups = []
-        for channel in self.channels_list:
-            if channel.startswith("#EXTINF:"):
-                result = re.search(r'group-title="([^"]*)"', channel)
-                groups.append(result.group(1))
-
-        resulting_groups = list(set(groups))
-        resulting_groups.sort()
-        return resulting_groups
+        print(f"Total channels removed [ {len(channels_to_remove)} ].")
 
     def __parse_groups_info(self):
+        groups = []
+        for channel in self.channels_list:
+            result = re.search(r'#EXTINF:.*group-title="([^"]*)"', channel)
+            if result != None:
+                groups.append(result.group(1))
+
+        unique_elements = set(groups)
+        resulting_groups = sorted(unique_elements)
+
         infos = {}
-        for group in self.groups_list:
+        for idx, group in enumerate(resulting_groups):
+            
             counter = 0
-            first_element = 0
-            last_element = 0
-
+            first_occurrence = -1
+            last_occurrence = -1
             for index, channel in enumerate(self.channels_list):
-                if channel.startswith("#EXTINF:"):
-                    if rf'group-title="{group}"' in channel:
+                if rf'group-title="{group}"' in channel:
 
-                        if index > first_element and first_element == 0:
-                            first_element = index
+                    if first_occurrence == -1:
+                        first_occurrence = index
+                    last_occurrence = index
+
+                    counter += 1
                         
-                        if index > last_element:
-                            last_element = index
-                        
-                        counter += 1
-                        
-            infos[group] = {
-                'total_channels': counter,
-                'first_element': first_element,
-                'last_element': last_element
+            infos[idx] = {
+                    'title': group,
+                    'total_channels': counter,
+                    'first_element': first_occurrence,
+                    'last_element': last_occurrence
             }
-        
-        return {key: infos[key] for key in sorted(infos)}
+
+        return infos
