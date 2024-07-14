@@ -12,31 +12,6 @@ A simple CLI to edit M3U8 playlists that allows you to manage and modify playlis
 - **List Channels Info**: Display detailed information about the channels in the playlist.
 - **Save Changes**: Export the edited playlist to a new M3U8 file.
 
-## Playlist Format
-This is the file structure that this scripts can parse.
-   ```txt
-   #EXTINF:0 tvg-name="News 4K" tvg-id="news.com" tvg-logo="channel.png" group-title="NEWS" catchup="default" catchup-days="7",News 4K
-   http://watch.com/news4k
-
-   #EXTINF:0 tvg-name="News H265" tvg-id="news.com" tvg-logo="news.png" group-title="NEWS" catchup="default" catchup-days="7",News H265
-   http://watch.com/newsh265
-
-   #EXTINF:0 tvg-name="Sports FHD" tvg-id="" tvg-logo="sports.png" group-title="SPORTS",Sports FHD
-   http://watch.com/sportsfhd
-
-   #EXTINF:0 tvg-name="Sports HD" tvg-id="" tvg-logo="sports.png" group-title="SPORTS",Sports HD
-   http://watch.com/sportshd
-   
-   #EXTINF:-1 tvg-name="Movie Title" tvg-logo="movie.png" group-title="Movies | Drama",Movie Title
-   http://watch.com/movie/1231312.mp4
-
-   #EXTINF:-1 tvg-name="Some Series S01E01" tvg-logo="series.png" group-title="Series | provider",Some Series S01E01
-   http://watch.com/series/S01E01.mp4
-
-   #EXTINF:-1 tvg-name="Some Series S01E02" tvg-logo="series.png" group-title="Series | provider",Some Series S01E02
-   http://watch.com/series/S01E02.mp4
-   ```
-
 ## Installation
 
 1. Clone this repository:
@@ -112,4 +87,29 @@ This is the file structure that this scripts can parse.
     Removing channels from group [ group-title="MOVIES" ].
     Total channels removed [ 5 ].
     Channels from group [ group-title="MOVIES" ] removed.
+   ```
+
+## Playlist Format
+This is the file structure that this scripts can parse.
+   ```txt
+   #EXTINF:0 tvg-name="News 4K" tvg-id="news.com" tvg-logo="channel.png" group-title="NEWS" catchup="default" catchup-days="7",News 4K
+   http://watch.com/news4k
+
+   #EXTINF:0 tvg-name="News H265" tvg-id="news.com" tvg-logo="news.png" group-title="NEWS" catchup="default" catchup-days="7",News H265
+   http://watch.com/newsh265
+
+   #EXTINF:0 tvg-name="Sports FHD" tvg-id="" tvg-logo="sports.png" group-title="SPORTS",Sports FHD
+   http://watch.com/sportsfhd
+
+   #EXTINF:0 tvg-name="Sports HD" tvg-id="" tvg-logo="sports.png" group-title="SPORTS",Sports HD
+   http://watch.com/sportshd
+   
+   #EXTINF:-1 tvg-name="Movie Title" tvg-logo="movie.png" group-title="Movies | Drama",Movie Title
+   http://watch.com/movie/1231312.mp4
+
+   #EXTINF:-1 tvg-name="Some Series S01E01" tvg-logo="series.png" group-title="Series | provider",Some Series S01E01
+   http://watch.com/series/S01E01.mp4
+
+   #EXTINF:-1 tvg-name="Some Series S01E02" tvg-logo="series.png" group-title="Series | provider",Some Series S01E02
+   http://watch.com/series/S01E02.mp4
    ```
