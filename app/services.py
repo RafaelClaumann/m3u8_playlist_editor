@@ -28,7 +28,7 @@ class Services:
         for index in sorted(set(channels_to_remove), reverse=True):
             self.channels_list[index] = ''
 
-        print(f"Total channels removed [ {len(channels_to_remove)} ].")
+        print(f"Total channels removed [ {int(len(channels_to_remove) / 2)} ].")
         self.groups_info = self.__parse_groups_info()
 
     def remove_unwanted_groups(self, group_ids: list):
