@@ -40,8 +40,8 @@ class Services:
         for i in sorted(group_ids, reverse=True):
             if 0 <= i < len(self.groups_list):
                 selected_groups.append(self.groups_list[i])
-                del self.groups_list[i]
                 self.groups_info.pop(self.groups_list[i])
+                del self.groups_list[i]
         
         for group in selected_groups:
             group_pattern = r'group-title="{}"'.format(re.escape(group))
