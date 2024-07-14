@@ -21,7 +21,7 @@ def main():
         print("Choose an option:")
         print("1. Remove low quality channels")
         print("2. Remove unwanted groups")
-        print("3. Rename group")
+        print("3. Change group title")
         print("4. List channels info")
         print("5. Exit")
         
@@ -37,7 +37,7 @@ def main():
             groups = svc.get_groups_info()
             print_formated_groups(groups=groups) 
 
-            print("Choose one or more groups to be removed, use the number displayed at left of the group name.")
+            print("Choose one or more groups to be removed, use the number displayed at left of the group title.")
             input_str = input("Type numbers separated by comma: ")
             ids = list(map(int, input_str.strip().split(',')))
 
@@ -48,12 +48,12 @@ def main():
             groups = svc.get_groups_info()
             print_formated_groups(groups=groups)
 
-            print("Choose one group to rename, use the number displayed at left of the group name.")
+            print("Choose one group to rename, use the number displayed at left of the group title.")
             group_id = int(input("Type the desired number: "))
-            new_group_name = input(f"Type new name for group [{groups.get(group_id)['title']}]: ")
+            new_group_title = input(f"Type new title for group [{groups.get(group_id)['title']}]: ")
 
             if(user_confirmation()):
-                svc.rename_group(group_id, new_group_name)
+                svc.rename_group(group_id, new_group_title)
 
         elif escolha == '4':
             print(json.dumps(svc.get_groups_info(), indent=4, ensure_ascii=False))
