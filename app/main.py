@@ -8,6 +8,12 @@ def print_formated_groups(groups: list):
         print(f"[{index}] - {group['title']}")
     print("\n")
 
+def user_confirmation():
+    if input("Do you want to proceed? (y/n): ") != "y":
+        print("Changes have been canceled.")
+        return False
+    return True
+
 def main():
     svc = services.Services("../files/sample_playlist.m3u8")
 
@@ -20,20 +26,22 @@ def main():
         print("5. Exit")
         
         escolha = input("Enter the number of the desired option: ")
-        
+        print()
+
         if escolha == '1':
-            print("Removing channels that contains H265, HD², SD² or SD in their names.")
-            svc.remove_low_quality_channels()
+            print("This will remove channels that contains H265, HD², SD² or SD in their names.")
+            if(user_confirmation()):
+                svc.remove_low_quality_channels()
 
         elif escolha == '2':
             groups = svc.get_groups_info()
             print_formated_groups(groups=groups) 
 
-            print("Choose one or more groups to be remove, use the number displayed at left of the group name.")
-            input_str = input("Type numbers separated by comma(write -1 to cancel): ")
+            print("Choose one or more groups to be removed, use the number displayed at left of the group name.")
+            input_str = input("Type numbers separated by comma: ")
             ids = list(map(int, input_str.strip().split(',')))
 
-            if sorted(ids)[0] != -1:
+            if(user_confirmation()):
                 svc.remove_unwanted_groups(group_ids=ids)
             
         elif escolha == '3':
@@ -44,11 +52,8 @@ def main():
             group_id = int(input("Type the desired number: "))
             new_group_name = input(f"Type new name for group [{groups.get(group_id)['title']}]: ")
 
-            yes_or_no = input("Do you want to proceed? (y/n): ")
-            if yes_or_no == "y":
-                print("changing group name")
-            else:
-                print("Group rename canceled")
+            if(user_confirmation()):
+                print("Changing group name")
 
         elif escolha == '4':
             print(json.dumps(svc.get_groups_info(), indent=4, ensure_ascii=False))
@@ -62,7 +67,7 @@ def main():
 
         channels = svc.get_channels_list()
         helpers.save_file("../files/output_playlist.m3u8", channels)
-        print('\n')
+        print('\n----------------------------------------------------\n')
 
 if __name__ == "__main__":
     main()
