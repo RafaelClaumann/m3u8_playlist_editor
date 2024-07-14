@@ -22,17 +22,15 @@ def main():
         escolha = input("Enter the number of the desired option: ")
         
         if escolha == '1':
+            print("Removing channels that contains H265, HD², SD² or SD in their names.")
             svc.remove_low_quality_channels()
 
         elif escolha == '2':
-            print("Groups found in the channel list: \n")
-
             groups = svc.get_groups_info()
-            for index, group in groups.items():
-                print(f"[{index}] - {group['title']}")      
+            print_formated_groups(groups=groups) 
 
-            print("\nChoose one or more groups to remove based on the integer value on the left side of the group name. ")
-            input_str = input("Write numbers separated by comma(write -1 to cancel): ")
+            print("Choose one or more groups to be remove, use the number displayed at left of the group name.")
+            input_str = input("Type numbers separated by comma(write -1 to cancel): ")
             ids = list(map(int, input_str.strip().split(',')))
 
             if sorted(ids)[0] != -1:
