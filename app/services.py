@@ -18,25 +18,9 @@ class Services:
 
     def remove_low_quality_channels(self):
         quality_pattern = r'.*tvg-name=.*\".*\b(H265|HD²|SD²|SD).*\".*,'
-        self.__remove_channels(quality_pattern)
-        self.groups_info = self.__parse_groups_info()
-
-    def remove_unwanted_groups(self, group_ids: list):
-        for group_id in group_ids:
-            group_title = self.groups_info[group_id]['title']
-
-            print(f'Removing channels from group [ group-title="{group_title}" ].')
-            group_pattern = r'#EXTINF:.*group-title="{}"'.format(re.escape(group_title))
-            self.__remove_channels(group_pattern)
-            print(f'Channels from group [ group-title="{group_title}" ] removed.')
-        
-        for group_id in sorted(set(group_ids), reverse=True):
-            self.groups_info.pop(group_id)
-
-    def __remove_channels(self, pattern: str):
         channels_to_remove = []
         for i in range(len(self.channels_list)):
-            if re.search(pattern, self.channels_list[i]):
+            if re.search(quality_pattern, self.channels_list[i]):
                 channels_to_remove.append(i)
                 if i + 1 < len(self.channels_list):
                     channels_to_remove.append(i + 1)
@@ -45,6 +29,34 @@ class Services:
             self.channels_list[index] = ''
 
         print(f"Total channels removed [ {len(channels_to_remove)} ].")
+        self.groups_info = self.__parse_groups_info()
+
+    def remove_unwanted_groups(self, group_ids: list):
+        for group_id in group_ids:
+            group_title = self.groups_info[group_id]['title']
+
+            print(f'Removing channels from group [ group-title="{group_title}" ].')
+            group_pattern = r'#EXTINF:.*group-title="{}"'.format(re.escape(group_title))
+            
+            lower_bound = self.groups_info[group_id]['first_occurrence']
+            upper_bound = self.groups_info[group_id]['last_occurrence']
+
+            channels_to_remove = []
+            for i in range(lower_bound, upper_bound + 1):
+                if re.search(group_pattern, self.channels_list[i]):
+                    channels_to_remove.append(i)
+                    if i + 1 < len(self.channels_list):
+                        channels_to_remove.append(i + 1)
+            
+            for index in sorted(set(channels_to_remove), reverse=True):
+                self.channels_list[index] = ''
+            
+            print(f"Total channels removed [ {int(len(channels_to_remove) / 2)} ].")
+
+            print(f'Channels from group [ group-title="{group_title}" ] removed.')
+        
+        for group_id in sorted(set(group_ids), reverse=True):
+            self.groups_info.pop(group_id)
 
     def __parse_groups_info(self):
         groups = []
@@ -74,8 +86,8 @@ class Services:
             infos[idx] = {
                     'title': group,
                     'total_channels': counter,
-                    'first_element': first_occurrence,
-                    'last_element': last_occurrence
+                    'first_occurrence': first_occurrence,
+                    'last_occurrence': last_occurrence
             }
 
         return infos
