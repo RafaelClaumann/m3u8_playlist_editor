@@ -53,7 +53,7 @@ def main():
             new_group_title = input(f"Type new title for group [{groups.get(group_id)['title']}]: ")
 
             if(user_confirmation()):
-                svc.rename_group(group_id, new_group_title)
+                svc.change_group_title(group_id, new_group_title)
 
         elif escolha == '4':
             print(json.dumps(svc.get_groups_info(), indent=4, ensure_ascii=False))

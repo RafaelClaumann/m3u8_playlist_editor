@@ -58,7 +58,7 @@ class Services:
         for group_id in sorted(set(group_ids), reverse=True):
             self.groups_info.pop(group_id)
 
-    def rename_group(self, old_group_id: int, new_group_title: str):
+    def change_group_title(self, old_group_id: int, new_group_title: str):
         old_group_title = self.groups_info.get(old_group_id)['title']
         group_pattern = r'group-title="{}"'.format(re.escape(old_group_title))
 
@@ -73,6 +73,8 @@ class Services:
         
         self.groups_info.get(old_group_id)['title'] = new_group_title
         self.groups_info = dict(sorted(self.groups_info.items(), key=lambda item: item[1]['title']))
+
+        print(f"Group [{old_group_title}] changed to [{new_group_title}]")
 
     def __parse_groups_info(self):
         groups = []
