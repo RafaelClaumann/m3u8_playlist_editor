@@ -79,7 +79,9 @@ class Services:
                 result = re.search(r'group-title="([^"]*)"', channel)
                 groups.append(result.group(1))
 
-        return list(set(groups))
+        resulting_groups = list(set(groups))
+        resulting_groups.sort()
+        return resulting_groups
 
     def __parse_groups_info(self):
         infos = {}
@@ -106,4 +108,4 @@ class Services:
                 'last_element': last_element
             }
         
-        return infos
+        return {key: infos[key] for key in sorted(infos)}
