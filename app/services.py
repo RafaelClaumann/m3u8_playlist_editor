@@ -58,6 +58,22 @@ class Services:
         for group_id in sorted(set(group_ids), reverse=True):
             self.groups_info.pop(group_id)
 
+    def rename_group(self, old_group_id: int, new_group_title: str):
+        old_group_title = self.groups_info.get(old_group_id)['title']
+        group_pattern = r'group-title="{}"'.format(re.escape(old_group_title))
+
+        lower_bound = self.groups_info[old_group_id]['first_occurrence']
+        upper_bound = self.groups_info[old_group_id]['last_occurrence']
+
+        for i in range(lower_bound, upper_bound + 1):
+            if self.channels_list[i].startswith("#EXTINF:"):
+                if re.search(group_pattern, self.channels_list[i]):
+                    modified = self.channels_list[i].replace(f'group-title="{old_group_title}"', f'group-title="{new_group_title}"')
+                    self.channels_list[i] = modified
+        
+        self.groups_info.get(old_group_id)['title'] = new_group_title
+        self.groups_info = dict(sorted(self.groups_info.items(), key=lambda item: item[1]['title']))
+
     def __parse_groups_info(self):
         groups = []
         for channel in self.channels_list:

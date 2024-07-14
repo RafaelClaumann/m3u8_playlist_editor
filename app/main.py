@@ -53,7 +53,7 @@ def main():
             new_group_name = input(f"Type new name for group [{groups.get(group_id)['title']}]: ")
 
             if(user_confirmation()):
-                print("Changing group name")
+                svc.rename_group(group_id, new_group_name)
 
         elif escolha == '4':
             print(json.dumps(svc.get_groups_info(), indent=4, ensure_ascii=False))
