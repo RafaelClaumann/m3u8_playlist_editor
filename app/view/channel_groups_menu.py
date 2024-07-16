@@ -1,3 +1,4 @@
+from config.config import Config
 import services.services as services
 import helpers as helpers
 
@@ -38,3 +39,6 @@ def show_menu(svc: services.Services):
         if choice == '4':
             print("Returning... \n")
             break
+
+        channels = svc.get_channels_list()
+        helpers.save_file(Config.OUTPUT_PLAYLIST_PATH, channels)
