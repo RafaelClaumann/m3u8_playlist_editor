@@ -1,3 +1,6 @@
+import os
+import time
+
 from config.config import Config
 import services.services as services
 import helpers as helpers
@@ -6,10 +9,10 @@ import helpers as helpers
 def show_menu(svc: services.Services):
     while True:
         print("Choose an option:")
-        print("1. Remove low quality channels")
-        print("2. Remove channels groups")
-        print("3. Show channels groups")
-        print("4. << Back to main menu >>")
+        print(" 1. Remove low quality channels")
+        print(" 2. Remove channels groups")
+        print(" 3. Show channels groups")
+        print("-1. << Back to main menu >>")
 
         choice = input("Enter the number of the desired option: ")
         print()
@@ -18,7 +21,7 @@ def show_menu(svc: services.Services):
             print("This will remove channels that contains H265, HD², SD² or SD in their names.")
             if helpers.user_confirmation():
                 svc.remove_low_quality_channels()
-                print("Channels removed \n")
+                print("Channels groups removed \n")
 
         if choice == '2':
             channels_groups = svc.get_channels_groups()
@@ -36,9 +39,11 @@ def show_menu(svc: services.Services):
             channels_groups = svc.get_channels_groups()
             helpers.print_groups_with_indexes(channels_groups)
 
-        if choice == '4':
+        if choice == '-1':
             print("Returning... \n")
             break
 
         channels = svc.get_channels_list()
         helpers.save_file(Config.OUTPUT_PLAYLIST_PATH, channels)
+
+    os.system('clear')
