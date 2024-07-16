@@ -1,16 +1,20 @@
-import app.services.services as services
-import app.helpers as helpers
+import os
+from config.config import Config
+import services.services as services
+import helpers as helpers
 
 
 def show_menu(svc: services.Services):
     while True:
         print("Choose an option:")
-        print("1. Remove series groups")
-        print("3. Exit")
+        print(" 1. Remove series groups")
+        print(" 2. Show series groups")
+        print("-1. << Back to main menu >>")
 
-        escolha = input("Enter the number of the desired option: ")
+        choice = input("Enter the number of the desired option: ")
+        print()
 
-        if escolha == '1':
+        if choice == '1':
             series_groups = svc.get_series_groups()
             helpers.print_groups_with_indexes(groups=series_groups)
 
@@ -21,7 +25,17 @@ def show_menu(svc: services.Services):
             groups_to_remove = [series_groups[id] for id in ids]
             if helpers.user_confirmation():
                 svc.remove_groups(groups_to_remove=groups_to_remove)
+                print("Series groups removed \n")
 
-        if escolha == '3':
+        if choice == '2':
+            series_groups = svc.get_series_groups()
+            helpers.print_groups_with_indexes(series_groups)
+
+        if choice == '-1':
             print("Returning... \n")
             break
+
+        channels = svc.get_channels_list()
+        helpers.save_file(Config.OUTPUT_PLAYLIST_PATH, channels)
+
+    os.system('clear')
