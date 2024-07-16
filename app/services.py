@@ -35,8 +35,8 @@ class Services:
         for group_id in group_ids:
             group_title = self.groups_info[group_id]['title']
 
-            print(f'Removing channels from group [ group-title="{group_title}" ].')
-            group_pattern = r'#EXTINF:.*group-title="{}"'.format(re.escape(group_title))
+            print(f'Removing channels from group [ tvg-group="{group_title}" ].')
+            group_pattern = r'#EXTINF:.*tvg-group="{}"'.format(re.escape(group_title))
             
             lower_bound = self.groups_info[group_id]['first_occurrence']
             upper_bound = self.groups_info[group_id]['last_occurrence']
@@ -53,14 +53,14 @@ class Services:
             
             print(f"Total channels removed [ {int(len(channels_to_remove) / 2)} ].")
 
-            print(f'Channels from group [ group-title="{group_title}" ] removed.')
+            print(f'Channels from group [ tvg-group="{group_title}" ] removed.')
         
         for group_id in sorted(set(group_ids), reverse=True):
             self.groups_info.pop(group_id)
 
     def change_group_title(self, old_group_id: int, new_group_title: str):
         old_group_title = self.groups_info.get(old_group_id)['title']
-        group_pattern = r'group-title="{}"'.format(re.escape(old_group_title))
+        group_pattern = r'tvg-group="{}"'.format(re.escape(old_group_title))
 
         lower_bound = self.groups_info[old_group_id]['first_occurrence']
         upper_bound = self.groups_info[old_group_id]['last_occurrence']
@@ -68,7 +68,7 @@ class Services:
         for i in range(lower_bound, upper_bound + 1):
             if self.channels_list[i].startswith("#EXTINF:"):
                 if re.search(group_pattern, self.channels_list[i]):
-                    modified = self.channels_list[i].replace(f'group-title="{old_group_title}"', f'group-title="{new_group_title}"')
+                    modified = self.channels_list[i].replace(f'tvg-group="{old_group_title}"', f'tvg-group="{new_group_title}"')
                     self.channels_list[i] = modified
         
         self.groups_info.get(old_group_id)['title'] = new_group_title
@@ -79,7 +79,7 @@ class Services:
     def __parse_groups_info(self):
         groups = []
         for channel in self.channels_list:
-            result = re.search(r'#EXTINF:.*group-title="([^"]*)"', channel)
+            result = re.search(r'#EXTINF:.*tvg-group="([^"]*)"', channel)
             if result != None:
                 groups.append(result.group(1))
 
@@ -93,7 +93,7 @@ class Services:
             first_occurrence = -1
             last_occurrence = -1
             for index, channel in enumerate(self.channels_list):
-                if rf'group-title="{group}"' in channel:
+                if rf'tvg-group="{group}"' in channel:
 
                     if first_occurrence == -1:
                         first_occurrence = index

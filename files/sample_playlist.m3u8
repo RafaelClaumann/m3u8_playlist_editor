@@ -1,1036 +1,1036 @@
 #EXTM3U
 
-#EXTINF:-1 tvg-id="" tvg-name="24H FILMES ADAM SANDLER" tvg-logo="movie.png" group-title="24H FILMES",24H FILMES ADAM SANDLER
+#EXTINF:-1 tvg-id="" tvg-name="24H FILMES ADAM SANDLER" tvg-logo="movie.png" tvg-group="24H FILMES",24H FILMES ADAM SANDLER
 http://watch.com/033261059/086882386/1475899.m3u8
 
-#EXTINF:-1 tvg-id="" tvg-name="24H FILMES ARNOLD SCHWARZENEGGER" tvg-logo="movie.png" group-title="24H FILMES",24H FILMES ARNOLD SCHWARZENEGGER
+#EXTINF:-1 tvg-id="" tvg-name="24H FILMES ARNOLD SCHWARZENEGGER" tvg-logo="movie.png" tvg-group="24H FILMES",24H FILMES ARNOLD SCHWARZENEGGER
 http://watch.com/033261059/086882386/1475430.m3u8
 
-#EXTINF:-1 tvg-id="" tvg-name="24H FILMES BRUCE WILLIS" tvg-logo="movie.png" group-title="24H FILMES",24H FILMES BRUCE WILLIS
+#EXTINF:-1 tvg-id="" tvg-name="24H FILMES BRUCE WILLIS" tvg-logo="movie.png" tvg-group="24H FILMES",24H FILMES BRUCE WILLIS
 http://watch.com/033261059/086882386/1475660.m3u8
 
-#EXTINF:-1 tvg-id="" tvg-name="24H FILMES GAL GADOT" tvg-logo="movie.png" group-title="24H FILMES",24H FILMES GAL GADOT
+#EXTINF:-1 tvg-id="" tvg-name="24H FILMES GAL GADOT" tvg-logo="movie.png" tvg-group="24H FILMES",24H FILMES GAL GADOT
 http://watch.com/033261059/086882386/1629407.m3u8
 
-#EXTINF:-1 tvg-id="" tvg-name="24H FILMES JASON STATHAM" tvg-logo="movie.png" group-title="24H FILMES",24H FILMES JASON STATHAM
+#EXTINF:-1 tvg-id="" tvg-name="24H FILMES JASON STATHAM" tvg-logo="movie.png" tvg-group="24H FILMES",24H FILMES JASON STATHAM
 http://watch.com/033261059/086882386/1474019.m3u8
 
-#EXTINF:-1 tvg-id="" tvg-name="24H FILMES LANÇAMENTOS" tvg-logo="movie.png" group-title="24H FILMES",24H FILMES LANÇAMENTOS
+#EXTINF:-1 tvg-id="" tvg-name="24H FILMES LANÇAMENTOS" tvg-logo="movie.png" tvg-group="24H FILMES",24H FILMES LANÇAMENTOS
 http://watch.com/033261059/086882386/1473351.m3u8
 
-#EXTINF:-1 tvg-id="" tvg-name="24H FILMES NACIONAIS" tvg-logo="movie.png" group-title="24H FILMES",24H FILMES NACIONAIS
+#EXTINF:-1 tvg-id="" tvg-name="24H FILMES NACIONAIS" tvg-logo="movie.png" tvg-group="24H FILMES",24H FILMES NACIONAIS
 http://watch.com/033261059/086882386/1474043.m3u8
 
-#EXTINF:-1 tvg-id="" tvg-name="24H FILMES OSCAR 2024" tvg-logo="movie.png" group-title="24H FILMES",24H FILMES OSCAR 2024
+#EXTINF:-1 tvg-id="" tvg-name="24H FILMES OSCAR 2024" tvg-logo="movie.png" tvg-group="24H FILMES",24H FILMES OSCAR 2024
 http://watch.com/033261059/086882386/1476438.m3u8
 
-#EXTINF:-1 tvg-id="" tvg-name="24H FILMES PLANETA DOS MACACOS" tvg-logo="movie.png" group-title="24H FILMES",24H FILMES PLANETA DOS MACACOS
+#EXTINF:-1 tvg-id="" tvg-name="24H FILMES PLANETA DOS MACACOS" tvg-logo="movie.png" tvg-group="24H FILMES",24H FILMES PLANETA DOS MACACOS
 http://watch.com/033261059/086882386/1483061.m3u8
 
-#EXTINF:-1 tvg-id="" tvg-name="24H FILMES STALLONE" tvg-logo="movie.png" group-title="24H FILMES",24H FILMES STALLONE
+#EXTINF:-1 tvg-id="" tvg-name="24H FILMES STALLONE" tvg-logo="movie.png" tvg-group="24H FILMES",24H FILMES STALLONE
 http://watch.com/033261059/086882386/1629406.m3u8
 
-#EXTINF:-1 tvg-id="" tvg-name="24H FILMES TERROR" tvg-logo="movie.png" group-title="24H FILMES",24H FILMES TERROR
+#EXTINF:-1 tvg-id="" tvg-name="24H FILMES TERROR" tvg-logo="movie.png" tvg-group="24H FILMES",24H FILMES TERROR
 http://watch.com/033261059/086882386/1473451.m3u8
 
-#EXTINF:0 tvg-name="Channel FHD" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL FHD
+#EXTINF:0 tvg-name="Channel FHD" tvg-id="channel.br" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL FHD
 http://watch.com/channelfhd
 
-#EXTINF:0 tvg-name="Channel FHD²" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL FHD²
+#EXTINF:0 tvg-name="Channel FHD²" tvg-id="channel.br" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL FHD²
 http://watch.com/channelfhd2
 
-#EXTINF:0 tvg-name="Channel H265" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL H265
+#EXTINF:0 tvg-name="Channel H265" tvg-id="channel.br" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL H265
 http://watch.com/channelh265
 
-#EXTINF:0 tvg-id="channel.br" tvg-name="CHANNEL HD" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL HD
+#EXTINF:0 tvg-id="channel.br" tvg-name="CHANNEL HD" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL HD
 http://watch.com/channelhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="CHANNEL HD²" tvg-id="chanel.br"  group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="CHANNEL HD²" tvg-id="chanel.br"  tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL HD²
 http://watch.com/channelhd2
 
-#EXTINF:0 tvg-name="CHANNEL SD" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL SD
+#EXTINF:0 tvg-name="CHANNEL SD" tvg-id="channel.br" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL SD
 http://watch.com/channelsd
 
-#EXTINF:0 tvg-name="CHANNEL SD²" tvg-id="channel.br" tvg-logo="logo.png" group-title="VARIEDADES" catchup="default" catchup-days="7",CHANNEL SD²
+#EXTINF:0 tvg-name="CHANNEL SD²" tvg-id="channel.br" tvg-logo="logo.png" tvg-group="VARIEDADES" catchup="default" catchup-days="7",CHANNEL SD²
 http://watch.com/121/channelsd2
 
-#EXTINF:0 tvg-name="Multishow FHD" tvg-id="multishow.br" tvg-logo="logo.png" group-title="VARIEDADES",Multishow FHD
+#EXTINF:0 tvg-name="Multishow FHD" tvg-id="multishow.br" tvg-logo="logo.png" tvg-group="VARIEDADES",Multishow FHD
 http://watch.com/multishowfhd
 
-#EXTINF:0 tvg-name="Multishow H265" tvg-id="multishow.br" tvg-logo="logo.png" group-title="VARIEDADES",Multishow H265
+#EXTINF:0 tvg-name="Multishow H265" tvg-id="multishow.br" tvg-logo="logo.png" tvg-group="VARIEDADES",Multishow H265
 http://watch.com/multishowh265
 
-#EXTINF:0 tvg-name="Multishow HD" tvg-id="multishow.br" tvg-logo="logo.png" group-title="VARIEDADES",Multishow HD
+#EXTINF:0 tvg-name="Multishow HD" tvg-id="multishow.br" tvg-logo="logo.png" tvg-group="VARIEDADES",Multishow HD
 http://watch.com/multishowhd
 
-#EXTINF:0 tvg-name="Multishow HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="VARIEDADES",Multishow HD²
+#EXTINF:0 tvg-name="Multishow HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="VARIEDADES",Multishow HD²
 http://watch.com/multishowhd2
 
-#EXTINF:0 tvg-name="Multishow SD" tvg-id="multishow.br" tvg-logo="logo.png" group-title="VARIEDADES",Multishow SD
+#EXTINF:0 tvg-name="Multishow SD" tvg-id="multishow.br" tvg-logo="logo.png" tvg-group="VARIEDADES",Multishow SD
 http://watch.com/multishowOsd
 
-#EXTINF:0 tvg-name="Multishow SD²" tvg-id="multishow.br" tvg-logo="logo.png" group-title="VARIEDADES",Multishow SD²
+#EXTINF:0 tvg-name="Multishow SD²" tvg-id="multishow.br" tvg-logo="logo.png" tvg-group="VARIEDADES",Multishow SD²
 http://watch.com/121/multishowsd2
 
-#EXTINF:0 tvg-name="BIS FHD" tvg-id="bis.br" tvg-logo="logo.png" group-title="VARIEDADES",BIS FHD
+#EXTINF:0 tvg-name="BIS FHD" tvg-id="bis.br" tvg-logo="logo.png" tvg-group="VARIEDADES",BIS FHD
 http://watch.com/bisfhd
 
-#EXTINF:0 tvg-name="BIS H265" tvg-id="bis.br" tvg-logo="logo.png" group-title="VARIEDADES",BIS H265
+#EXTINF:0 tvg-name="BIS H265" tvg-id="bis.br" tvg-logo="logo.png" tvg-group="VARIEDADES",BIS H265
 http://watch.com/bish265
 
-#EXTINF:0 tvg-name="BIS HD" tvg-id="bis.br" tvg-logo="logo.png" group-title="VARIEDADES",BIS HD
+#EXTINF:0 tvg-name="BIS HD" tvg-id="bis.br" tvg-logo="logo.png" tvg-group="VARIEDADES",BIS HD
 http://watch.com/bishd
 
-#EXTINF:0 tvg-name="BIS HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="VARIEDADES",BIS HD²
+#EXTINF:0 tvg-name="BIS HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="VARIEDADES",BIS HD²
 http://watch.com/bishd2
 
-#EXTINF:0 tvg-name="BIS SD" tvg-id="bis.br" tvg-logo="logo.png" group-title="VARIEDADES",BIS SD
+#EXTINF:0 tvg-name="BIS SD" tvg-id="bis.br" tvg-logo="logo.png" tvg-group="VARIEDADES",BIS SD
 http://watch.com/bisOsd
 
-#EXTINF:0 tvg-name="BIS SD²" tvg-id="bis.br" tvg-logo="logo.png" group-title="VARIEDADES",BIS SD²
+#EXTINF:0 tvg-name="BIS SD²" tvg-id="bis.br" tvg-logo="logo.png" tvg-group="VARIEDADES",BIS SD²
 http://watch.com/121/bissd2
 
-#EXTINF:0 tvg-name="E! FHD" tvg-id="e.br" tvg-logo="logo.png" group-title="VARIEDADES",E! FHD
+#EXTINF:0 tvg-name="E! FHD" tvg-id="e.br" tvg-logo="logo.png" tvg-group="VARIEDADES",E! FHD
 http://watch.com/efhd
 
-#EXTINF:0 tvg-name="E! H265" tvg-id="e.br" tvg-logo="logo.png" group-title="VARIEDADES",E! H265
+#EXTINF:0 tvg-name="E! H265" tvg-id="e.br" tvg-logo="logo.png" tvg-group="VARIEDADES",E! H265
 http://watch.com/eh265
 
-#EXTINF:0 tvg-name="E! HD" tvg-id="e.br" tvg-logo="logo.png" group-title="VARIEDADES",E! HD
+#EXTINF:0 tvg-name="E! HD" tvg-id="e.br" tvg-logo="logo.png" tvg-group="VARIEDADES",E! HD
 http://watch.com/ehd
 
-#EXTINF:0 tvg-name="E! HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="VARIEDADES",E! HD²
+#EXTINF:0 tvg-name="E! HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="VARIEDADES",E! HD²
 http://watch.com/ehd2
 
-#EXTINF:0 tvg-name="E! SD" tvg-id="e.br" tvg-logo="logo.png" group-title="VARIEDADES",E! SD
+#EXTINF:0 tvg-name="E! SD" tvg-id="e.br" tvg-logo="logo.png" tvg-group="VARIEDADES",E! SD
 http://watch.com/eOsd
 
-#EXTINF:0 tvg-name="E! SD²" tvg-id="e.br" tvg-logo="logo.png" group-title="VARIEDADES",E! SD²
+#EXTINF:0 tvg-name="E! SD²" tvg-id="e.br" tvg-logo="logo.png" tvg-group="VARIEDADES",E! SD²
 http://watch.com/121/esd2
 
-#EXTINF:0 tvg-name="MTV FHD" tvg-id="mtv.br" tvg-logo="logo.png" group-title="VARIEDADES",MTV FHD
+#EXTINF:0 tvg-name="MTV FHD" tvg-id="mtv.br" tvg-logo="logo.png" tvg-group="VARIEDADES",MTV FHD
 http://watch.com/mtvfhd
 
-#EXTINF:0 tvg-name="MTV H265" tvg-id="mtv.br" tvg-logo="logo.png" group-title="VARIEDADES",MTV H265
+#EXTINF:0 tvg-name="MTV H265" tvg-id="mtv.br" tvg-logo="logo.png" tvg-group="VARIEDADES",MTV H265
 http://watch.com/mtvh265
 
-#EXTINF:0 tvg-name="MTV HD" tvg-id="mtv.br" tvg-logo="logo.png" group-title="VARIEDADES",MTV HD
+#EXTINF:0 tvg-name="MTV HD" tvg-id="mtv.br" tvg-logo="logo.png" tvg-group="VARIEDADES",MTV HD
 http://watch.com/mtvhd
 
-#EXTINF:0 tvg-name="MTV HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="VARIEDADES",MTV HD²
+#EXTINF:0 tvg-name="MTV HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="VARIEDADES",MTV HD²
 http://watch.com/mtvhd2
 
-#EXTINF:0 tvg-name="MTV SD" tvg-id="mtv.br" tvg-logo="logo.png" group-title="VARIEDADES",MTV SD
+#EXTINF:0 tvg-name="MTV SD" tvg-id="mtv.br" tvg-logo="logo.png" tvg-group="VARIEDADES",MTV SD
 http://watch.com/mtvOsd
 
-#EXTINF:0 tvg-name="MTV SD²" tvg-id="mtv.br" tvg-logo="logo.png" group-title="VARIEDADES",MTV SD²
+#EXTINF:0 tvg-name="MTV SD²" tvg-id="mtv.br" tvg-logo="logo.png" tvg-group="VARIEDADES",MTV SD²
 http://watch.com/121/mtvsd2
 
-#EXTINF:0 tvg-name="MTV Live FHD" tvg-id="mtvlive.br" tvg-logo="logo.png" group-title="VARIEDADES",MTV Live FHD
+#EXTINF:0 tvg-name="MTV Live FHD" tvg-id="mtvlive.br" tvg-logo="logo.png" tvg-group="VARIEDADES",MTV Live FHD
 http://watch.com/mtvlivefhd 
 
-#EXTINF:0 tvg-name="MTV Live H265" tvg-id="mtvlive.br" tvg-logo="logo.png" group-title="VARIEDADES",MTV Live H265
+#EXTINF:0 tvg-name="MTV Live H265" tvg-id="mtvlive.br" tvg-logo="logo.png" tvg-group="VARIEDADES",MTV Live H265
 http://watch.com/mtvliveh265
 
-#EXTINF:0 tvg-name="MTV Live HD" tvg-id="mtvlive.br" tvg-logo="logo.png" group-title="VARIEDADES",MTV Live HD
+#EXTINF:0 tvg-name="MTV Live HD" tvg-id="mtvlive.br" tvg-logo="logo.png" tvg-group="VARIEDADES",MTV Live HD
 http://watch.com/mtvlivehd
 
-#EXTINF:0 tvg-name="MTV Live HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="VARIEDADES",MTV Live HD²
+#EXTINF:0 tvg-name="MTV Live HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="VARIEDADES",MTV Live HD²
 http://watch.com/mtvlivehd2
 
-#EXTINF:0 tvg-name="MTV Live SD" tvg-id="mtvlive.br" tvg-logo="logo.png" group-title="VARIEDADES",MTV Live SD
+#EXTINF:0 tvg-name="MTV Live SD" tvg-id="mtvlive.br" tvg-logo="logo.png" tvg-group="VARIEDADES",MTV Live SD
 http://watch.com/mtvliveOsd
 
-#EXTINF:0 tvg-name="MTV Live SD²" tvg-id="mtvlive.br" tvg-logo="logo.png" group-title="VARIEDADES",MTV Live SD²
+#EXTINF:0 tvg-name="MTV Live SD²" tvg-id="mtvlive.br" tvg-logo="logo.png" tvg-group="VARIEDADES",MTV Live SD²
 http://watch.com/121/mtvlivesd2
 
-#EXTINF:0 tvg-name="OFF FHD" tvg-id="off.br" tvg-logo="logo.png" group-title="VARIEDADES",OFF FHD
+#EXTINF:0 tvg-name="OFF FHD" tvg-id="off.br" tvg-logo="logo.png" tvg-group="VARIEDADES",OFF FHD
 http://watch.com/offfhd 
 
-#EXTINF:0 tvg-name="OFF H265" tvg-id="off.br" tvg-logo="logo.png" group-title="VARIEDADES",OFF H265
+#EXTINF:0 tvg-name="OFF H265" tvg-id="off.br" tvg-logo="logo.png" tvg-group="VARIEDADES",OFF H265
 http://watch.com/offh265
 
-#EXTINF:0 tvg-name="OFF HD" tvg-id="off.br" tvg-logo="logo.png" group-title="VARIEDADES",OFF HD
+#EXTINF:0 tvg-name="OFF HD" tvg-id="off.br" tvg-logo="logo.png" tvg-group="VARIEDADES",OFF HD
 http://watch.com/offhd
 
-#EXTINF:0 tvg-name="OFF HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="VARIEDADES",OFF HD²
+#EXTINF:0 tvg-name="OFF HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="VARIEDADES",OFF HD²
 http://watch.com/offhd2
 
-#EXTINF:0 tvg-name="OFF SD" tvg-id="off.br" tvg-logo="logo.png" group-title="VARIEDADES",OFF SD
+#EXTINF:0 tvg-name="OFF SD" tvg-id="off.br" tvg-logo="logo.png" tvg-group="VARIEDADES",OFF SD
 http://watch.com/offOsd
 
-#EXTINF:0 tvg-name="OFF SD²" tvg-id="off.br" tvg-logo="logo.png" group-title="VARIEDADES",OFF SD²
+#EXTINF:0 tvg-name="OFF SD²" tvg-id="off.br" tvg-logo="logo.png" tvg-group="VARIEDADES",OFF SD²
 http://watch.com/121/offsd2
 
-#EXTINF:0 tvg-name="Music Box FHD" tvg-id="musicbox.br" tvg-logo="logo.png" group-title="VARIEDADES",Music Box FHD
+#EXTINF:0 tvg-name="Music Box FHD" tvg-id="musicbox.br" tvg-logo="logo.png" tvg-group="VARIEDADES",Music Box FHD
 http://watch.com/musicboxfhd 
 
-#EXTINF:0 tvg-name="Music Box H265" tvg-id="musicbox.br" tvg-logo="logo.png" group-title="VARIEDADES",Music Box H265
+#EXTINF:0 tvg-name="Music Box H265" tvg-id="musicbox.br" tvg-logo="logo.png" tvg-group="VARIEDADES",Music Box H265
 http://watch.com/musicboxh265
 
-#EXTINF:0 tvg-name="Music Box HD" tvg-id="musicbox.br" tvg-logo="logo.png" group-title="VARIEDADES",Music Box HD
+#EXTINF:0 tvg-name="Music Box HD" tvg-id="musicbox.br" tvg-logo="logo.png" tvg-group="VARIEDADES",Music Box HD
 http://watch.com/musicboxhd
 
-#EXTINF:0 tvg-name="Music Box HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="VARIEDADES",Music Box HD²
+#EXTINF:0 tvg-name="Music Box HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="VARIEDADES",Music Box HD²
 http://watch.com/musicboxhd2
 
-#EXTINF:0 tvg-name="Music Box SD" tvg-id="musicbox.br" tvg-logo="logo.png" group-title="VARIEDADES",Music Box SD
+#EXTINF:0 tvg-name="Music Box SD" tvg-id="musicbox.br" tvg-logo="logo.png" tvg-group="VARIEDADES",Music Box SD
 http://watch.com/musicboxOsd
 
-#EXTINF:0 tvg-name="Music Box SD²" tvg-id="musicbox.br" tvg-logo="logo.png" group-title="VARIEDADES",Music Box SD²
+#EXTINF:0 tvg-name="Music Box SD²" tvg-id="musicbox.br" tvg-logo="logo.png" tvg-group="VARIEDADES",Music Box SD²
 http://watch.com/121/musicboxsd2
 
-#EXTINF:0 tvg-name="Lifetime FHD" tvg-id="lifetime.br" tvg-logo="logo.png" group-title="VARIEDADES",Lifetime FHD
+#EXTINF:0 tvg-name="Lifetime FHD" tvg-id="lifetime.br" tvg-logo="logo.png" tvg-group="VARIEDADES",Lifetime FHD
 http://watch.com/lifetimefhd 
 
-#EXTINF:0 tvg-name="Lifetime H265" tvg-id="lifetime.br" tvg-logo="logo.png" group-title="VARIEDADES",Lifetime H265
+#EXTINF:0 tvg-name="Lifetime H265" tvg-id="lifetime.br" tvg-logo="logo.png" tvg-group="VARIEDADES",Lifetime H265
 http://watch.com/lifetimeh265
 
-#EXTINF:0 tvg-name="Lifetime HD" tvg-id="lifetime.br" tvg-logo="logo.png" group-title="VARIEDADES",Lifetime HD
+#EXTINF:0 tvg-name="Lifetime HD" tvg-id="lifetime.br" tvg-logo="logo.png" tvg-group="VARIEDADES",Lifetime HD
 http://watch.com/lifetimehd
 
-#EXTINF:0 tvg-name="Lifetime HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="VARIEDADES",Lifetime HD²
+#EXTINF:0 tvg-name="Lifetime HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="VARIEDADES",Lifetime HD²
 http://watch.com/lifetimehd2
 
-#EXTINF:0 tvg-name="Lifetime SD" tvg-id="lifetime.br" tvg-logo="logo.png" group-title="VARIEDADES",Lifetime SD
+#EXTINF:0 tvg-name="Lifetime SD" tvg-id="lifetime.br" tvg-logo="logo.png" tvg-group="VARIEDADES",Lifetime SD
 http://watch.com/lifetimesd
 
-#EXTINF:0 tvg-name="Lifetime SD²" tvg-id="lifetime.br" tvg-logo="logo.png" group-title="VARIEDADES",Lifetime SD²
+#EXTINF:0 tvg-name="Lifetime SD²" tvg-id="lifetime.br" tvg-logo="logo.png" tvg-group="VARIEDADES",Lifetime SD²
 http://watch.com/121/lifetimesd2
 
-#EXTINF:0 tvg-name="ESPN FHD" tvg-id="ESPN.br" tvg-logo="logo.png" group-title="ESPORTES",ESPN FHD
+#EXTINF:0 tvg-name="ESPN FHD" tvg-id="ESPN.br" tvg-logo="logo.png" tvg-group="ESPORTES",ESPN FHD
 http://watch.com/ESPNfhd
 
-#EXTINF:0 tvg-name="ESPN H265" tvg-id="ESPN.br" tvg-logo="logo.png" group-title="ESPORTES",ESPN H265
+#EXTINF:0 tvg-name="ESPN H265" tvg-id="ESPN.br" tvg-logo="logo.png" tvg-group="ESPORTES",ESPN H265
 http://watch.com/ESPNh265
 
-#EXTINF:0 tvg-id="ESPN.br" tvg-name="ESPN HD" tvg-logo="logo.png" group-title="ESPORTES",ESPN HD
+#EXTINF:0 tvg-id="ESPN.br" tvg-name="ESPN HD" tvg-logo="logo.png" tvg-group="ESPORTES",ESPN HD
 http://watch.com/ESPNhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="ESPN HD²" tvg-id="chanel.br"  group-title="ESPORTES",ESPN HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="ESPN HD²" tvg-id="chanel.br"  tvg-group="ESPORTES",ESPN HD²
 http://watch.com/ESPNhd2
 
-#EXTINF:0 tvg-name="BAND SPORTS FHD" tvg-id="BAND SPORTS.br" tvg-logo="logo.png" group-title="ESPORTES",BAND SPORTS FHD
+#EXTINF:0 tvg-name="BAND SPORTS FHD" tvg-id="BAND SPORTS.br" tvg-logo="logo.png" tvg-group="ESPORTES",BAND SPORTS FHD
 http://watch.com/BANDSPORTSfhd
 
-#EXTINF:0 tvg-name="BAND SPORTS H265" tvg-id="BAND SPORTS.br" tvg-logo="logo.png" group-title="ESPORTES",BAND SPORTS H265
+#EXTINF:0 tvg-name="BAND SPORTS H265" tvg-id="BAND SPORTS.br" tvg-logo="logo.png" tvg-group="ESPORTES",BAND SPORTS H265
 http://watch.com/BANDSPORTSh265
 
-#EXTINF:0 tvg-id="BAND SPORTS.br" tvg-name="BAND SPORTS HD" tvg-logo="logo.png" group-title="ESPORTES",BAND SPORTS HD
+#EXTINF:0 tvg-id="BAND SPORTS.br" tvg-name="BAND SPORTS HD" tvg-logo="logo.png" tvg-group="ESPORTES",BAND SPORTS HD
 http://watch.com/BANDSPORTShd
 
-#EXTINF:0 tvg-name="premiere 01 FHD" tvg-id="premiere01.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 01 FHD
+#EXTINF:0 tvg-name="premiere 01 FHD" tvg-id="premiere01.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 01 FHD
 http://watch.com/premiere01fhd 
 
-#EXTINF:0 tvg-name="premiere 01 H265" tvg-id="premiere01.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 01 H265
+#EXTINF:0 tvg-name="premiere 01 H265" tvg-id="premiere01.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 01 H265
 http://watch.com/premiere01h265
 
-#EXTINF:0 tvg-name="premiere 01 HD" tvg-id="premiere01.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 01 HD
+#EXTINF:0 tvg-name="premiere 01 HD" tvg-id="premiere01.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 01 HD
 http://watch.com/premiere01hd
 
-#EXTINF:0 tvg-name="premiere 01 HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="ESPORTES",premiere 01 HD²
+#EXTINF:0 tvg-name="premiere 01 HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="ESPORTES",premiere 01 HD²
 http://watch.com/premiere01hd2
 
-#EXTINF:0 tvg-name="premiere 01 SD" tvg-id="premiere01.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 01 SD
+#EXTINF:0 tvg-name="premiere 01 SD" tvg-id="premiere01.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 01 SD
 http://watch.com/premiere01sd
 
-#EXTINF:0 tvg-name="premiere 01 SD²" tvg-id="premiere01.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 01 SD²
+#EXTINF:0 tvg-name="premiere 01 SD²" tvg-id="premiere01.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 01 SD²
 http://watch.com/121/premiere01sd2
 
-#EXTINF:0 tvg-name="premiere 02 FHD" tvg-id="premiere02.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 02 FHD
+#EXTINF:0 tvg-name="premiere 02 FHD" tvg-id="premiere02.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 02 FHD
 http://watch.com/premiere02fhd 
 
-#EXTINF:0 tvg-name="premiere 02 H265" tvg-id="premiere02.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 02 H265
+#EXTINF:0 tvg-name="premiere 02 H265" tvg-id="premiere02.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 02 H265
 http://watch.com/premiere02h265
 
-#EXTINF:0 tvg-name="premiere 02 HD" tvg-id="premiere02.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 02 HD
+#EXTINF:0 tvg-name="premiere 02 HD" tvg-id="premiere02.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 02 HD
 http://watch.com/premiere02hd
 
-#EXTINF:0 tvg-name="premiere 02 HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="ESPORTES",premiere 02 HD²
+#EXTINF:0 tvg-name="premiere 02 HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="ESPORTES",premiere 02 HD²
 http://watch.com/premiere02hd2
 
-#EXTINF:0 tvg-name="premiere 02 SD" tvg-id="premiere02.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 02 SD
+#EXTINF:0 tvg-name="premiere 02 SD" tvg-id="premiere02.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 02 SD
 http://watch.com/premiere02sd
 
-#EXTINF:0 tvg-name="premiere 02 SD²" tvg-id="premiere02.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 02 SD²
+#EXTINF:0 tvg-name="premiere 02 SD²" tvg-id="premiere02.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 02 SD²
 http://watch.com/121/premiere02sd2
 
-#EXTINF:0 tvg-name="premiere 03 FHD" tvg-id="premiere03.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 03 FHD
+#EXTINF:0 tvg-name="premiere 03 FHD" tvg-id="premiere03.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 03 FHD
 http://watch.com/premiere03fhd 
 
-#EXTINF:0 tvg-name="premiere 03 H265" tvg-id="premiere03.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 03 H265
+#EXTINF:0 tvg-name="premiere 03 H265" tvg-id="premiere03.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 03 H265
 http://watch.com/premiere03h265
 
-#EXTINF:0 tvg-name="premiere 03 HD" tvg-id="premiere03.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 03 HD
+#EXTINF:0 tvg-name="premiere 03 HD" tvg-id="premiere03.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 03 HD
 http://watch.com/premiere03hd
 
-#EXTINF:0 tvg-name="premiere 03 HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="ESPORTES",premiere 03 HD²
+#EXTINF:0 tvg-name="premiere 03 HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="ESPORTES",premiere 03 HD²
 http://watch.com/premiere03hd2
 
-#EXTINF:0 tvg-name="premiere 03 SD" tvg-id="premiere03.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 03 SD
+#EXTINF:0 tvg-name="premiere 03 SD" tvg-id="premiere03.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 03 SD
 http://watch.com/premiere03sd
 
-#EXTINF:0 tvg-name="premiere 03 SD²" tvg-id="premiere03.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 03 SD²
+#EXTINF:0 tvg-name="premiere 03 SD²" tvg-id="premiere03.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 03 SD²
 http://watch.com/121/premiere03sd2
 
-#EXTINF:0 tvg-name="premiere 04 FHD" tvg-id="premiere04.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 04 FHD
+#EXTINF:0 tvg-name="premiere 04 FHD" tvg-id="premiere04.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 04 FHD
 http://watch.com/premiere04fhd 
 
-#EXTINF:0 tvg-name="premiere 04 H265" tvg-id="premiere04.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 04 H265
+#EXTINF:0 tvg-name="premiere 04 H265" tvg-id="premiere04.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 04 H265
 http://watch.com/premiere04h265
 
-#EXTINF:0 tvg-name="premiere 04 HD" tvg-id="premiere04.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 04 HD
+#EXTINF:0 tvg-name="premiere 04 HD" tvg-id="premiere04.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 04 HD
 http://watch.com/premiere04hd
 
-#EXTINF:0 tvg-name="premiere 04 HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="ESPORTES",premiere 04 HD²
+#EXTINF:0 tvg-name="premiere 04 HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="ESPORTES",premiere 04 HD²
 http://watch.com/premiere04hd2
 
-#EXTINF:0 tvg-name="premiere 04 SD" tvg-id="premiere04.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 04 SD
+#EXTINF:0 tvg-name="premiere 04 SD" tvg-id="premiere04.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 04 SD
 http://watch.com/premiere04sd
 
-#EXTINF:0 tvg-name="premiere 04 SD²" tvg-id="premiere04.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 04 SD²
+#EXTINF:0 tvg-name="premiere 04 SD²" tvg-id="premiere04.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 04 SD²
 http://watch.com/121/premiere04sd2
 
-#EXTINF:0 tvg-name="premiere 05 FHD" tvg-id="premiere05.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 05 FHD
+#EXTINF:0 tvg-name="premiere 05 FHD" tvg-id="premiere05.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 05 FHD
 http://watch.com/premiere05fhd 
 
-#EXTINF:0 tvg-name="premiere 05 H265" tvg-id="premiere05.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 05 H265
+#EXTINF:0 tvg-name="premiere 05 H265" tvg-id="premiere05.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 05 H265
 http://watch.com/premiere05h265
 
-#EXTINF:0 tvg-name="premiere 05 HD" tvg-id="premiere05.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 05 HD
+#EXTINF:0 tvg-name="premiere 05 HD" tvg-id="premiere05.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 05 HD
 http://watch.com/premiere05hd
 
-#EXTINF:0 tvg-name="premiere 05 HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="ESPORTES",premiere 05 HD²
+#EXTINF:0 tvg-name="premiere 05 HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="ESPORTES",premiere 05 HD²
 http://watch.com/premiere05hd2
 
-#EXTINF:0 tvg-name="premiere 05 SD" tvg-id="premiere05.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 05 SD
+#EXTINF:0 tvg-name="premiere 05 SD" tvg-id="premiere05.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 05 SD
 http://watch.com/premiere05sd
 
-#EXTINF:0 tvg-name="premiere 05 SD²" tvg-id="premiere05.br" tvg-logo="logo.png" group-title="ESPORTES",premiere 05 SD²
+#EXTINF:0 tvg-name="premiere 05 SD²" tvg-id="premiere05.br" tvg-logo="logo.png" tvg-group="ESPORTES",premiere 05 SD²
 http://watch.com/121/premiere05sd2
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="BAND SPORTS HD²" tvg-id="chanel.br"  group-title="ESPORTES",BAND SPORTS HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="BAND SPORTS HD²" tvg-id="chanel.br"  tvg-group="ESPORTES",BAND SPORTS HD²
 http://watch.com/BANDSPORTShd2
 
-#EXTINF:0 tvg-name="Telecine FHD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine FHD
+#EXTINF:0 tvg-name="Telecine FHD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine FHD
 http://watch.com/Telecinefhd
 
-#EXTINF:0 tvg-name="Telecine H265" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine H265
+#EXTINF:0 tvg-name="Telecine H265" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine H265
 http://watch.com/Telecineh265
 
-#EXTINF:0 tvg-id="Telecine.br" tvg-name="Telecine HD" tvg-logo="logo.png" group-title="TELECINE",Telecine HD
+#EXTINF:0 tvg-id="Telecine.br" tvg-name="Telecine HD" tvg-logo="logo.png" tvg-group="TELECINE",Telecine HD
 http://watch.com/Telecinehd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="Telecine HD²" tvg-id="chanel.br"  group-title="TELECINE",Telecine HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="Telecine HD²" tvg-id="chanel.br"  tvg-group="TELECINE",Telecine HD²
 http://watch.com/Telecinehd2
 
-#EXTINF:0 tvg-name="Telecine SD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine SD
+#EXTINF:0 tvg-name="Telecine SD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine SD
 http://watch.com/Telecinesd
 
-#EXTINF:0 tvg-name="Telecine SD²" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine SD²
+#EXTINF:0 tvg-name="Telecine SD²" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine SD²
 http://watch.com/121/Telecinesd2
 
-#EXTINF:0 tvg-name="Telecine Action FHD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Action FHD
+#EXTINF:0 tvg-name="Telecine Action FHD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Action FHD
 http://watch.com/Telecinefhd
 
-#EXTINF:0 tvg-name="Telecine Action H265" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Action H265
+#EXTINF:0 tvg-name="Telecine Action H265" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Action H265
 http://watch.com/Telecineh265
 
-#EXTINF:0 tvg-name="Telecine Action HD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Action HD
+#EXTINF:0 tvg-name="Telecine Action HD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Action HD
 http://watch.com/Telecinehd
 
-#EXTINF:0 tvg-name="Telecine Action HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="TELECINE",Telecine Action HD²
+#EXTINF:0 tvg-name="Telecine Action HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="TELECINE",Telecine Action HD²
 http://watch.com/Telecinehd2
 
-#EXTINF:0 tvg-name="Telecine Action SD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Action SD
+#EXTINF:0 tvg-name="Telecine Action SD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Action SD
 http://watch.com/Telecinesd
 
-#EXTINF:0 tvg-name="Telecine Action SD²" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Action SD²
+#EXTINF:0 tvg-name="Telecine Action SD²" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Action SD²
 http://watch.com/121/Telecinesd2
 
-#EXTINF:0 tvg-name="Telecine Cult FHD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Cult FHD
+#EXTINF:0 tvg-name="Telecine Cult FHD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Cult FHD
 http://watch.com/Telecinefhd
 
-#EXTINF:0 tvg-name="Telecine Cult H265" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Cult H265
+#EXTINF:0 tvg-name="Telecine Cult H265" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Cult H265
 http://watch.com/Telecineh265
 
-#EXTINF:0 tvg-name="Telecine Cult HD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Cult HD
+#EXTINF:0 tvg-name="Telecine Cult HD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Cult HD
 http://watch.com/Telecinehd
 
-#EXTINF:0 tvg-name="Telecine Cult HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="TELECINE",Telecine Cult HD²
+#EXTINF:0 tvg-name="Telecine Cult HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="TELECINE",Telecine Cult HD²
 http://watch.com/Telecinehd2
 
-#EXTINF:0 tvg-name="Telecine Cult SD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Cult SD
+#EXTINF:0 tvg-name="Telecine Cult SD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Cult SD
 http://watch.com/Telecinesd
 
-#EXTINF:0 tvg-name="Telecine Cult SD²" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Cult SD²
+#EXTINF:0 tvg-name="Telecine Cult SD²" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Cult SD²
 http://watch.com/121/Telecinesd2
 
-#EXTINF:0 tvg-name="Telecine Fun FHD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Fun FHD
+#EXTINF:0 tvg-name="Telecine Fun FHD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Fun FHD
 http://watch.com/Telecinefhd
 
-#EXTINF:0 tvg-name="Telecine Fun H265" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Fun H265
+#EXTINF:0 tvg-name="Telecine Fun H265" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Fun H265
 http://watch.com/Telecineh265
 
-#EXTINF:0 tvg-name="Telecine Fun HD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Fun HD
+#EXTINF:0 tvg-name="Telecine Fun HD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Fun HD
 http://watch.com/Telecinehd
 
-#EXTINF:0 tvg-name="Telecine Fun HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="TELECINE",Telecine Fun HD²
+#EXTINF:0 tvg-name="Telecine Fun HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="TELECINE",Telecine Fun HD²
 http://watch.com/Telecinehd2
 
-#EXTINF:0 tvg-name="Telecine Fun SD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Fun SD
+#EXTINF:0 tvg-name="Telecine Fun SD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Fun SD
 http://watch.com/Telecinesd
 
-#EXTINF:0 tvg-name="Telecine Fun SD²" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Fun SD²
+#EXTINF:0 tvg-name="Telecine Fun SD²" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Fun SD²
 http://watch.com/121/Telecinesd2
 
-#EXTINF:0 tvg-name="Telecine Pipoca FHD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Pipoca FHD
+#EXTINF:0 tvg-name="Telecine Pipoca FHD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Pipoca FHD
 http://watch.com/Telecinefhd
 
-#EXTINF:0 tvg-name="Telecine Pipoca H265" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Pipoca H265
+#EXTINF:0 tvg-name="Telecine Pipoca H265" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Pipoca H265
 http://watch.com/Telecineh265
 
-#EXTINF:0 tvg-name="Telecine Pipoca HD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Pipoca HD
+#EXTINF:0 tvg-name="Telecine Pipoca HD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Pipoca HD
 http://watch.com/Telecinehd
 
-#EXTINF:0 tvg-name="Telecine Pipoca HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="TELECINE",Telecine Pipoca HD²
+#EXTINF:0 tvg-name="Telecine Pipoca HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="TELECINE",Telecine Pipoca HD²
 http://watch.com/Telecinehd2
 
-#EXTINF:0 tvg-name="Telecine Pipoca SD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Pipoca SD
+#EXTINF:0 tvg-name="Telecine Pipoca SD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Pipoca SD
 http://watch.com/Telecinesd
 
-#EXTINF:0 tvg-name="Telecine Pipoca SD²" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Pipoca SD²
+#EXTINF:0 tvg-name="Telecine Pipoca SD²" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Pipoca SD²
 http://watch.com/121/Telecinesd2
 
-#EXTINF:0 tvg-name="Telecine Premium FHD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Premium FHD
+#EXTINF:0 tvg-name="Telecine Premium FHD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Premium FHD
 http://watch.com/Telecinefhd
 
-#EXTINF:0 tvg-name="Telecine Premium H265" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Premium H265
+#EXTINF:0 tvg-name="Telecine Premium H265" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Premium H265
 http://watch.com/Telecineh265
 
-#EXTINF:0 tvg-name="Telecine Premium HD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Premium HD
+#EXTINF:0 tvg-name="Telecine Premium HD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Premium HD
 http://watch.com/Telecinehd
 
-#EXTINF:0 tvg-name="Telecine Premium HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="TELECINE",Telecine Premium HD²
+#EXTINF:0 tvg-name="Telecine Premium HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="TELECINE",Telecine Premium HD²
 http://watch.com/Telecinehd2
 
-#EXTINF:0 tvg-name="Telecine Premium SD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Premium SD
+#EXTINF:0 tvg-name="Telecine Premium SD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Premium SD
 http://watch.com/Telecinesd
 
-#EXTINF:0 tvg-name="Telecine Premium SD²" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Premium SD²
+#EXTINF:0 tvg-name="Telecine Premium SD²" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Premium SD²
 http://watch.com/121/Telecinesd2
 
-#EXTINF:0 tvg-name="Telecine Touch FHD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Touch FHD
+#EXTINF:0 tvg-name="Telecine Touch FHD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Touch FHD
 http://watch.com/Telecinefhd
 
-#EXTINF:0 tvg-name="Telecine Touch H265" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Touch H265
+#EXTINF:0 tvg-name="Telecine Touch H265" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Touch H265
 http://watch.com/Telecineh265
 
-#EXTINF:0 tvg-name="Telecine Touch HD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Touch HD
+#EXTINF:0 tvg-name="Telecine Touch HD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Touch HD
 http://watch.com/Telecinehd
 
-#EXTINF:0 tvg-name="Telecine Touch HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="TELECINE",Telecine Touch HD²
+#EXTINF:0 tvg-name="Telecine Touch HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="TELECINE",Telecine Touch HD²
 http://watch.com/Telecinehd2
 
-#EXTINF:0 tvg-name="Telecine Touch SD" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Touch SD
+#EXTINF:0 tvg-name="Telecine Touch SD" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Touch SD
 http://watch.com/Telecinesd
 
-#EXTINF:0 tvg-name="Telecine Touch SD²" tvg-id="Telecine.br" tvg-logo="logo.png" group-title="TELECINE",Telecine Touch SD²
+#EXTINF:0 tvg-name="Telecine Touch SD²" tvg-id="Telecine.br" tvg-logo="logo.png" tvg-group="TELECINE",Telecine Touch SD²
 http://watch.com/121/Telecinesd2
 
-#EXTINF:0 tvg-name="HBO FHD" tvg-id="HBO.br" tvg-logo="logo.png" group-title="HBO",HBO FHD
+#EXTINF:0 tvg-name="HBO FHD" tvg-id="HBO.br" tvg-logo="logo.png" tvg-group="HBO",HBO FHD
 http://watch.com/HBOfhd
 
-#EXTINF:0 tvg-name="HBO H265" tvg-id="HBO.br" tvg-logo="logo.png" group-title="HBO",HBO H265
+#EXTINF:0 tvg-name="HBO H265" tvg-id="HBO.br" tvg-logo="logo.png" tvg-group="HBO",HBO H265
 http://watch.com/HBOh265
 
-#EXTINF:0 tvg-id="HBO.br" tvg-name="HBO HD" tvg-logo="logo.png" group-title="HBO",HBO HD
+#EXTINF:0 tvg-id="HBO.br" tvg-name="HBO HD" tvg-logo="logo.png" tvg-group="HBO",HBO HD
 http://watch.com/HBOhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="HBO HD²" tvg-id="chanel.br"  group-title="HBO",HBO HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="HBO HD²" tvg-id="chanel.br"  tvg-group="HBO",HBO HD²
 http://watch.com/HBOhd2
 
-#EXTINF:0 tvg-name="HBO SD" tvg-id="HBO.br" tvg-logo="logo.png" group-title="HBO",HBO SD
+#EXTINF:0 tvg-name="HBO SD" tvg-id="HBO.br" tvg-logo="logo.png" tvg-group="HBO",HBO SD
 http://watch.com/HBOsd
 
-#EXTINF:0 tvg-name="HBO FAMILY FHD" tvg-id="HBOFAMILY.BR" tvg-logo="logo.png" group-title="HBO",HBO FAMILY FHD
+#EXTINF:0 tvg-name="HBO FAMILY FHD" tvg-id="HBOFAMILY.BR" tvg-logo="logo.png" tvg-group="HBO",HBO FAMILY FHD
 http://watch.com/HBOFAMILYfhd
 
-#EXTINF:0 tvg-name="HBO FAMILY H265" tvg-id="HBOFAMILY.BR" tvg-logo="logo.png" group-title="HBO",HBO FAMILY H265
+#EXTINF:0 tvg-name="HBO FAMILY H265" tvg-id="HBOFAMILY.BR" tvg-logo="logo.png" tvg-group="HBO",HBO FAMILY H265
 http://watch.com/HBOFAMILYh265
 
-#EXTINF:0 tvg-id="HBOFAMILY.BR" tvg-name="HBO FAMILY HD" tvg-logo="logo.png" group-title="HBO",HBO FAMILY HD
+#EXTINF:0 tvg-id="HBOFAMILY.BR" tvg-name="HBO FAMILY HD" tvg-logo="logo.png" tvg-group="HBO",HBO FAMILY HD
 http://watch.com/HBOFAMILYhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="HBO FAMILY HD²" tvg-id="chanel.br"  group-title="HBO",HBO FAMILY HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="HBO FAMILY HD²" tvg-id="chanel.br"  tvg-group="HBO",HBO FAMILY HD²
 http://watch.com/HBOFAMILYhd2
 
-#EXTINF:0 tvg-name="HBO FAMILY SD" tvg-id="HBOFAMILY.BR" tvg-logo="logo.png" group-title="HBO",HBO FAMILY SD
+#EXTINF:0 tvg-name="HBO FAMILY SD" tvg-id="HBOFAMILY.BR" tvg-logo="logo.png" tvg-group="HBO",HBO FAMILY SD
 http://watch.com/HBOFAMILYsd
 
-#EXTINF:0 tvg-name="HBO FAMILY SD²" tvg-id="HBOFAMILY.BR" tvg-logo="logo.png" group-title="HBO",HBO FAMILY SD²
+#EXTINF:0 tvg-name="HBO FAMILY SD²" tvg-id="HBOFAMILY.BR" tvg-logo="logo.png" tvg-group="HBO",HBO FAMILY SD²
 http://watch.com/121/HBOFAMILYsd2
 
-#EXTINF:0 tvg-name="HBO PLUS FHD" tvg-id="HBO.BR" tvg-logo="logo.png" group-title="HBO",HBO PLUS FHD
+#EXTINF:0 tvg-name="HBO PLUS FHD" tvg-id="HBO.BR" tvg-logo="logo.png" tvg-group="HBO",HBO PLUS FHD
 http://watch.com/HBOPLUSfhd
 
-#EXTINF:0 tvg-name="HBO PLUS H265" tvg-id="HBO.BR" tvg-logo="logo.png" group-title="HBO",HBO PLUS H265
+#EXTINF:0 tvg-name="HBO PLUS H265" tvg-id="HBO.BR" tvg-logo="logo.png" tvg-group="HBO",HBO PLUS H265
 http://watch.com/HBOPLUSh265
 
-#EXTINF:0 tvg-id="HBO.BR" tvg-name="HBO PLUS HD" tvg-logo="logo.png" group-title="HBO",HBO PLUS HD
+#EXTINF:0 tvg-id="HBO.BR" tvg-name="HBO PLUS HD" tvg-logo="logo.png" tvg-group="HBO",HBO PLUS HD
 http://watch.com/HBOPLUShd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="HBO PLUS HD²" tvg-id="chanel.br"  group-title="HBO",HBO PLUS HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="HBO PLUS HD²" tvg-id="chanel.br"  tvg-group="HBO",HBO PLUS HD²
 http://watch.com/HBOPLUShd2
 
-#EXTINF:0 tvg-name="HBO PLUS SD" tvg-id="HBO.BR" tvg-logo="logo.png" group-title="HBO",HBO PLUS SD
+#EXTINF:0 tvg-name="HBO PLUS SD" tvg-id="HBO.BR" tvg-logo="logo.png" tvg-group="HBO",HBO PLUS SD
 http://watch.com/HBOPLUSsd
 
-#EXTINF:0 tvg-name="HBO PLUS SD²" tvg-id="HBO.BR" tvg-logo="logo.png" group-title="HBO",HBO PLUS SD²
+#EXTINF:0 tvg-name="HBO PLUS SD²" tvg-id="HBO.BR" tvg-logo="logo.png" tvg-group="HBO",HBO PLUS SD²
 http://watch.com/121/HBOPLUSsd2
 
-#EXTINF:0 tvg-name="HBO Mundi FHD" tvg-id="HBO.BR" tvg-logo="logo.png" group-title="HBO",HBO Mundi FHD
+#EXTINF:0 tvg-name="HBO Mundi FHD" tvg-id="HBO.BR" tvg-logo="logo.png" tvg-group="HBO",HBO Mundi FHD
 http://watch.com/HBOMundifhd
 
-#EXTINF:0 tvg-name="HBO Mundi H265" tvg-id="HBO.BR" tvg-logo="logo.png" group-title="HBO",HBO Mundi H265
+#EXTINF:0 tvg-name="HBO Mundi H265" tvg-id="HBO.BR" tvg-logo="logo.png" tvg-group="HBO",HBO Mundi H265
 http://watch.com/HBOMundih265
 
-#EXTINF:0 tvg-id="HBO.BR" tvg-name="HBO Mundi HD" tvg-logo="logo.png" group-title="HBO",HBO Mundi HD
+#EXTINF:0 tvg-id="HBO.BR" tvg-name="HBO Mundi HD" tvg-logo="logo.png" tvg-group="HBO",HBO Mundi HD
 http://watch.com/HBOMundihd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="HBO Mundi HD²" tvg-id="chanel.br"  group-title="HBO",HBO Mundi HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="HBO Mundi HD²" tvg-id="chanel.br"  tvg-group="HBO",HBO Mundi HD²
 http://watch.com/HBOMundihd2
 
-#EXTINF:0 tvg-name="HBO Mundi SD" tvg-id="HBO.BR" tvg-logo="logo.png" group-title="HBO",HBO Mundi SD
+#EXTINF:0 tvg-name="HBO Mundi SD" tvg-id="HBO.BR" tvg-logo="logo.png" tvg-group="HBO",HBO Mundi SD
 http://watch.com/HBOMundisd
 
-#EXTINF:0 tvg-name="HBO Mundi SD²" tvg-id="HBO.BR" tvg-logo="logo.png" group-title="HBO",HBO Mundi SD²
+#EXTINF:0 tvg-name="HBO Mundi SD²" tvg-id="HBO.BR" tvg-logo="logo.png" tvg-group="HBO",HBO Mundi SD²
 http://watch.com/121/HBOMundisd2
 
-#EXTINF:0 tvg-name="HBO Signature FHD" tvg-id="HBO.BR" tvg-logo="logo.png" group-title="HBO",HBO Signature FHD
+#EXTINF:0 tvg-name="HBO Signature FHD" tvg-id="HBO.BR" tvg-logo="logo.png" tvg-group="HBO",HBO Signature FHD
 http://watch.com/HBOSignaturefhd
 
-#EXTINF:0 tvg-name="HBO Signature H265" tvg-id="HBO.BR" tvg-logo="logo.png" group-title="HBO",HBO Signature H265
+#EXTINF:0 tvg-name="HBO Signature H265" tvg-id="HBO.BR" tvg-logo="logo.png" tvg-group="HBO",HBO Signature H265
 http://watch.com/HBOSignatureh265
 
-#EXTINF:0 tvg-id="HBO.BR" tvg-name="HBO Signature HD" tvg-logo="logo.png" group-title="HBO",HBO Signature HD
+#EXTINF:0 tvg-id="HBO.BR" tvg-name="HBO Signature HD" tvg-logo="logo.png" tvg-group="HBO",HBO Signature HD
 http://watch.com/HBOSignaturehd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="HBO Signature HD²" tvg-id="chanel.br"  group-title="HBO",HBO Signature HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="HBO Signature HD²" tvg-id="chanel.br"  tvg-group="HBO",HBO Signature HD²
 http://watch.com/HBOSignaturehd2
 
-#EXTINF:0 tvg-name="HBO Signature SD" tvg-id="HBO.BR" tvg-logo="logo.png" group-title="HBO",HBO Signature SD
+#EXTINF:0 tvg-name="HBO Signature SD" tvg-id="HBO.BR" tvg-logo="logo.png" tvg-group="HBO",HBO Signature SD
 http://watch.com/HBOSignaturesd
 
-#EXTINF:0 tvg-name="HBO Signature SD²" tvg-id="HBO.BR" tvg-logo="logo.png" group-title="HBO",HBO Signature SD²
+#EXTINF:0 tvg-name="HBO Signature SD²" tvg-id="HBO.BR" tvg-logo="logo.png" tvg-group="HBO",HBO Signature SD²
 http://watch.com/121/HBOSignaturesd2
 
-#EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 4K" tvg-logo="logo.png" group-title="CANAIS 4K",CHANNEL MAX 01 4K
+#EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 4K" tvg-logo="logo.png" tvg-group="CANAIS 4K",CHANNEL MAX 01 4K
 http://watch.com/9808/channelmax4k.m3u8
 
-#EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 FHD" tvg-logo="logo.png" group-title="PAY-PER-VIEW",CHANNEL MAX 01 FHD
+#EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 FHD" tvg-logo="logo.png" tvg-group="PAY-PER-VIEW",CHANNEL MAX 01 FHD
 http://watch.com/9808/channelmaxfhd.m3u8
 
-#EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 HD" tvg-logo="logo.png" group-title="PAY-PER-VIEW",CHANNEL MAX 01 HD
+#EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 HD" tvg-logo="logo.png" tvg-group="PAY-PER-VIEW",CHANNEL MAX 01 HD
 http://watch.com/9808/channelmaxhd.m3u8
 
-#EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 HD²" tvg-logo="logo.png" group-title="PAY-PER-VIEW",CHANNEL MAX 01 HD²
+#EXTINF:-1 tvg-id="" tvg-name="CHANNEL MAX 01 HD²" tvg-logo="logo.png" tvg-group="PAY-PER-VIEW",CHANNEL MAX 01 HD²
 http://watch.com/9808/channelmaxhd2.m3u8
 
-#EXTINF:-1 tvg-id="cnn.br" tvg-name="NOTICIAS 01" tvg-logo="logo.png" group-title="NOTICIAS",NOTICIAS 01 FHD
+#EXTINF:-1 tvg-id="cnn.br" tvg-name="NOTICIAS 01" tvg-logo="logo.png" tvg-group="NOTICIAS",NOTICIAS 01 FHD
 http://watch.m3u8/1260573/noticias01fhd.m3u8
 
-#EXTINF:-1 tvg-id="cnn.br" tvg-name="NOTICIAS 02" tvg-logo="logo.png" group-title="NOTICIAS",NOTICIAS 02 FHD
+#EXTINF:-1 tvg-id="cnn.br" tvg-name="NOTICIAS 02" tvg-logo="logo.png" tvg-group="NOTICIAS",NOTICIAS 02 FHD
 http://watch.m3u8/1260573/noticias02fhd.m3u8
 
-#EXTINF:-1 tvg-id="cnn.br" tvg-name="NOTICIAS 03" tvg-logo="logo.png" group-title="NOTICIAS",NOTICIAS 03 FHD
+#EXTINF:-1 tvg-id="cnn.br" tvg-name="NOTICIAS 03" tvg-logo="logo.png" tvg-group="NOTICIAS",NOTICIAS 03 FHD
 http://watch.m3u8/1260573/noticias03fhd.m3u8
 
-#EXTINF:0 tvg-name="GLOBO SP 4K" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO SP 4K
+#EXTINF:0 tvg-name="GLOBO SP 4K" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO SP 4K
 http://watch.com/GLOBOfhd
 
-#EXTINF:0 tvg-name="GLOBO SP FHD" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO SP FHD
+#EXTINF:0 tvg-name="GLOBO SP FHD" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO SP FHD
 http://watch.com/GLOBOfhd
 
-#EXTINF:0 tvg-name="GLOBO SP H265" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO SP H265
+#EXTINF:0 tvg-name="GLOBO SP H265" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO SP H265
 http://watch.com/GLOBOh265
 
-#EXTINF:0 tvg-id="GLOBO.br" tvg-name="GLOBO SP HD" tvg-logo="logo.png" group-title="ABERTOS",GLOBO SP HD
+#EXTINF:0 tvg-id="GLOBO.br" tvg-name="GLOBO SP HD" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO SP HD
 http://watch.com/GLOBOhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="GLOBO SP HD²" tvg-id="chanel.br"  group-title="ABERTOS",GLOBO SP HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="GLOBO SP HD²" tvg-id="chanel.br"  tvg-group="ABERTOS",GLOBO SP HD²
 http://watch.com/GLOBOhd2
 
-#EXTINF:0 tvg-name="GLOBO SP SD" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO SP SD
+#EXTINF:0 tvg-name="GLOBO SP SD" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO SP SD
 http://watch.com/GLOBOsd
 
-#EXTINF:0 tvg-name="GLOBO SP SD²" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO SP SD²
+#EXTINF:0 tvg-name="GLOBO SP SD²" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO SP SD²
 http://watch.com/121/GLOBOsd2
 
-#EXTINF:0 tvg-name="GLOBO SC FHD" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO SC FHD
+#EXTINF:0 tvg-name="GLOBO SC FHD" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO SC FHD
 http://watch.com/GLOBOfhd
 
-#EXTINF:0 tvg-name="GLOBO SC H265" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO SC H265
+#EXTINF:0 tvg-name="GLOBO SC H265" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO SC H265
 http://watch.com/GLOBOh265
 
-#EXTINF:0 tvg-id="GLOBO.br" tvg-name="GLOBO SC HD" tvg-logo="logo.png" group-title="ABERTOS",GLOBO SC HD
+#EXTINF:0 tvg-id="GLOBO.br" tvg-name="GLOBO SC HD" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO SC HD
 http://watch.com/GLOBOhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="GLOBO SC HD²" tvg-id="chanel.br"  group-title="ABERTOS",GLOBO SC HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="GLOBO SC HD²" tvg-id="chanel.br"  tvg-group="ABERTOS",GLOBO SC HD²
 http://watch.com/GLOBOhd2
 
-#EXTINF:0 tvg-name="GLOBO SC SD" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO SC SD
+#EXTINF:0 tvg-name="GLOBO SC SD" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO SC SD
 http://watch.com/GLOBOsd
 
-#EXTINF:0 tvg-name="GLOBO SC SD²" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO SC SD²
+#EXTINF:0 tvg-name="GLOBO SC SD²" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO SC SD²
 http://watch.com/121/GLOBOsd2
 
-#EXTINF:0 tvg-name="GLOBO MG FHD" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO MG FHD
+#EXTINF:0 tvg-name="GLOBO MG FHD" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO MG FHD
 http://watch.com/GLOBOfhd
 
-#EXTINF:0 tvg-name="GLOBO MG H265" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO MG H265
+#EXTINF:0 tvg-name="GLOBO MG H265" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO MG H265
 http://watch.com/GLOBOh265
 
-#EXTINF:0 tvg-id="GLOBO.br" tvg-name="GLOBO MG HD" tvg-logo="logo.png" group-title="ABERTOS",GLOBO MG HD
+#EXTINF:0 tvg-id="GLOBO.br" tvg-name="GLOBO MG HD" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO MG HD
 http://watch.com/GLOBOhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="GLOBO MG HD²" tvg-id="chanel.br"  group-title="ABERTOS",GLOBO MG HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="GLOBO MG HD²" tvg-id="chanel.br"  tvg-group="ABERTOS",GLOBO MG HD²
 http://watch.com/GLOBOhd2
 
-#EXTINF:0 tvg-name="GLOBO MG SD" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO MG SD
+#EXTINF:0 tvg-name="GLOBO MG SD" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO MG SD
 http://watch.com/GLOBOsd
 
-#EXTINF:0 tvg-name="GLOBO MG SD²" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO MG SD²
+#EXTINF:0 tvg-name="GLOBO MG SD²" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO MG SD²
 http://watch.com/121/GLOBOsd2
 
-#EXTINF:0 tvg-name="GLOBO RS FHD" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO RS FHD
+#EXTINF:0 tvg-name="GLOBO RS FHD" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO RS FHD
 http://watch.com/GLOBOfhd
 
-#EXTINF:0 tvg-name="GLOBO RS H265" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO RS H265
+#EXTINF:0 tvg-name="GLOBO RS H265" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO RS H265
 http://watch.com/GLOBOh265
 
-#EXTINF:0 tvg-id="GLOBO.br" tvg-name="GLOBO RS HD" tvg-logo="logo.png" group-title="ABERTOS",GLOBO RS HD
+#EXTINF:0 tvg-id="GLOBO.br" tvg-name="GLOBO RS HD" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO RS HD
 http://watch.com/GLOBOhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="GLOBO RS HD²" tvg-id="chanel.br"  group-title="ABERTOS",GLOBO RS HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="GLOBO RS HD²" tvg-id="chanel.br"  tvg-group="ABERTOS",GLOBO RS HD²
 http://watch.com/GLOBOhd2
 
-#EXTINF:0 tvg-name="GLOBO RS SD" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO RS SD
+#EXTINF:0 tvg-name="GLOBO RS SD" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO RS SD
 http://watch.com/GLOBOsd
 
-#EXTINF:0 tvg-name="GLOBO RS SD²" tvg-id="GLOBO.br" tvg-logo="logo.png" group-title="ABERTOS",GLOBO RS SD²
+#EXTINF:0 tvg-name="GLOBO RS SD²" tvg-id="GLOBO.br" tvg-logo="logo.png" tvg-group="ABERTOS",GLOBO RS SD²
 http://watch.com/121/GLOBOsd2
 
-#EXTINF:0 tvg-name="BAND SP 4K" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND SP 4K
+#EXTINF:0 tvg-name="BAND SP 4K" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND SP 4K
 http://watch.com/BANDfhd
 
-#EXTINF:0 tvg-name="BAND SP FHD" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND SP FHD
+#EXTINF:0 tvg-name="BAND SP FHD" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND SP FHD
 http://watch.com/BANDfhd
 
-#EXTINF:0 tvg-name="BAND SP H265" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND SP H265
+#EXTINF:0 tvg-name="BAND SP H265" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND SP H265
 http://watch.com/BANDh265
 
-#EXTINF:0 tvg-id="BAND.br" tvg-name="BAND SP HD" tvg-logo="logo.png" group-title="ABERTOS",BAND SP HD
+#EXTINF:0 tvg-id="BAND.br" tvg-name="BAND SP HD" tvg-logo="logo.png" tvg-group="ABERTOS",BAND SP HD
 http://watch.com/BANDhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="BAND SP HD²" tvg-id="chanel.br"  group-title="ABERTOS",BAND SP HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="BAND SP HD²" tvg-id="chanel.br"  tvg-group="ABERTOS",BAND SP HD²
 http://watch.com/BANDhd2
 
-#EXTINF:0 tvg-name="BAND SP SD" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND SP SD
+#EXTINF:0 tvg-name="BAND SP SD" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND SP SD
 http://watch.com/BANDOsd
 
-#EXTINF:0 tvg-name="BAND SP SD²" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND SP SD²
+#EXTINF:0 tvg-name="BAND SP SD²" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND SP SD²
 http://watch.com/121/BANDsd2
 
-#EXTINF:0 tvg-name="BAND SC FHD" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND SC FHD
+#EXTINF:0 tvg-name="BAND SC FHD" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND SC FHD
 http://watch.com/BANDfhd
 
-#EXTINF:0 tvg-name="BAND SC H265" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND SC H265
+#EXTINF:0 tvg-name="BAND SC H265" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND SC H265
 http://watch.com/BANDh265
 
-#EXTINF:0 tvg-id="BAND.br" tvg-name="BAND SC HD" tvg-logo="logo.png" group-title="ABERTOS",BAND SC HD
+#EXTINF:0 tvg-id="BAND.br" tvg-name="BAND SC HD" tvg-logo="logo.png" tvg-group="ABERTOS",BAND SC HD
 http://watch.com/BANDhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="BAND SC HD²" tvg-id="chanel.br"  group-title="ABERTOS",BAND SC HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="BAND SC HD²" tvg-id="chanel.br"  tvg-group="ABERTOS",BAND SC HD²
 http://watch.com/BANDhd2
 
-#EXTINF:0 tvg-name="BAND SC SD" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND SC SD
+#EXTINF:0 tvg-name="BAND SC SD" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND SC SD
 http://watch.com/BANDOsd
 
-#EXTINF:0 tvg-name="BAND SC SD²" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND SC SD²
+#EXTINF:0 tvg-name="BAND SC SD²" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND SC SD²
 http://watch.com/121/BANDsd2
 
-#EXTINF:0 tvg-name="BAND MG FHD" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND MG FHD
+#EXTINF:0 tvg-name="BAND MG FHD" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND MG FHD
 http://watch.com/BANDfhd
 
-#EXTINF:0 tvg-name="BAND MG H265" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND MG H265
+#EXTINF:0 tvg-name="BAND MG H265" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND MG H265
 http://watch.com/BANDh265
 
-#EXTINF:0 tvg-id="BAND.br" tvg-name="BAND MG HD" tvg-logo="logo.png" group-title="ABERTOS",BAND MG HD
+#EXTINF:0 tvg-id="BAND.br" tvg-name="BAND MG HD" tvg-logo="logo.png" tvg-group="ABERTOS",BAND MG HD
 http://watch.com/BANDhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="BAND MG HD²" tvg-id="chanel.br"  group-title="ABERTOS",BAND MG HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="BAND MG HD²" tvg-id="chanel.br"  tvg-group="ABERTOS",BAND MG HD²
 http://watch.com/BANDhd2
 
-#EXTINF:0 tvg-name="BAND MG SD" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND MG SD
+#EXTINF:0 tvg-name="BAND MG SD" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND MG SD
 http://watch.com/BANDOsd
 
-#EXTINF:0 tvg-name="BAND MG SD²" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND MG SD²
+#EXTINF:0 tvg-name="BAND MG SD²" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND MG SD²
 http://watch.com/121/BANDsd2
 
-#EXTINF:0 tvg-name="BAND RS FHD" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND RS FHD
+#EXTINF:0 tvg-name="BAND RS FHD" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND RS FHD
 http://watch.com/BANDfhd
 
-#EXTINF:0 tvg-name="BAND RS H265" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND RS H265
+#EXTINF:0 tvg-name="BAND RS H265" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND RS H265
 http://watch.com/BANDh265
 
-#EXTINF:0 tvg-id="BAND.br" tvg-name="BAND RS HD" tvg-logo="logo.png" group-title="ABERTOS",BAND RS HD
+#EXTINF:0 tvg-id="BAND.br" tvg-name="BAND RS HD" tvg-logo="logo.png" tvg-group="ABERTOS",BAND RS HD
 http://watch.com/BANDhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="BAND RS HD²" tvg-id="chanel.br"  group-title="ABERTOS",BAND RS HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="BAND RS HD²" tvg-id="chanel.br"  tvg-group="ABERTOS",BAND RS HD²
 http://watch.com/BANDhd2
 
-#EXTINF:0 tvg-name="BAND RS SD" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND RS SD
+#EXTINF:0 tvg-name="BAND RS SD" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND RS SD
 http://watch.com/BANDOsd
 
-#EXTINF:0 tvg-name="BAND RS SD²" tvg-id="BAND.br" tvg-logo="logo.png" group-title="ABERTOS",BAND RS SD²
+#EXTINF:0 tvg-name="BAND RS SD²" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="ABERTOS",BAND RS SD²
 http://watch.com/121/BANDsd2
 
-#EXTINF:0 tvg-name="CNN FHD" tvg-id="CNN.br" tvg-logo="logo.png" group-title="NOTÍCIAS",CNN FHD
+#EXTINF:0 tvg-name="CNN FHD" tvg-id="CNN.br" tvg-logo="logo.png" tvg-group="NOTÍCIAS",CNN FHD
 http://watch.com/CNNfhd
 
-#EXTINF:0 tvg-name="CNN H265" tvg-id="CNN.br" tvg-logo="logo.png" group-title="NOTÍCIAS",CNN H265
+#EXTINF:0 tvg-name="CNN H265" tvg-id="CNN.br" tvg-logo="logo.png" tvg-group="NOTÍCIAS",CNN H265
 http://watch.com/CNNh265
 
-#EXTINF:0 tvg-id="CNN.br" tvg-name="CNN HD" tvg-logo="logo.png" group-title="NOTÍCIAS",CNN HD
+#EXTINF:0 tvg-id="CNN.br" tvg-name="CNN HD" tvg-logo="logo.png" tvg-group="NOTÍCIAS",CNN HD
 http://watch.com/CNNhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="CNN HD²" tvg-id="chanel.br"  group-title="NOTÍCIAS",CNN HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="CNN HD²" tvg-id="chanel.br"  tvg-group="NOTÍCIAS",CNN HD²
 http://watch.com/CNNhd2
 
-#EXTINF:0 tvg-name="CNN SD" tvg-id="CNN.br" tvg-logo="logo.png" group-title="NOTÍCIAS",CNN SD
+#EXTINF:0 tvg-name="CNN SD" tvg-id="CNN.br" tvg-logo="logo.png" tvg-group="NOTÍCIAS",CNN SD
 http://watch.com/CNNsd
 
-#EXTINF:0 tvg-name="CNN SD²" tvg-id="CNN.br" tvg-logo="logo.png" group-title="NOTÍCIAS",CNN SD²
+#EXTINF:0 tvg-name="CNN SD²" tvg-id="CNN.br" tvg-logo="logo.png" tvg-group="NOTÍCIAS",CNN SD²
 http://watch.com/121/CNNsd2
 
-#EXTINF:0 tvg-name="BAND NEWS FHD" tvg-id="BAND.br" tvg-logo="logo.png" group-title="NOTÍCIAS",BAND NEWS FHD
+#EXTINF:0 tvg-name="BAND NEWS FHD" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="NOTÍCIAS",BAND NEWS FHD
 http://watch.com/BANDfhd
 
-#EXTINF:0 tvg-name="BAND NEWS H265" tvg-id="BAND.br" tvg-logo="logo.png" group-title="NOTÍCIAS",BAND NEWS H265
+#EXTINF:0 tvg-name="BAND NEWS H265" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="NOTÍCIAS",BAND NEWS H265
 http://watch.com/BANDh265
 
-#EXTINF:0 tvg-id="BAND.br" tvg-name="BAND NEWS HD" tvg-logo="logo.png" group-title="NOTÍCIAS",BAND NEWS HD
+#EXTINF:0 tvg-id="BAND.br" tvg-name="BAND NEWS HD" tvg-logo="logo.png" tvg-group="NOTÍCIAS",BAND NEWS HD
 http://watch.com/BANDhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="BAND NEWS HD²" tvg-id="chanel.br"  group-title="NOTÍCIAS",BAND NEWS HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="BAND NEWS HD²" tvg-id="chanel.br"  tvg-group="NOTÍCIAS",BAND NEWS HD²
 http://watch.com/BANDhd2
 
-#EXTINF:0 tvg-name="BAND NEWS SD" tvg-id="BAND.br" tvg-logo="logo.png" group-title="NOTÍCIAS",BAND NEWS SD
+#EXTINF:0 tvg-name="BAND NEWS SD" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="NOTÍCIAS",BAND NEWS SD
 http://watch.com/BANDsd
 
-#EXTINF:0 tvg-name="BAND NEWS SD²" tvg-id="BAND.br" tvg-logo="logo.png" group-title="NOTÍCIAS",BAND NEWS SD²
+#EXTINF:0 tvg-name="BAND NEWS SD²" tvg-id="BAND.br" tvg-logo="logo.png" tvg-group="NOTÍCIAS",BAND NEWS SD²
 http://watch.com/121/BANDsd2
 
-#EXTINF:-1 tvg-id="discovery.br" tvg-name="DISCOVERY 4K" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY 4K
+#EXTINF:-1 tvg-id="discovery.br" tvg-name="DISCOVERY 4K" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY 4K
 http://watch.m3u8/discoveryfhd.m3u8
 
-#EXTINF:-1 tvg-id="discovery.br" tvg-name="DISCOVERY FHD" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY FHD
+#EXTINF:-1 tvg-id="discovery.br" tvg-name="DISCOVERY FHD" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY FHD
 http://watch.m3u8/discoveryfhd.m3u8
 
-#EXTINF:0 tvg-name="DISCOVERY H&H FHD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY H&H FHD
+#EXTINF:0 tvg-name="DISCOVERY H&H FHD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY H&H FHD
 http://watch.com/DISCOVERYfhd
 
-#EXTINF:0 tvg-name="DISCOVERY H&H H265" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY H&H H265
+#EXTINF:0 tvg-name="DISCOVERY H&H H265" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY H&H H265
 http://watch.com/DISCOVERYh265
 
-#EXTINF:0 tvg-id="DISCOVERY.br" tvg-name="DISCOVERY H&H HD" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY H&H HD
+#EXTINF:0 tvg-id="DISCOVERY.br" tvg-name="DISCOVERY H&H HD" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY H&H HD
 http://watch.com/DISCOVERYhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="DISCOVERY H&H HD²" tvg-id="chanel.br"  group-title="DOCUMENTÁRIOS",DISCOVERY H&H HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="DISCOVERY H&H HD²" tvg-id="chanel.br"  tvg-group="DOCUMENTÁRIOS",DISCOVERY H&H HD²
 http://watch.com/DISCOVERYhd2
 
-#EXTINF:0 tvg-name="DISCOVERY H&H SD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY H&H SD
+#EXTINF:0 tvg-name="DISCOVERY H&H SD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY H&H SD
 http://watch.com/DISCOVERYOsd
 
-#EXTINF:0 tvg-name="DISCOVERY H&H SD²" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY H&H SD²
+#EXTINF:0 tvg-name="DISCOVERY H&H SD²" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY H&H SD²
 http://watch.com/121/DISCOVERYsd2
 
-#EXTINF:0 tvg-name="DISCOVERY TURBO FHD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY TURBO FHD
+#EXTINF:0 tvg-name="DISCOVERY TURBO FHD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY TURBO FHD
 http://watch.com/DISCOVERYfhd
 
-#EXTINF:0 tvg-name="DISCOVERY TURBO H265" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY TURBO H265
+#EXTINF:0 tvg-name="DISCOVERY TURBO H265" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY TURBO H265
 http://watch.com/DISCOVERYh265
 
-#EXTINF:0 tvg-name="DISCOVERY TURBO HD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY TURBO HD
+#EXTINF:0 tvg-name="DISCOVERY TURBO HD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY TURBO HD
 http://watch.com/DISCOVERYhd
 
-#EXTINF:0 tvg-name="DISCOVERY TURBO HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="DOCUMENTÁRIOS",DISCOVERY TURBO HD²
+#EXTINF:0 tvg-name="DISCOVERY TURBO HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="DOCUMENTÁRIOS",DISCOVERY TURBO HD²
 http://watch.com/DISCOVERYhd2
 
-#EXTINF:0 tvg-name="DISCOVERY TURBO SD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY TURBO SD
+#EXTINF:0 tvg-name="DISCOVERY TURBO SD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY TURBO SD
 http://watch.com/DISCOVERYOsd
 
-#EXTINF:0 tvg-name="DISCOVERY TURBO SD²" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY TURBO SD²
+#EXTINF:0 tvg-name="DISCOVERY TURBO SD²" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY TURBO SD²
 http://watch.com/121/DISCOVERYsd2
 
-#EXTINF:0 tvg-name="DISCOVERY ID FHD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY ID FHD
+#EXTINF:0 tvg-name="DISCOVERY ID FHD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY ID FHD
 http://watch.com/DISCOVERYfhd
 
-#EXTINF:0 tvg-name="DISCOVERY ID H265" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY ID H265
+#EXTINF:0 tvg-name="DISCOVERY ID H265" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY ID H265
 http://watch.com/DISCOVERYh265
 
-#EXTINF:0 tvg-name="DISCOVERY ID HD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY ID HD
+#EXTINF:0 tvg-name="DISCOVERY ID HD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY ID HD
 http://watch.com/DISCOVERYhd
 
-#EXTINF:0 tvg-name="DISCOVERY ID HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="DOCUMENTÁRIOS",DISCOVERY ID HD²
+#EXTINF:0 tvg-name="DISCOVERY ID HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="DOCUMENTÁRIOS",DISCOVERY ID HD²
 http://watch.com/DISCOVERYhd2
 
-#EXTINF:0 tvg-name="DISCOVERY ID SD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY ID SD
+#EXTINF:0 tvg-name="DISCOVERY ID SD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY ID SD
 http://watch.com/DISCOVERYOsd
 
-#EXTINF:0 tvg-name="DISCOVERY ID SD²" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY ID SD²
+#EXTINF:0 tvg-name="DISCOVERY ID SD²" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY ID SD²
 http://watch.com/121/DISCOVERYsd2
 
-#EXTINF:0 tvg-name="DISCOVERY SCIENCE FHD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY SCIENCE FHD
+#EXTINF:0 tvg-name="DISCOVERY SCIENCE FHD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY SCIENCE FHD
 http://watch.com/DISCOVERYfhd
 
-#EXTINF:0 tvg-name="DISCOVERY SCIENCE H265" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY SCIENCE H265
+#EXTINF:0 tvg-name="DISCOVERY SCIENCE H265" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY SCIENCE H265
 http://watch.com/DISCOVERYh265
 
-#EXTINF:0 tvg-name="DISCOVERY SCIENCE HD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY SCIENCE HD
+#EXTINF:0 tvg-name="DISCOVERY SCIENCE HD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY SCIENCE HD
 http://watch.com/DISCOVERYhd
 
-#EXTINF:0 tvg-name="DISCOVERY SCIENCE HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="DOCUMENTÁRIOS",DISCOVERY SCIENCE HD²
+#EXTINF:0 tvg-name="DISCOVERY SCIENCE HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="DOCUMENTÁRIOS",DISCOVERY SCIENCE HD²
 http://watch.com/DISCOVERYhd2
 
-#EXTINF:0 tvg-name="DISCOVERY SCIENCE SD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY SCIENCE SD
+#EXTINF:0 tvg-name="DISCOVERY SCIENCE SD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY SCIENCE SD
 http://watch.com/DISCOVERYOsd
 
-#EXTINF:0 tvg-name="DISCOVERY SCIENCE SD²" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY SCIENCE SD²
+#EXTINF:0 tvg-name="DISCOVERY SCIENCE SD²" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY SCIENCE SD²
 http://watch.com/121/DISCOVERYsd2
 
-#EXTINF:0 tvg-name="DISCOVERY THEATER FHD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY THEATER FHD
+#EXTINF:0 tvg-name="DISCOVERY THEATER FHD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY THEATER FHD
 http://watch.com/DISCOVERYfhd
 
-#EXTINF:0 tvg-name="DISCOVERY THEATER H265" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY THEATER H265
+#EXTINF:0 tvg-name="DISCOVERY THEATER H265" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY THEATER H265
 http://watch.com/DISCOVERYh265
 
-#EXTINF:0 tvg-name="DISCOVERY THEATER HD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY THEATER HD
+#EXTINF:0 tvg-name="DISCOVERY THEATER HD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY THEATER HD
 http://watch.com/DISCOVERYhd
 
-#EXTINF:0 tvg-name="DISCOVERY THEATER HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="DOCUMENTÁRIOS",DISCOVERY THEATER HD²
+#EXTINF:0 tvg-name="DISCOVERY THEATER HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="DOCUMENTÁRIOS",DISCOVERY THEATER HD²
 http://watch.com/DISCOVERYhd2
 
-#EXTINF:0 tvg-name="DISCOVERY THEATER SD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY THEATER SD
+#EXTINF:0 tvg-name="DISCOVERY THEATER SD" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY THEATER SD
 http://watch.com/DISCOVERYOsd
 
-#EXTINF:0 tvg-name="DISCOVERY THEATER SD²" tvg-id="DISCOVERY.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",DISCOVERY THEATER SD²
+#EXTINF:0 tvg-name="DISCOVERY THEATER SD²" tvg-id="DISCOVERY.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",DISCOVERY THEATER SD²
 http://watch.com/121/DISCOVERYsd2
 
-#EXTINF:0 tvg-name="History FHD" tvg-id="History.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",History FHD
+#EXTINF:0 tvg-name="History FHD" tvg-id="History.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",History FHD
 http://watch.com/Historyfhd
 
-#EXTINF:0 tvg-name="History H265" tvg-id="History.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",History H265
+#EXTINF:0 tvg-name="History H265" tvg-id="History.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",History H265
 http://watch.com/Historyh265
 
-#EXTINF:0 tvg-id="History.br" tvg-name="History HD" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",History HD
+#EXTINF:0 tvg-id="History.br" tvg-name="History HD" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",History HD
 http://watch.com/Historyhd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="History HD²" tvg-id="chanel.br"  group-title="DOCUMENTÁRIOS",History HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="History HD²" tvg-id="chanel.br"  tvg-group="DOCUMENTÁRIOS",History HD²
 http://watch.com/Historyhd2
 
-#EXTINF:0 tvg-name="History SD" tvg-id="History.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",History SD
+#EXTINF:0 tvg-name="History SD" tvg-id="History.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",History SD
 http://watch.com/Historysd
 
-#EXTINF:0 tvg-name="History SD²" tvg-id="History.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",History SD²
+#EXTINF:0 tvg-name="History SD²" tvg-id="History.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",History SD²
 http://watch.com/121/Historysd2
 
-#EXTINF:0 tvg-name="H2 FHD" tvg-id="H2.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",H2 FHD
+#EXTINF:0 tvg-name="H2 FHD" tvg-id="H2.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",H2 FHD
 http://watch.com/H2fhd
 
-#EXTINF:0 tvg-name="H2 H265" tvg-id="H2.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",H2 H265
+#EXTINF:0 tvg-name="H2 H265" tvg-id="H2.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",H2 H265
 http://watch.com/H2h265
 
-#EXTINF:0 tvg-id="H2.br" tvg-name="H2 HD" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",H2 HD
+#EXTINF:0 tvg-id="H2.br" tvg-name="H2 HD" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",H2 HD
 http://watch.com/H2hd
 
-#EXTINF:0 tvg-logo="logo.png" tvg-name="H2 HD²" tvg-id="chanel.br"  group-title="DOCUMENTÁRIOS",H2 HD²
+#EXTINF:0 tvg-logo="logo.png" tvg-name="H2 HD²" tvg-id="chanel.br"  tvg-group="DOCUMENTÁRIOS",H2 HD²
 http://watch.com/H2hd2
 
-#EXTINF:0 tvg-name="H2 SD" tvg-id="H2.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",H2 SD
+#EXTINF:0 tvg-name="H2 SD" tvg-id="H2.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",H2 SD
 http://watch.com/H2sd
 
-#EXTINF:0 tvg-name="H2 SD²" tvg-id="H2.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",H2 SD²
+#EXTINF:0 tvg-name="H2 SD²" tvg-id="H2.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",H2 SD²
 http://watch.com/121/H2sd2
 
-#EXTINF:0 tvg-name="NATIONAL GEOGRAPHIC FHD" tvg-id="NATGEO.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",NATIONAL GEOGRAPHIC FHD
+#EXTINF:0 tvg-name="NATIONAL GEOGRAPHIC FHD" tvg-id="NATGEO.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",NATIONAL GEOGRAPHIC FHD
 http://watch.com/NATGEOfhd
 
-#EXTINF:0 tvg-name="NATIONAL GEOGRAPHIC H265" tvg-id="NATGEO.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",NATIONAL GEOGRAPHIC H265
+#EXTINF:0 tvg-name="NATIONAL GEOGRAPHIC H265" tvg-id="NATGEO.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",NATIONAL GEOGRAPHIC H265
 http://watch.com/NATGEOh265
 
-#EXTINF:0 tvg-name="NATIONAL GEOGRAPHIC HD" tvg-id="NATGEO.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",NATIONAL GEOGRAPHIC HD
+#EXTINF:0 tvg-name="NATIONAL GEOGRAPHIC HD" tvg-id="NATGEO.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",NATIONAL GEOGRAPHIC HD
 http://watch.com/NATGEOhd
 
-#EXTINF:0 tvg-name="NATIONAL GEOGRAPHIC HD²" tvg-logo="logo.png" tvg-id="chanel.br"  group-title="DOCUMENTÁRIOS",NATIONAL GEOGRAPHIC HD²
+#EXTINF:0 tvg-name="NATIONAL GEOGRAPHIC HD²" tvg-logo="logo.png" tvg-id="chanel.br"  tvg-group="DOCUMENTÁRIOS",NATIONAL GEOGRAPHIC HD²
 http://watch.com/NATGEOhd2
 
-#EXTINF:0 tvg-name="NATIONAL GEOGRAPHIC SD" tvg-id="NATGEO.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",NATIONAL GEOGRAPHIC SD
+#EXTINF:0 tvg-name="NATIONAL GEOGRAPHIC SD" tvg-id="NATGEO.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",NATIONAL GEOGRAPHIC SD
 http://watch.com/NATGEOOsd
 
-#EXTINF:0 tvg-name="NATIONAL GEOGRAPHIC SD²" tvg-id="NATGEO.br" tvg-logo="logo.png" group-title="DOCUMENTÁRIOS",NATIONAL GEOGRAPHIC SD²
+#EXTINF:0 tvg-name="NATIONAL GEOGRAPHIC SD²" tvg-id="NATGEO.br" tvg-logo="logo.png" tvg-group="DOCUMENTÁRIOS",NATIONAL GEOGRAPHIC SD²
 http://watch.com/121/NATGEOsd2
 
-#EXTINF:-1 tvg-name="007: Sem Tempo para Morrer (2021)" tvg-logo="movie.png" group-title="Coletânea | 007",007: Sem Tempo para Morrer (2021)
+#EXTINF:-1 tvg-name="007: Sem Tempo para Morrer (2021)" tvg-logo="movie.png" tvg-group="Coletânea | 007",007: Sem Tempo para Morrer (2021)
 http://watch.com/movie/98989.mp4
 
-#EXTINF:-1 tvg-name="007: Cassino Royale (2006)" tvg-logo="movie.png" group-title="Coletânea | 007",007: Cassino Royale (2006)
+#EXTINF:-1 tvg-name="007: Cassino Royale (2006)" tvg-logo="movie.png" tvg-group="Coletânea | 007",007: Cassino Royale (2006)
 http://watch.com/movie/98989.mp4
 
-#EXTINF:-1 tvg-name="007: Um Novo Dia para Morrer (2002)" tvg-logo="movie.png" group-title="Coletânea | 007",007: Um Novo Dia para Morrer (2002)
+#EXTINF:-1 tvg-name="007: Um Novo Dia para Morrer (2002)" tvg-logo="movie.png" tvg-group="Coletânea | 007",007: Um Novo Dia para Morrer (2002)
 http://watch.com/movie/98989.mp4
 
-#EXTINF:-1 tvg-name="007: Contra Spectre (2015)" tvg-logo="movie.png" group-title="Coletânea | 007",007: Contra Spectre (2015)
+#EXTINF:-1 tvg-name="007: Contra Spectre (2015)" tvg-logo="movie.png" tvg-group="Coletânea | 007",007: Contra Spectre (2015)
 http://watch.com/movie/98989.mp4
 
-#EXTINF:-1 tvg-name="007: O Espião Que Me Amava (1977)" tvg-logo="movie.png" group-title="Coletânea | 007",007: O Espião Que Me Amava (1977)
+#EXTINF:-1 tvg-name="007: O Espião Que Me Amava (1977)" tvg-logo="movie.png" tvg-group="Coletânea | 007",007: O Espião Que Me Amava (1977)
 http://watch.com/movie/98989.mp4
 
-#EXTINF:-1 tvg-name="007: Marcado para a Morte (1987)" tvg-logo="movie.png" group-title="Coletânea | 007",007: Marcado para a Morte (1987)
+#EXTINF:-1 tvg-name="007: Marcado para a Morte (1987)" tvg-logo="movie.png" tvg-group="Coletânea | 007",007: Marcado para a Morte (1987)
 http://watch.com/movie/98989.mp4
 
-#EXTINF:-1 tvg-name="007: Contra o Satânico Dr. No (1962)" tvg-logo="movie.png" group-title="Coletânea | 007",007: Contra o Satânico Dr. No (1962)
+#EXTINF:-1 tvg-name="007: Contra o Satânico Dr. No (1962)" tvg-logo="movie.png" tvg-group="Coletânea | 007",007: Contra o Satânico Dr. No (1962)
 http://watch.com/movie/98989.mp4
 
-#EXTINF:-1 tvg-name="007: Os Diamantes São Eternos (1971)" tvg-logo="movie.png" group-title="Coletânea | 007",007: Os Diamantes São Eternos (1971)
+#EXTINF:-1 tvg-name="007: Os Diamantes São Eternos (1971)" tvg-logo="movie.png" tvg-group="Coletânea | 007",007: Os Diamantes São Eternos (1971)
 http://watch.com/movie/98989.mp4
 
-#EXTINF:-1 tvg-name="007: Operação Skyfall (2012)" tvg-logo="movie.png" group-title="Coletânea | 007",007: Operação Skyfall (2012)
+#EXTINF:-1 tvg-name="007: Operação Skyfall (2012)" tvg-logo="movie.png" tvg-group="Coletânea | 007",007: Operação Skyfall (2012)
 http://watch.com/movie/98989.mp4
 
-#EXTINF:-1 tvg-name="Rambo I" tvg-logo="movie.png" group-title="Coletânea | Rambo",Rambo I
+#EXTINF:-1 tvg-name="Rambo I" tvg-logo="movie.png" tvg-group="Coletânea | Rambo",Rambo I
 http://watch.com/movie/98989.mp4
 
-#EXTINF:-1 tvg-name="Rambo II" tvg-logo="movie.png" group-title="Coletânea | Rambo",Rambo II
+#EXTINF:-1 tvg-name="Rambo II" tvg-logo="movie.png" tvg-group="Coletânea | Rambo",Rambo II
 http://watch.com/movie/98989.mp4
 
-#EXTINF:-1 tvg-name="Rambo II" tvg-logo="movie.png" group-title="Coletânea | Rambo",Rambo II
+#EXTINF:-1 tvg-name="Rambo II" tvg-logo="movie.png" tvg-group="Coletânea | Rambo",Rambo II
 http://watch.com/movie/98989.mp4
 
-#EXTINF:-1 tvg-name="Rambo III" tvg-logo="movie.png" group-title="Coletânea | Rambo",Rambo III
+#EXTINF:-1 tvg-name="Rambo III" tvg-logo="movie.png" tvg-group="Coletânea | Rambo",Rambo III
 http://watch.com/movie/98989.mp4
 
-#EXTINF:-1 tvg-name="Rambo IV (2008)" tvg-logo="movie.png" group-title="Coletânea | Rambo",Rambo IV (2008)
+#EXTINF:-1 tvg-name="Rambo IV (2008)" tvg-logo="movie.png" tvg-group="Coletânea | Rambo",Rambo IV (2008)
 http://watch.com/movie/98989.mp4
 
-#EXTINF:-1 tvg-name="Pulsação (2023)" tvg-logo="movie.png" group-title="Filmes | Drama",Pulsação (2023)
+#EXTINF:-1 tvg-name="Pulsação (2023)" tvg-logo="movie.png" tvg-group="Filmes | Drama",Pulsação (2023)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Antes da Dinastia (2023)" tvg-logo="movie.png" group-title="Filmes | Drama",Antes da Dinastia (2023)
+#EXTINF:-1 tvg-name="Antes da Dinastia (2023)" tvg-logo="movie.png" tvg-group="Filmes | Drama",Antes da Dinastia (2023)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Miller's Girl (2024)" tvg-logo="movie.png" group-title="Filmes | Drama",Miller's Girl (2024)
+#EXTINF:-1 tvg-name="Miller's Girl (2024)" tvg-logo="movie.png" tvg-group="Filmes | Drama",Miller's Girl (2024)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Flutuar (2024)" tvg-logo="movie.png" group-title="Filmes | Drama",Flutuar (2024)
+#EXTINF:-1 tvg-name="Flutuar (2024)" tvg-logo="movie.png" tvg-group="Filmes | Drama",Flutuar (2024)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="O Padeiro (2023)" tvg-logo="movie.png" group-title="Filmes | Drama",O Padeiro (2023)
+#EXTINF:-1 tvg-name="O Padeiro (2023)" tvg-logo="movie.png" tvg-group="Filmes | Drama",O Padeiro (2023)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Reeducando Molly (2023)" tvg-logo="movie.png" group-title="Filmes | Drama",Reeducando Molly (2023)
+#EXTINF:-1 tvg-name="Reeducando Molly (2023)" tvg-logo="movie.png" tvg-group="Filmes | Drama",Reeducando Molly (2023)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Uma Prova de Coragem (2024)" tvg-logo="movie.png" group-title="Filmes | Drama",Uma Prova de Coragem (2024)
+#EXTINF:-1 tvg-name="Uma Prova de Coragem (2024)" tvg-logo="movie.png" tvg-group="Filmes | Drama",Uma Prova de Coragem (2024)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Close (2022)" tvg-logo="movie.png" group-title="Filmes | Drama",Close (2022)
+#EXTINF:-1 tvg-name="Close (2022)" tvg-logo="movie.png" tvg-group="Filmes | Drama",Close (2022)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Confissões (2023)" tvg-logo="movie.png" group-title="Filmes | Drama",Confissões (2023)
+#EXTINF:-1 tvg-name="Confissões (2023)" tvg-logo="movie.png" tvg-group="Filmes | Drama",Confissões (2023)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Assine Aquí (2024)" tvg-logo="movie.png" group-title="Filmes | Drama",Assine Aquí (2024)
+#EXTINF:-1 tvg-name="Assine Aquí (2024)" tvg-logo="movie.png" tvg-group="Filmes | Drama",Assine Aquí (2024)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Armadilhas do Passado (2023)" tvg-logo="movie.png" group-title="Filmes | Drama",Armadilhas do Passado (2023)
+#EXTINF:-1 tvg-name="Armadilhas do Passado (2023)" tvg-logo="movie.png" tvg-group="Filmes | Drama",Armadilhas do Passado (2023)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="O Rito da Dança (2024)" tvg-logo="movie.png" group-title="Filmes | Drama",O Rito da Dança (2024)
+#EXTINF:-1 tvg-name="O Rito da Dança (2024)" tvg-logo="movie.png" tvg-group="Filmes | Drama",O Rito da Dança (2024)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Los impactados (2023)" tvg-logo="movie.png" group-title="Filmes | Drama",Los impactados (2023)
+#EXTINF:-1 tvg-name="Los impactados (2023)" tvg-logo="movie.png" tvg-group="Filmes | Drama",Los impactados (2023)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="A Casa Mal-Assombrada (2021)" tvg-logo="movie.png" group-title="Filmes | Drama",A Casa Mal-Assombrada (2021)
+#EXTINF:-1 tvg-name="A Casa Mal-Assombrada (2021)" tvg-logo="movie.png" tvg-group="Filmes | Drama",A Casa Mal-Assombrada (2021)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="O Impostor (2022)" tvg-logo="movie.png" group-title="Filmes | Drama",O Impostor (2022)
+#EXTINF:-1 tvg-name="O Impostor (2022)" tvg-logo="movie.png" tvg-group="Filmes | Drama",O Impostor (2022)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Náufrago (2000)" tvg-logo="movie.png" group-title="Filmes | Drama",Náufrago (2000)
+#EXTINF:-1 tvg-name="Náufrago (2000)" tvg-logo="movie.png" tvg-group="Filmes | Drama",Náufrago (2000)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Inverno Rigoroso (2016)" tvg-logo="movie.png" group-title="Filmes | Drama",Inverno Rigoroso (2016)
+#EXTINF:-1 tvg-name="Inverno Rigoroso (2016)" tvg-logo="movie.png" tvg-group="Filmes | Drama",Inverno Rigoroso (2016)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Cães de Guerra (2016)" tvg-logo="movie.png" group-title="Filmes | Drama",Cães de Guerra (2016)
+#EXTINF:-1 tvg-name="Cães de Guerra (2016)" tvg-logo="movie.png" tvg-group="Filmes | Drama",Cães de Guerra (2016)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Meu Nome Não é Johnny (2008)" tvg-logo="movie.png" group-title="Filmes | Drama",Meu Nome Não é Johnny (2008)
+#EXTINF:-1 tvg-name="Meu Nome Não é Johnny (2008)" tvg-logo="movie.png" tvg-group="Filmes | Drama",Meu Nome Não é Johnny (2008)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="A Aposta (2020)" tvg-logo="movie.png" group-title="Filmes | Drama",A Aposta (2020)
+#EXTINF:-1 tvg-name="A Aposta (2020)" tvg-logo="movie.png" tvg-group="Filmes | Drama",A Aposta (2020)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Procurando Nemo (2003)" tvg-logo="movie.png" group-title="Filmes | Animação / Infantil",Procurando Nemo (2003)
+#EXTINF:-1 tvg-name="Procurando Nemo (2003)" tvg-logo="movie.png" tvg-group="Filmes | Animação / Infantil",Procurando Nemo (2003)
 http://watch.com/movie/1231312.mp4
 
-#EXTINF:-1 tvg-name="Vida de Inseto (1998)" tvg-logo="movie.png" group-title="Filmes | Animação / Infantil",Vida de Inseto (1998)
+#EXTINF:-1 tvg-name="Vida de Inseto (1998)" tvg-logo="movie.png" tvg-group="Filmes | Animação / Infantil",Vida de Inseto (1998)
 http://watch.com/movie/2424323.mp4
 
-#EXTINF:-1 tvg-name="Ratatouille (2007)" tvg-logo="movie.png" group-title="Filmes | Animação / Infantil",Ratatouille (2007)
+#EXTINF:-1 tvg-name="Ratatouille (2007)" tvg-logo="movie.png" tvg-group="Filmes | Animação / Infantil",Ratatouille (2007)
 http://watch.com/movie/1524230.mp4
 
-#EXTINF:-1 tvg-name="The Last of Us (2023) S01E09" tvg-logo="serie.png" group-title="Séries | Max",The Last of Us (2023) S01E09
+#EXTINF:-1 tvg-name="The Last of Us (2023) S01E09" tvg-logo="serie.png" tvg-group="Séries | Max",The Last of Us (2023) S01E09
 http://watch.com/series/S01E09.mp4
 
-#EXTINF:-1 tvg-name="The Last of Us (2023) S01E08" tvg-logo="serie.png" group-title="Séries | Max",The Last of Us (2023) S01E08
+#EXTINF:-1 tvg-name="The Last of Us (2023) S01E08" tvg-logo="serie.png" tvg-group="Séries | Max",The Last of Us (2023) S01E08
 http://watch.com/series/S01E08.mp4
 
-#EXTINF:-1 tvg-name="The Last of Us (2023) S01E09" tvg-logo="serie.png" group-title="Séries | Max",The Last of Us (2023) S01E09
+#EXTINF:-1 tvg-name="The Last of Us (2023) S01E09" tvg-logo="serie.png" tvg-group="Séries | Max",The Last of Us (2023) S01E09
 http://watch.com/series/S01E09.mp4
 
-#EXTINF:-1 tvg-name="The Last of Us (2023) S01E10" tvg-logo="serie.png" group-title="Séries | Max",The Last of Us (2023) S01E10
+#EXTINF:-1 tvg-name="The Last of Us (2023) S01E10" tvg-logo="serie.png" tvg-group="Séries | Max",The Last of Us (2023) S01E10
 http://watch.com/series/S01E10.mp4
 
-#EXTINF:-1 tvg-name="The Boys S04E03" tvg-logo="serie.png" group-title="Séries | Amazon Prime Vídeo",The Boys S04E03
+#EXTINF:-1 tvg-name="The Boys S04E03" tvg-logo="serie.png" tvg-group="Séries | Amazon Prime Vídeo",The Boys S04E03
 http://watch.com/series/2324342.mp4
 
-#EXTINF:-1 tvg-name="The Boys S04E02" tvg-logo="serie.png" group-title="Séries | Amazon Prime Vídeo",The Boys S04E02
+#EXTINF:-1 tvg-name="The Boys S04E02" tvg-logo="serie.png" tvg-group="Séries | Amazon Prime Vídeo",The Boys S04E02
 http://watch.com/series/313213.mp4
 
-#EXTINF:-1 tvg-name="The Boys S04E01" tvg-logo="serie.png" group-title="Séries | Amazon Prime Vídeo",The Boys S04E01
+#EXTINF:-1 tvg-name="The Boys S04E01" tvg-logo="serie.png" tvg-group="Séries | Amazon Prime Vídeo",The Boys S04E01
 http://watch.com/series/21311.mp4
 
-#EXTINF:-1 tvg-name="Easy S01E07" tvg-logo="serie.png" group-title="Séries | Netflix",Easy S01E07
+#EXTINF:-1 tvg-name="Easy S01E07" tvg-logo="serie.png" tvg-group="Séries | Netflix",Easy S01E07
 http://watch.com/series/033261059/086882386/2021915.mp4
 
-#EXTINF:-1 tvg-name="Easy S01E06" tvg-logo="serie.png" group-title="Séries | Netflix",Easy S01E06
+#EXTINF:-1 tvg-name="Easy S01E06" tvg-logo="serie.png" tvg-group="Séries | Netflix",Easy S01E06
 http://watch.com/series/033261059/086882386/2021914.mp4
 
-#EXTINF:-1 tvg-name="Easy S01E05" tvg-logo="serie.png" group-title="Séries | Netflix",Easy S01E05
+#EXTINF:-1 tvg-name="Easy S01E05" tvg-logo="serie.png" tvg-group="Séries | Netflix",Easy S01E05
 http://watch.com/series/033261059/086882386/2021913.mp4
 
-#EXTINF:-1 tvg-name="Easy S01E04" tvg-logo="serie.png" group-title="Séries | Netflix",Easy S01E04
+#EXTINF:-1 tvg-name="Easy S01E04" tvg-logo="serie.png" tvg-group="Séries | Netflix",Easy S01E04
 http://watch.com/series/033261059/086882386/2021912.mp4
 
-#EXTINF:-1 tvg-name="Easy S01E03" tvg-logo="serie.png" group-title="Séries | Netflix",Easy S01E03
+#EXTINF:-1 tvg-name="Easy S01E03" tvg-logo="serie.png" tvg-group="Séries | Netflix",Easy S01E03
 http://watch.com/series/033261059/086882386/2021911.mp4
 
-#EXTINF:-1 tvg-name="Easy S01E02" tvg-logo="serie.png" group-title="Séries | Netflix",Easy S01E02
+#EXTINF:-1 tvg-name="Easy S01E02" tvg-logo="serie.png" tvg-group="Séries | Netflix",Easy S01E02
 http://watch.com/series/033261059/086882386/2021910.mp4
 
-#EXTINF:-1 tvg-name="Easy S01E01" tvg-logo="serie.png" group-title="Séries | Netflix",Easy S01E01
+#EXTINF:-1 tvg-name="Easy S01E01" tvg-logo="serie.png" tvg-group="Séries | Netflix",Easy S01E01
 http://watch.com/series/033261059/086882386/2021909.mp4
