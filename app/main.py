@@ -14,22 +14,22 @@ def main():
         print(" 3. Series")
         print("-1. Exit")
 
-        escolha = input("Enter the number of the desired option: ")
+        choice = input("Enter the number of the desired option: ")
         print()
 
-        if escolha == '1':
+        if choice == '1':
             os.system('clear')
             channel_groups_menu.show_menu(svc)
 
-        if escolha == '2':
+        if choice == '2':
             os.system('clear')
             movies_group_menu.show_menu(svc)
 
-        if escolha == '3':
+        if choice == '3':
             os.system('clear')
             series_group_menu.show_menu(svc)
 
-        if escolha == '-1':
+        if choice == '-1':
             print("Exiting...")
             break
 

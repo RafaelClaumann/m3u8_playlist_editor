@@ -8,21 +8,26 @@ import helpers as helpers
 def show_menu(svc: services.Services):
     while True:
         print("Choose an option:")
-        print(" 1. Remove low quality channels")
-        print(" 2. Remove channels groups")
-        print(" 3. Show channels groups")
+        print(" 1. Show channels groups")
+        print(" 2. Remove low quality channels")
+        print(" 3. Remove channels groups")
         print("-1. << Back to main menu >>")
 
         choice = input("Enter the number of the desired option: ")
         print()
 
         if choice == '1':
+            print("Groups found in the channel list:")
+            channels_groups = svc.get_channels_groups()
+            helpers.print_groups_with_indexes(channels_groups)
+
+        if choice == '2':
             print("This will remove channels that contains H265, HD², SD² or SD in their names.")
             if helpers.user_confirmation():
                 svc.remove_low_quality_channels()
                 print("Channels groups removed \n")
 
-        if choice == '2':
+        if choice == '3':
             channels_groups = svc.get_channels_groups()
             helpers.print_groups_with_indexes(groups=channels_groups)
 
@@ -35,11 +40,8 @@ def show_menu(svc: services.Services):
                 svc.remove_groups(groups_to_remove=groups_to_remove)
                 print()
                 helpers.print_groups_with_indexes(groups_to_remove)
-
-        if choice == '3':
-            print("Groups found in the channel list:")
-            channels_groups = svc.get_channels_groups()
-            helpers.print_groups_with_indexes(channels_groups)
+            else:
+                print()
 
         if choice == '-1':
             print("Returning... \n")

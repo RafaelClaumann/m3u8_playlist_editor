@@ -7,14 +7,19 @@ import helpers as helpers
 def show_menu(svc: services.Services):
     while True:
         print("Choose an option:")
-        print(" 1. Remove series groups")
-        print(" 2. Show series groups")
+        print(" 1. Show series groups")
+        print(" 2. Remove series groups")
         print("-1. << Back to main menu >>")
 
         choice = input("Enter the number of the desired option: ")
         print()
 
         if choice == '1':
+            print("Groups found in the channel list:")
+            series_groups = svc.get_series_groups()
+            helpers.print_groups_with_indexes(series_groups)
+
+        if choice == '2':
             series_groups = svc.get_series_groups()
             helpers.print_groups_with_indexes(groups=series_groups)
 
@@ -27,11 +32,8 @@ def show_menu(svc: services.Services):
                 svc.remove_groups(groups_to_remove=groups_to_remove)
                 print()
                 helpers.print_groups_with_indexes(groups_to_remove)
-
-        if choice == '2':
-            print("Groups found in the channel list:")
-            series_groups = svc.get_series_groups()
-            helpers.print_groups_with_indexes(series_groups)
+            else:
+                print()
 
         if choice == '-1':
             print("Returning... \n")
