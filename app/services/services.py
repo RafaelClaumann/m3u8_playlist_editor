@@ -1,5 +1,5 @@
 import re
-import app.helpers as helpers
+import helpers as helpers
 
 
 class Services:
@@ -92,7 +92,6 @@ class Services:
             for index in sorted(set(channels_to_remove), reverse=True):
                 self.channels_list[index] = ''
 
-            print(f"removendo: {group}")
             self.groups_list = [item for item in self.groups_list if item['tvg-group'] != tvg_group]
 
     # return a list of unique groups found in channels_list
