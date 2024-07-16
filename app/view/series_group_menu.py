@@ -25,9 +25,11 @@ def show_menu(svc: services.Services):
             groups_to_remove = [series_groups[id] for id in ids]
             if helpers.user_confirmation():
                 svc.remove_groups(groups_to_remove=groups_to_remove)
-                print("Series groups removed \n")
+                print()
+                helpers.print_groups_with_indexes(groups_to_remove)
 
         if choice == '2':
+            print("Groups found in the channel list:")
             series_groups = svc.get_series_groups()
             helpers.print_groups_with_indexes(series_groups)
 

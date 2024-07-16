@@ -17,7 +17,6 @@ def user_confirmation():
 
 
 def print_groups_with_indexes(groups: list):
-    print("Groups found in the channel list:")
     for index, group in enumerate(groups):
         print(f"[{index}] - {group['tvg-group']}")
     print()
