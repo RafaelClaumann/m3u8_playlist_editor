@@ -78,13 +78,9 @@ class Services:
     # this means remove the group and all channels contained in
     def remove_groups(self, groups_to_remove: list):
         for group in groups_to_remove:
-            tvg_group = group['tvg-group']
-            lower_bound = group['first_occurrence']
-            upper_bound = group['last_occurrence']
-
             channels_to_remove = []
-            group_pattern = r'#EXTINF:.*tvg-group="{}"'.format(re.escape(tvg_group))
-            for i in range(lower_bound, upper_bound + 1):
+            group_pattern = r'#EXTINF:.*tvg-group="{}"'.format(re.escape(group.tvg_group))
+            for i in range(group.first_occurrence, group.last_occurrence + 1):
                 if re.search(group_pattern, self.channels_list[i]):
                     channels_to_remove.append(i)
                     if i + 1 < len(self.channels_list):
@@ -93,7 +89,7 @@ class Services:
             for index in sorted(set(channels_to_remove), reverse=True):
                 self.channels_list[index] = ''
 
-            self.groups_list = [item for item in self.groups_list if item['tvg-group'] != tvg_group]
+            self.groups_list = [item for item in self.groups_list if item.tvg_group != group.tvg_group]
 
     # return a list of unique groups found in channels_list
     def __parse_groups(self):
