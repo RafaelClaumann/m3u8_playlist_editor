@@ -1,5 +1,6 @@
 import re
-import helpers as helpers
+import helpers
+import models.group as models
 
 
 class Services:
@@ -23,18 +24,18 @@ class Services:
     def get_channels_groups(self):
         groups = []
         for group in self.groups_list:
-            channels_search = re.search(r'\|', group['tvg-group'], re.IGNORECASE)
+            channels_search = re.search(r'\|', group.tvg_group, re.IGNORECASE)
             if channels_search is None:
                 groups.append(group)
         return groups
 
-    # groups of movies should contain pipe(|) in their names
+    # groups of movies/vod should contain pipe(|) in their names
     # movies groups names: Filmes, Movies, Coletânea, Collection, Shows, Concerts, Vod, Especiais, Specials
     def get_movies_groups(self):
         groups = []
         for group in self.groups_list:
             movies_pattern = r'((Filmes|Movies|Coletânea|Collection|Shows|Concerts|Vod|Especiais|Specials).*\|.*)'
-            movies_search = re.search(movies_pattern, group['tvg-group'], re.IGNORECASE)
+            movies_search = re.search(movies_pattern, group.tvg_group, re.IGNORECASE)
             if movies_search is not None:
                 groups.append(group)
         return groups
@@ -44,7 +45,7 @@ class Services:
     def get_series_groups(self):
         groups = []
         for group in self.groups_list:
-            series_search = re.search(r"((Series|Séries).*\|.*)", group['tvg-group'], re.IGNORECASE)
+            series_search = re.search(r"((Series|Séries).*\|.*)", group.tvg_group, re.IGNORECASE)
             if series_search is not None:
                 groups.append(group)
         return groups
@@ -113,7 +114,7 @@ class Services:
         enriched_groups = []
 
         for group in group_list:
-            enriched_group = {'tvg-names': []}
+            enriched_group = models.Group()
             total_occurrences = 0
             first_occurrence = -1
             last_occurrence = -1
@@ -127,12 +128,12 @@ class Services:
                     name_search = re.search(r'#EXTINF:.*tvg-name="([^"]*)"', channel, re.IGNORECASE)
                     if name_search:
                         result = name_search.group(1)
-                        enriched_group['tvg-names'].append(result)
+                        enriched_group.tvg_names.append(result)
 
-            enriched_group['tvg-group'] = group
-            enriched_group['total_occurrences'] = total_occurrences
-            enriched_group['first_occurrence'] = first_occurrence
-            enriched_group['last_occurrence'] = last_occurrence + 1
+            enriched_group.tvg_group = group
+            enriched_group.first_occurrence = first_occurrence
+            enriched_group.last_occurrence = last_occurrence
+            enriched_group.total_occurrences = total_occurrences
             enriched_groups.append(enriched_group)
 
         return enriched_groups
