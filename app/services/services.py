@@ -54,15 +54,15 @@ class Services:
     # use lower and upper bound to iterate over slices of channels_list
     def remove_low_quality_channels(self):
         for group in self.get_groups_list():
-            lower_bound = group['first_occurrence']
-            upper_bound = group['last_occurrence']
+            lower_bound = group.first_occurrence
+            upper_bound = group.last_occurrence
 
             channels_to_remove = []
             group_pattern = r'#EXTINF:.*tvg-group="([^"]*)"'
             quality_pattern = r'.*tvg-name=.*\".*\b(H265|HD²|SD²|SD).*\".*,'
             for idx, channel in enumerate(self.channels_list[lower_bound:upper_bound], start=lower_bound):
                 if re.search(quality_pattern, self.channels_list[idx]):
-                    if re.search(group_pattern, channel).group(1) == group['tvg-group']:
+                    if re.search(group_pattern, channel).group(1) == group.tvg_group:
                         channels_to_remove.append(idx)
                         if idx + 1 < len(self.channels_list):
                             channels_to_remove.append(idx + 1)
@@ -71,7 +71,7 @@ class Services:
                 self.channels_list[idx] = ''
 
             total_channels_to_remove = int(len(channels_to_remove) / 2)
-            if total_channels_to_remove == group['total_occurrences']:
+            if total_channels_to_remove == group.total_occurrences:
                 self.remove_groups([group])
 
     # remove one or more groups
