@@ -51,28 +51,40 @@ class Services:
         return groups
 
     # remove channels that contains H265, HD², SD² or SD in their names
-    # use lower and upper bound to iterate over slices of channels_list
-    def remove_low_quality_channels(self):
+    def remove_low_quality_channels_from_all_groups(self):
         for group in self.get_groups_list():
-            lower_bound = group.first_occurrence
-            upper_bound = group.last_occurrence
+            self.remove_low_quality_channels_from_group(group)
 
-            channels_to_remove = []
-            group_pattern = r'#EXTINF:.*tvg-group="([^"]*)"'
-            quality_pattern = r'.*tvg-name=.*\".*\b(H265|HD²|SD²|SD).*\".*,'
-            for idx, channel in enumerate(self.channels_list[lower_bound:upper_bound], start=lower_bound):
-                if re.search(quality_pattern, self.channels_list[idx]):
-                    if re.search(group_pattern, channel).group(1) == group.tvg_group:
-                        channels_to_remove.append(idx)
-                        if idx + 1 < len(self.channels_list):
-                            channels_to_remove.append(idx + 1)
+    # remove channels(H265, HD², SD² or SD) from a specific group
+    # update group total_occurrences according to quantity of channels removed
+    # if all group channels are removed the group will be removed too
+    def remove_low_quality_channels_from_group(self, group: models.Group()):
+        lower_bound = group.first_occurrence
+        upper_bound = group.last_occurrence
 
-            for idx in sorted(set(channels_to_remove), reverse=True):
-                self.channels_list[idx] = ''
+        channels_names_to_remove = []
+        channels_indexes_to_remove = []
+        group_pattern = r'#EXTINF:.*tvg-group="([^"]*)"'
+        quality_pattern = r'tvg-name="([^"]*(SD|SD²|HD²|H265)[^"]*)"'
+        for idx, channel in enumerate(self.channels_list[lower_bound:upper_bound + 1], start=lower_bound):
+            result = re.search(quality_pattern, self.channels_list[idx])
+            if result:
+                if re.search(group_pattern, channel).group(1) == group.tvg_group:
+                    channels_names_to_remove.append(result.group(1))
+                    channels_indexes_to_remove.append(idx)
+                    if idx + 1 < len(self.channels_list):
+                        channels_indexes_to_remove.append(idx + 1)
 
-            total_channels_to_remove = int(len(channels_to_remove) / 2)
-            if total_channels_to_remove == group.total_occurrences:
-                self.remove_groups([group])
+        for idx in sorted(set(channels_indexes_to_remove), reverse=True):
+            self.channels_list[idx] = ''
+
+        total_channels_to_remove = int(len(channels_indexes_to_remove) / 2)
+        if total_channels_to_remove == group.total_occurrences:
+            self.remove_groups([group])
+        elif total_channels_to_remove < group.total_occurrences:
+            for i in channels_names_to_remove:
+                group.tvg_names.remove(i)
+            group.total_occurrences = group.total_occurrences - total_channels_to_remove
 
     # remove one or more groups
     # this means remove the group and all channels contained in

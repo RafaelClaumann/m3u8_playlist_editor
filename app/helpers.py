@@ -18,5 +18,5 @@ def user_confirmation():
 
 def print_groups_with_indexes(groups: list):
     for index, group in enumerate(groups):
-        print(f"[{index}] - {group.tvg_group}")
+        print(f"[{index}] - {group.tvg_group} - {len(group.tvg_names)} media elements")
     print()
