@@ -5,3 +5,4 @@ venv/
 teste.py
 full_playlist.m3u8
 output_playlist.m3u8
+.coverage
