@@ -1,5 +1,5 @@
 # https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
-name: [1] Python Test
+name: 1 - Python Test
 
 on: [push]
 
