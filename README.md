@@ -1,18 +1,6 @@
-# M3U8 Playlist Editor
+![series_menu](https://github.com/user-attachments/assets/3049b80a-31c5-4fd7-9cae-ed00f7a6602e)# M3U8 Playlist Editor
 
 A simple CLI to edit M3U8 playlists that allows you to manage and modify playlists.
-
-## Demonstration
-
-### channels menu
-![channels_menu](https://github.com/user-attachments/assets/1cd18ec7-177f-49a9-aef1-3e1f749b4c7d)
-
-### movies menu
-![movies_menu](https://github.com/user-attachments/assets/8769a4e3-9173-4459-9a12-8d0f8b02e77f)
-
-### series menu
-![series_menu](https://github.com/user-attachments/assets/141179c2-32d0-47d1-a838-4d76e7256aed)
-
 
 ## Features
 
@@ -46,63 +34,25 @@ A simple CLI to edit M3U8 playlists that allows you to manage and modify playlis
 
 2. Select an option: You will see a menu with the following options:
    ```bash
-    Choose an option:
-      1. Remove low quality channels
-      2. Remove unwanted groups
-      3. Change group title
-      4. List channels info
-      5. Exit
-    Enter the number of the desired option: 
+   Choose an option to work with:
+    1. Channels
+    2. Movies/Vod
+    3. Series
+   -1. Exit
+   Enter the number of the desired option:
    ```
   
-3. Removing low quality channels, option 1:
-   ```bash
-    Choose an option:
-      1. Remove low quality channels
-      2. Remove unwanted groups
-      3. Change group title
-      4. List channels info
-      5. Exit
-    Enter the number of the desired option: 1
-    
-    This will remove channels that contains H265, HD², SD² or SD in their names.
-    Do you want to proceed? (y/n): y
-   
-    Total channels removed [ 180 ].
-   ```
-  
-4. Removing unwanted groups, option 2:
-   ```bash
-    Choose an option:
-      1. Remove low quality channels
-      2. Remove unwanted groups
-      3. Change group title
-      4. List channels info
-      5. Exit
-    Enter the number of the desired option: 2
-    
-    Groups found in the channel list: 
-    
-    [0] - 4K CHANNELS
-    [1] - SPORTS
-    [2] - MOVIES
-    [3] - DOCUMENTARY
-    [4] - NEWS
-    
-    Choose one or more groups to be removed, use the number displayed at left of the group title.
-    Type numbers separated by comma: 4, 2
-    Do you want to proceed? (y/n): y
-   
-    Removing channels from group [ group-title="NEWS" ].
-    Total channels removed [ 18 ].
-    Channels from group [ group-title="NEWS" ] removed.
-    Removing channels from group [ group-title="MOVIES" ].
-    Total channels removed [ 5 ].
-    Channels from group [ group-title="MOVIES" ] removed.
-   ```
-
 ## Demonstration
-![editando_canais](https://github.com/user-attachments/assets/3d20e054-4f46-4413-b6c9-24f4d944afe5)
+
+### channels menu
+![channels_menu](https://github.com/user-attachments/assets/7866309b-2a1d-40ae-bbeb-6133ad8abd9b)
+
+### movies menu
+![movies_menu](https://github.com/user-attachments/assets/5c23e4be-10ac-4602-b859-788c7b783e43)
+
+### series menu
+![series_menu](https://github.com/user-attachments/assets/33b89978-150a-4dc0-ace5-9a37b872e0dc)
+
 
 
 ## Playlist Format
