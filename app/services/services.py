@@ -1,6 +1,6 @@
 import re
-import helpers
-import models.group as models
+import app.helpers
+import app.models.group as models
 
 
 class Services:
@@ -9,7 +9,7 @@ class Services:
     groups_list = []
 
     def __init__(self, playlist_path: str):
-        self.channels_list = helpers.read_file(playlist_path)
+        self.channels_list = app.helpers.read_file(playlist_path)
 
         sorted_groups = self.__parse_groups()
         self.groups_list = self.__enrich_groups_data(sorted_groups)
@@ -65,7 +65,7 @@ class Services:
         channels_names_to_remove = []
         channels_indexes_to_remove = []
         group_pattern = r'#EXTINF:.*tvg-group="([^"]*)"'
-        quality_pattern = r'tvg-name="([^"]*(SD|SD²|HD²|H265)[^"]*)"'
+        quality_pattern = r'tvg-name="([^"]*(\bHD²|SD|SD²|H265)[^"]*)"'
         for idx, channel in enumerate(self.channels_list[lower_bound:upper_bound + 1], start=lower_bound):
             result = re.search(quality_pattern, self.channels_list[idx])
             if result:
