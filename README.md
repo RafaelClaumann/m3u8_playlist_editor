@@ -1,4 +1,4 @@
-![series_menu](https://github.com/user-attachments/assets/3049b80a-31c5-4fd7-9cae-ed00f7a6602e)# M3U8 Playlist Editor
+# M3U8 Playlist Editor
 
 A simple CLI to edit M3U8 playlists that allows you to manage and modify playlists.
 
