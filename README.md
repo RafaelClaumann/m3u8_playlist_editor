@@ -44,13 +44,13 @@ A simple CLI to edit M3U8 playlists that allows you to manage and modify playlis
   
 ## Demonstration
 
-### channels menu
+### Channels menu
 ![channels_menu](https://github.com/user-attachments/assets/7866309b-2a1d-40ae-bbeb-6133ad8abd9b)
 
-### movies menu
+### Movies menu
 ![movies_menu](https://github.com/user-attachments/assets/5c23e4be-10ac-4602-b859-788c7b783e43)
 
-### series menu
+### Series menu
 ![series_menu](https://github.com/user-attachments/assets/33b89978-150a-4dc0-ace5-9a37b872e0dc)
 
 
