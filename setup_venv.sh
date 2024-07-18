@@ -8,7 +8,4 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # Executar os testes com unittest
-python -m unittest discover -s tests
-
-# ou executar os testes com pytest
-pytest
+python -m pytest --cov=app tests/
