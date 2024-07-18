@@ -28,7 +28,8 @@ jobs:
 
       - name: Lint with flake8
         run: |
-          flake8 app/
+          source venv/bin/activate
+          python -m flake8 app/
 
       - name: Test with pytest
         run: |
