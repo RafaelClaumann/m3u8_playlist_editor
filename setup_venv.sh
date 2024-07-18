@@ -8,4 +8,4 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # Executar os testes com unittest
-python -m pytest --cov=app tests/
+python -m pytest --cov-config=.coveragerc --cov=app tests/
