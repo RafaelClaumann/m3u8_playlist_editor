@@ -1,4 +1,4 @@
-name: [1] Python Test
+name: Python CI
 
 on: [push]
 
@@ -28,9 +28,9 @@ jobs:
 
       - name: Lint with flake8
         run: |
-          pip install flake8
           flake8 app/
 
       - name: Test with pytest
         run: |
+          source venv/bin/activate
           python -m pytest --cov-config=.coveragerc --cov=app tests/
