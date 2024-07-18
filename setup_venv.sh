@@ -1,3 +1,5 @@
+export PYTHONPATH=${PWD}
+
 # Criar e ativar o ambiente virtual
 python -m venv venv
 source venv/bin/activate
