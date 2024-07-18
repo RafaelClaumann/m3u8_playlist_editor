@@ -2,6 +2,18 @@
 
 A simple CLI to edit M3U8 playlists that allows you to manage and modify playlists.
 
+## Demonstration
+
+### channels menu
+![channels_menu](https://github.com/user-attachments/assets/1cd18ec7-177f-49a9-aef1-3e1f749b4c7d)
+
+### movies menu
+![movies_menu](https://github.com/user-attachments/assets/8769a4e3-9173-4459-9a12-8d0f8b02e77f)
+
+### series menu
+![series_menu](https://github.com/user-attachments/assets/141179c2-32d0-47d1-a838-4d76e7256aed)
+
+
 ## Features
 
 - **Load Playlists**: Import M3U8 playlists for editing.
