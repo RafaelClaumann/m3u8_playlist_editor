@@ -8,7 +8,8 @@ def show_menu(svc: services.Services):
     while True:
         print("Choose an option:")
         print(" 1. Show movies groups")
-        print(" 2. Remove movies groups")
+        print(" 2. Show movies from group")
+        print(" 3. Remove movies groups")
         print("-1. << Back to main menu >>")
 
         choice = input("Enter the number of the desired option: ")
@@ -20,6 +21,15 @@ def show_menu(svc: services.Services):
             helpers.print_groups_with_indexes(movies_groups)
 
         if choice == '2':
+            movies_groups = svc.get_movies_groups()
+            helpers.print_groups_with_indexes(groups=movies_groups)
+
+            print("Choose one group to show media names.")
+            input_str = input("Type the group number: ")
+            group_id = int(input_str)
+            helpers.print_group_media_with_indexes(group=movies_groups[group_id])
+
+        if choice == '3':
             movies_groups = svc.get_movies_groups()
             helpers.print_groups_with_indexes(groups=movies_groups)
 

@@ -9,9 +9,10 @@ def show_menu(svc: services.Services):
     while True:
         print("Choose an option:")
         print(" 1. Show channels groups")
-        print(" 2. Remove low quality channels")
-        print(" 3. Remove low quality channels from group")
-        print(" 4. Remove channels groups")
+        print(" 2. Show channels from group")
+        print(" 3. Remove low quality channels")
+        print(" 4. Remove low quality channels from group")
+        print(" 5. Remove channels groups")
         print("-1. << Back to main menu >>")
 
         choice = input("Enter the number of the desired option: ")
@@ -23,6 +24,15 @@ def show_menu(svc: services.Services):
             helpers.print_groups_with_indexes(channels_groups)
 
         if choice == '2':
+            channels_groups = svc.get_channels_groups()
+            helpers.print_groups_with_indexes(groups=channels_groups)
+
+            print("Choose one group to show media names.")
+            input_str = input("Type the group number: ")
+            group_id = int(input_str)
+            helpers.print_group_media_with_indexes(group=channels_groups[group_id])
+
+        if choice == '3':
             print("This will remove channels that contains H265, HD², SD² or SD in their names.")
             if helpers.user_confirmation():
                 svc.remove_low_quality_channels_from_all_groups()
@@ -30,7 +40,7 @@ def show_menu(svc: services.Services):
             else:
                 print()
 
-        if choice == '3':
+        if choice == '4':
             channels_groups = svc.get_channels_groups()
             helpers.print_groups_with_indexes(groups=channels_groups)
 
@@ -45,7 +55,7 @@ def show_menu(svc: services.Services):
             else:
                 print()
 
-        if choice == '4':
+        if choice == '5':
             channels_groups = svc.get_channels_groups()
             helpers.print_groups_with_indexes(groups=channels_groups)
 
