@@ -103,6 +103,28 @@ class Services:
 
             self.groups_list = [item for item in self.groups_list if item.tvg_group != group.tvg_group]
 
+    def remove_medias_from_group(self, group_param: models.Group, media_ids: list):
+        for media_id in sorted(media_ids, reverse=True):
+            media_name = group_param.tvg_names[media_id]
+            self.remove_media_from_group_by_tvg_name(group_param, media_name)
+            group_param.tvg_names.pop(media_id)
+
+    def remove_media_from_group_by_tvg_name(self, group: models.Group(), media_name: str):
+        lower_bound = group.first_occurrence
+        upper_bound = group.last_occurrence
+
+        channels_indexes_to_remove = []
+        media_pattern = rf'#EXTINF.*tvg-name=\"({media_name})\"'
+        for idx, channel in enumerate(self.channels_list[lower_bound:upper_bound + 1], start=lower_bound):
+            result = re.search(media_pattern, self.channels_list[idx])
+            if result:
+                channels_indexes_to_remove.append(idx)
+                if idx + 1 < len(self.channels_list):
+                    channels_indexes_to_remove.append(idx + 1)
+
+        for idx in sorted(set(channels_indexes_to_remove), reverse=True):
+            self.channels_list[idx] = ''
+
     # return a list of unique groups found in channels_list
     def __parse_groups(self):
         groups = []

@@ -225,3 +225,33 @@ class Testing(unittest.TestCase):
         self.assertTrue(all('tvg-group="ESPORTES"' not in item for item in svcs.get_channels_list()))
         # ensure that esportes tvg_names aren't in channels list
         self.assertFalse(any(tvg_name in esportes_channels for tvg_name in svcs.get_channels_list()))
+
+    @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
+    def test_remove_medias_from_group(self, positional01):
+        svcs = svc.Services("fake_input_playlist_path")
+
+        # original esportes tvg_names 09 channels
+        # original esportes tvg_names elements 05 to 09 will be removed, remaining 5 channels
+        # original esportes tvg_names size after removal 5 elements
+        media_to_remove = [
+            {"index":  5, "name": 'BAND SPORTS FHD'},
+            {"index": 6, "name": 'BAND SPORTS H265'},
+            {"index": 7, "name": 'BAND SPORTS HD'},
+            {"index": 8, "name": 'BAND SPORTS HD²'},
+            {"index": 9, "name": 'BAND SPORTS SD²'}
+        ]
+
+        media_indexes = [item["index"] for item in media_to_remove]
+        media_names = [item["name"] for item in media_to_remove]
+
+        esportes_group = svcs.get_groups_list()[3]
+        svcs.remove_medias_from_group(esportes_group, media_indexes)
+
+        # ensure the size of tvg_names was decreased correctly
+        self.assertEqual(5, len(esportes_group.tvg_names))
+        # ensure that group esportes was maintained in groups list
+        self.assertTrue(any(group.tvg_group == "ESPORTES" for group in svcs.get_groups_list()))
+        # ensure that no one tvg_names from 'media_to_remove' are in channels_list
+        self.assertFalse(any(tvg_name in media_names for tvg_name in svcs.get_channels_list()))
+        # ensure that no one tvg_names from 'media_to_remove' are in esportes tvg_names list
+        self.assertFalse(any(tvg_name in media_names for tvg_name in esportes_group.tvg_names))
