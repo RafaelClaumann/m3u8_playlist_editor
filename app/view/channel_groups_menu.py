@@ -77,7 +77,7 @@ def show_menu(svc: services.Services):
             else:
                 print()
 
-        # REMOVE CHANNELS GROUPS MEDIA
+        # REMOVE CHANNELS FROM GROUP
         if choice == '6':
             channels_groups = svc.get_channels_groups()
             helpers.print_groups_with_indexes(groups=channels_groups)
@@ -88,7 +88,7 @@ def show_menu(svc: services.Services):
             group = channels_groups[group_id]
             helpers.print_group_media_with_indexes(group=group)
 
-            print("Choose one media to remove.")
+            print("Choose one or more medias to remove.")
             input_str = input("Type numbers separated by comma: ")
             media_ids = list(map(int, input_str.strip().split(',')))
 
