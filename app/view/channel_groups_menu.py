@@ -1,8 +1,8 @@
 import os
 
-from config.config import Config
-import services.services as services
 import helpers as helpers
+import services.services as services
+from config.config import Config
 
 
 def show_menu(svc: services.Services):
@@ -93,7 +93,7 @@ def show_menu(svc: services.Services):
             media_ids = list(map(int, input_str.strip().split(',')))
 
             if helpers.user_confirmation():
-                svc.remove_medias_from_group(group_param=group,media_ids=media_ids)
+                svc.remove_medias_from_group(group_param=group, media_ids=media_ids)
                 print()
                 helpers.print_group_media_with_indexes(group=group)
             else:

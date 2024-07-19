@@ -1,10 +1,10 @@
 import re
+
 import app.helpers
 import app.models.group as models
 
 
 class Services:
-
     channels_list = []
     groups_list = []
 
