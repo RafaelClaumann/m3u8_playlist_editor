@@ -251,7 +251,30 @@ class Testing(unittest.TestCase):
         self.assertEqual(5, len(esportes_group.tvg_names))
         # ensure that group esportes was maintained in groups list
         self.assertTrue(any(group.tvg_group == "ESPORTES" for group in svcs.get_groups_list()))
-        # ensure that no one tvg_names from 'media_to_remove' are in channels_list
-        self.assertFalse(any(tvg_name in media_names for tvg_name in svcs.get_channels_list()))
         # ensure that no one tvg_names from 'media_to_remove' are in esportes tvg_names list
-        self.assertFalse(any(tvg_name in media_names for tvg_name in esportes_group.tvg_names))
+        self.assertTrue(not any(tvg_name in media_names for tvg_name in esportes_group.tvg_names))
+        # ensure that no one tvg_names from 'media_to_remove' are in channels_list
+        for media_name in media_names:
+            self.assertTrue(all(f'tvg-name="{media_name}"' not in item for item in svcs.get_channels_list()))
+
+    @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
+    def test_remove_medias_from_group_with_one_element(self, positional01):
+        svcs = svc.Services("fake_input_playlist_path")
+
+        group_name = 'Coletânea | 007'
+        media_name = "007: Operação Skyfall"
+        media_index = 0
+
+        collection_group = svcs.get_groups_list()[1]
+        svcs.remove_medias_from_group(collection_group, [media_index])
+
+        # ensure the size of tvg_names was decreased correctly
+        self.assertEqual(0, len(collection_group.tvg_names))
+        # ensure that tvg-group(Coletânea | 007) was removed from channels list
+        self.assertTrue(all(f'tvg-group="{group_name}"' not in item for item in svcs.get_channels_list()))
+        # ensure that tvg-group(Coletânea | 007) was maintained in groups list
+        self.assertTrue(any(group.tvg_group == group_name for group in svcs.get_groups_list()))
+        # ensure the tvg_name(007: Operação Skyfall) from tvg-group(Coletânea | 007) are not in channels_list
+        self.assertTrue(all(f'tvg-name="{media_name}"' not in item for item in svcs.get_channels_list()))
+        # ensure that tvg_name(007: Operação Skyfall) was removed from tvg-group(Coletânea | 007)
+        self.assertTrue(all(media_name not in item for item in collection_group.tvg_names))
