@@ -1,3 +1,6 @@
+import app.models.group as models
+
+
 def read_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         lines = file.read().split('\n')
@@ -19,4 +22,10 @@ def user_confirmation():
 def print_groups_with_indexes(groups: list):
     for index, group in enumerate(groups):
         print(f"[{index}] - {group.tvg_group} - {len(group.tvg_names)} media elements")
+    print()
+
+
+def print_group_media_with_indexes(group: models.Group):
+    for index, tvg_name in enumerate(group.tvg_names):
+        print(f"[{index}] - {tvg_name}")
     print()

@@ -1,25 +1,40 @@
 import os
-from config.config import Config
-import services.services as services
+
 import helpers as helpers
+import services.services as services
+from config.config import Config
 
 
 def show_menu(svc: services.Services):
     while True:
         print("Choose an option:")
         print(" 1. Show series groups")
-        print(" 2. Remove series groups")
+        print(" 2. Show series from group")
+        print(" 3. Remove series groups")
+        print(" 4. Remove series from group")
         print("-1. << Back to main menu >>")
 
         choice = input("Enter the number of the desired option: ")
         print()
 
+        # SHOW SERIES GROUPS
         if choice == '1':
             print("Groups found in the channel list:")
             series_groups = svc.get_series_groups()
             helpers.print_groups_with_indexes(series_groups)
 
+        # SHOW SERIES FROM A GROUP
         if choice == '2':
+            series_groups = svc.get_series_groups()
+            helpers.print_groups_with_indexes(groups=series_groups)
+
+            print("Choose one group to show media names.")
+            input_str = input("Type the group number: ")
+            group_id = int(input_str)
+            helpers.print_group_media_with_indexes(group=series_groups[group_id])
+
+        # REMOVE SERIES GROUPS
+        if choice == '3':
             series_groups = svc.get_series_groups()
             helpers.print_groups_with_indexes(groups=series_groups)
 
@@ -32,6 +47,28 @@ def show_menu(svc: services.Services):
                 svc.remove_groups(groups_to_remove=groups_to_remove)
                 print()
                 helpers.print_groups_with_indexes(groups_to_remove)
+            else:
+                print()
+
+        # REMOVE SERIES FROM GROUP
+        if choice == '4':
+            series_groups = svc.get_series_groups()
+            helpers.print_groups_with_indexes(groups=series_groups)
+
+            print("Choose one group to show media names.")
+            input_str = input("Type the group number: ")
+            group_id = int(input_str)
+            group = series_groups[group_id]
+            helpers.print_group_media_with_indexes(group=group)
+
+            print("Choose one or more medias to remove.")
+            input_str = input("Type numbers separated by comma: ")
+            media_ids = list(map(int, input_str.strip().split(',')))
+
+            if helpers.user_confirmation():
+                svc.remove_medias_from_group(group_param=group, media_ids=media_ids)
+                print()
+                helpers.print_group_media_with_indexes(group=group)
             else:
                 print()
 
