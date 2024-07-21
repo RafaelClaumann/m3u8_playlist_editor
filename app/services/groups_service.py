@@ -24,7 +24,7 @@ class GroupsService:
     def generate_writable_media_list(self):
         writable_media_list = []
         for group_item in self.media_groups:
-            for media_item in group_item.tvg_names:
+            for media_item in group_item.media_list:
                 writable_media_list.append(media_item.__repr__())
         return writable_media_list
 
@@ -35,7 +35,7 @@ class GroupsService:
     @staticmethod
     def remove_media_from_group(group: group_model.Group, media_to_remove: List[int]):
         for idx in sorted(media_to_remove, reverse=True):
-            group.tvg_names.pop(idx)
+            group.media_list.pop(idx)
 
     def remove_low_quality_channels_from_all_groups(self):
         for group in self.media_groups:
@@ -43,7 +43,7 @@ class GroupsService:
 
     @staticmethod
     def remove_low_quality_channels_from_group(group: group_model.Group):
-        group_media = group.tvg_names
+        group_media = group.media_list
         channels_indexes_to_remove = []
         quality_pattern = r'tvg-name="([^"]*(\bHD²|SD|SD²|H265)[^"]*)"'
 
@@ -58,7 +58,7 @@ class GroupsService:
         for group_item in self.media_groups:
             for media_item in media_items:
                 if group_item.tvg_group == media_item.tvg_group:
-                    group_item.tvg_names.append(media_item)
+                    group_item.media_list.append(media_item)
 
     def __parse_and_sort_media_groups(self, raw_media_list: List[str]):
         groups = []

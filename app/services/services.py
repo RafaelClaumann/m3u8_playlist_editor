@@ -83,7 +83,7 @@ class Services:
             self.remove_groups([group])
         elif total_channels_to_remove < group.total_occurrences:
             for i in channels_names_to_remove:
-                group.tvg_names.remove(i)
+                group.media_list.remove(i)
             group.total_occurrences = group.total_occurrences - total_channels_to_remove
 
     # remove one or more groups
@@ -105,9 +105,9 @@ class Services:
 
     def remove_medias_from_group(self, group_param: models.Group, media_ids: list):
         for media_id in sorted(media_ids, reverse=True):
-            media_name = group_param.tvg_names[media_id]
+            media_name = group_param.media_list[media_id]
             self.remove_media_from_group_by_tvg_name(group_param, media_name)
-            group_param.tvg_names.pop(media_id)
+            group_param.media_list.pop(media_id)
 
     def remove_media_from_group_by_tvg_name(self, group: models.Group(), media_name: str):
         lower_bound = group.first_occurrence
@@ -158,7 +158,7 @@ class Services:
                     name_search = re.search(r'#EXTINF:.*tvg-name="([^"]*)"', channel, re.IGNORECASE)
                     if name_search:
                         result = name_search.group(1)
-                        enriched_group.tvg_names.append(result)
+                        enriched_group.media_list.append(result)
 
             enriched_group.tvg_group = group
             enriched_group.first_occurrence = first_occurrence
