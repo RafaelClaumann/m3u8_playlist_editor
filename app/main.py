@@ -1,4 +1,8 @@
 import os
+
+import app.services.groups_service as group_svc_import
+import app.services.media_service as media_svc_import
+from app import helpers
 from config.config import Config
 from services import services
 from view import channel_groups_menu, series_group_menu, movies_group_menu
@@ -6,6 +10,11 @@ from view import channel_groups_menu, series_group_menu, movies_group_menu
 
 def main():
     svc = services.Services(Config.INPUT_PLAYLIST_PATH)
+
+    raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
+    media_svc = media_svc_import.MediaService(raw_media_list=raw_media_list)
+    group_svc = group_svc_import.GroupsService(raw_media_list=raw_media_list)
+    group_svc.join_media_on_groups(media_items=media_svc.media_items)
 
     while True:
         print("Choose an option to work with:")
@@ -19,7 +28,7 @@ def main():
 
         if choice == '1':
             os.system('clear')
-            channel_groups_menu.show_menu(svc)
+            channel_groups_menu.show_menu(groups_svc=group_svc)
 
         if choice == '2':
             os.system('clear')

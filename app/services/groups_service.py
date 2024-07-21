@@ -22,7 +22,7 @@ class GroupsService:
         return [group for group in self.media_groups if group.group_type == group_type]
 
     def generate_writable_media_list(self):
-        writable_media_list = []
+        writable_media_list = ["#EXTM3U"]
         for group_item in self.media_groups:
             for media_item in group_item.media_list:
                 writable_media_list.append(media_item.__repr__())
