@@ -88,7 +88,7 @@ def show_menu(groups_svc: group_svc_import.GroupsService):
             chosen_group = channels_groups[int(input_str)]
             helpers.print_group_media_with_indexes(group=chosen_group)
 
-            print(f"Choose one or more medias to remove from group.")
+            print("Choose one or more medias to remove from group.")
             input_str = input("Type numbers separated by comma: ")
             media_ids = list(map(int, input_str.strip().split(',')))
 

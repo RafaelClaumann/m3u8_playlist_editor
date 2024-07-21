@@ -32,7 +32,7 @@ def main():
 
         if choice == '2':
             os.system('clear')
-            movies_group_menu.show_menu(svc)
+            movies_group_menu.show_menu(groups_svc=group_svc)
 
         if choice == '3':
             os.system('clear')
