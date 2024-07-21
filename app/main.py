@@ -4,13 +4,10 @@ import app.services.groups_service as group_svc_import
 import app.services.media_service as media_svc_import
 from app import helpers
 from config.config import Config
-from services import services
 from view import channel_groups_menu, series_group_menu, movies_group_menu
 
 
 def main():
-    svc = services.Services(Config.INPUT_PLAYLIST_PATH)
-
     raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
     media_svc = media_svc_import.MediaService(raw_media_list=raw_media_list)
     group_svc = group_svc_import.GroupsService(raw_media_list=raw_media_list)
@@ -36,7 +33,7 @@ def main():
 
         if choice == '3':
             os.system('clear')
-            series_group_menu.show_menu(svc)
+            series_group_menu.show_menu(groups_svc=group_svc)
 
         if choice == '-1':
             print("Exiting...")

@@ -1,17 +1,18 @@
 import os
 
 import helpers as helpers
-import services.services as services
 from config.config import Config
 
+import app.services.groups_service as group_svc_import
 
-def show_menu(svc: services.Services):
+
+def show_menu(groups_svc: group_svc_import.GroupsService):
     while True:
         print("Choose an option:")
         print(" 1. Show series groups")
-        print(" 2. Show series from group")
+        print(" 2. Show series from a group")
         print(" 3. Remove series groups")
-        print(" 4. Remove series from group")
+        print(" 4. Remove series from a group")
         print("-1. << Back to main menu >>")
 
         choice = input("Enter the number of the desired option: ")
@@ -20,55 +21,54 @@ def show_menu(svc: services.Services):
         # SHOW SERIES GROUPS
         if choice == '1':
             print("Groups found in the channel list:")
-            series_groups = svc.get_series_groups()
-            helpers.print_groups_with_indexes(series_groups)
+            series_groups = groups_svc.get_groups(group_type=group_svc_import.GroupType.SERIES)
+            helpers.print_groups_with_indexes(groups=series_groups)
 
         # SHOW SERIES FROM A GROUP
         if choice == '2':
-            series_groups = svc.get_series_groups()
+            series_groups = groups_svc.get_groups(group_type=group_svc_import.GroupType.SERIES)
             helpers.print_groups_with_indexes(groups=series_groups)
 
-            print("Choose one group to show media names.")
+            print("Choose one group to show your media names.")
             input_str = input("Type the group number: ")
-            group_id = int(input_str)
-            helpers.print_group_media_with_indexes(group=series_groups[group_id])
+            chosen_group = series_groups[int(input_str)]
+            helpers.print_group_media_with_indexes(group=chosen_group)
 
-        # REMOVE SERIES GROUPS
+        # REMOVE ONE OR MORE SERIES GROUPS
         if choice == '3':
-            series_groups = svc.get_series_groups()
+            series_groups = groups_svc.get_groups(group_type=group_svc_import.GroupType.SERIES)
             helpers.print_groups_with_indexes(groups=series_groups)
 
             print("Choose one or more groups to be removed, use the number displayed at left of the group title.")
             input_str = input("Type numbers separated by comma: ")
             ids = list(map(int, input_str.strip().split(',')))
 
-            groups_to_remove = [series_groups[id] for id in ids]
+            groups_to_remove = [series_groups[idx] for idx in ids]
             if helpers.user_confirmation():
-                svc.remove_groups(groups_to_remove=groups_to_remove)
+                groups_svc.remove_groups(groups_to_remove=groups_to_remove)
                 print()
-                helpers.print_groups_with_indexes(groups_to_remove)
+                helpers.print_groups_with_indexes(groups=groups_to_remove)
             else:
                 print()
 
-        # REMOVE SERIES FROM GROUP
+        # REMOVE SERIES FROM A GROUP
         if choice == '4':
-            series_groups = svc.get_series_groups()
+            series_groups = groups_svc.get_groups(group_type=group_svc_import.GroupType.MOVIES)
             helpers.print_groups_with_indexes(groups=series_groups)
 
-            print("Choose one group to show media names.")
+            print("Choose one group to show your media names.")
             input_str = input("Type the group number: ")
-            group_id = int(input_str)
-            group = series_groups[group_id]
-            helpers.print_group_media_with_indexes(group=group)
+            chosen_group = series_groups[int(input_str)]
+            helpers.print_group_media_with_indexes(group=chosen_group)
 
-            print("Choose one or more medias to remove.")
+            print("Choose one or more medias to remove from group.")
             input_str = input("Type numbers separated by comma: ")
             media_ids = list(map(int, input_str.strip().split(',')))
 
             if helpers.user_confirmation():
-                svc.remove_medias_from_group(group_param=group, media_ids=media_ids)
+                groups_svc.remove_media_from_group(group=chosen_group, media_to_remove=media_ids)
                 print()
-                helpers.print_group_media_with_indexes(group=group)
+                helpers.print_group_media_with_indexes(group=chosen_group)
             else:
                 print()
 
@@ -76,7 +76,7 @@ def show_menu(svc: services.Services):
             print("Returning... \n")
             break
 
-        channels = svc.get_channels_list()
+        channels = groups_svc.generate_writable_media_list()
         helpers.save_file(Config.OUTPUT_PLAYLIST_PATH, channels)
 
     os.system('clear')
