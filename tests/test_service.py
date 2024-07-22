@@ -130,7 +130,7 @@ class Testing(unittest.TestCase):
     def test_remove_all_low_quality_channels(self, mock_channels_list):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
-        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
+        media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
         # before changes were made
         esportes_group = media_svc.media_groups[3]
@@ -172,7 +172,7 @@ class Testing(unittest.TestCase):
     def test_remove_low_quality_from_a_group(self, positional01):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
-        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
+        media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
         esportes_group = media_svc.media_groups[3]
         media_svc.remove_low_quality_channels_from_group(esportes_group)
@@ -199,7 +199,7 @@ class Testing(unittest.TestCase):
     def test_remove_low_quality_from_a_group_that_contains_only_low_quality(self, positional01):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
-        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
+        media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
         free_group = media_svc.media_groups[4]
         free_channels = free_group.media_list
@@ -214,7 +214,7 @@ class Testing(unittest.TestCase):
     def test_remove_esportes_group(self, positional01):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
-        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
+        media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
         esportes_group = media_svc.media_groups[3]
         media_svc.remove_groups([esportes_group])
@@ -228,7 +228,7 @@ class Testing(unittest.TestCase):
     def test_remove_multiple_groups(self, positional01):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
-        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
+        media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
         twenty_four_movies_group = media_svc.media_groups[0]
         twenty_four_movies_group_name = twenty_four_movies_group.tvg_group
@@ -263,7 +263,7 @@ class Testing(unittest.TestCase):
     def test_remove_all_groups(self, positional01):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
-        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
+        media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
         groups_to_remove = media_svc.media_groups
         media_svc.remove_groups(groups_to_remove)
@@ -275,7 +275,7 @@ class Testing(unittest.TestCase):
     def test_remove_medias_from_group(self, positional01):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
-        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
+        media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
         to_remove = [
             {"id": 2, "name": 'ESPN SD²'},
@@ -302,7 +302,7 @@ class Testing(unittest.TestCase):
     def test_remove_medias_from_group_with_one_element(self, positional01):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
-        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
+        media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
         collection_group = media_svc.media_groups[1]  # 'Coletânea | 007'
         media_to_remove = collection_group.media_list[0]  # '007: Operação Skyfall'
@@ -318,7 +318,7 @@ class Testing(unittest.TestCase):
     def test_remove_all_medias_from_group(self, positional01):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
-        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
+        media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
         esportes_group = media_svc.media_groups[3]
         media_svc.remove_media_from_group(esportes_group, esportes_group.media_list)

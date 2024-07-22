@@ -17,7 +17,7 @@ def main():
 
     raw_media_list = helpers.read_file(file_path=Config.INPUT_PLAYLIST_PATH)
     parsed_media_list = parse_svc.parse_raw_list(raw_list=raw_media_list)
-    media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
+    media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
     while True:
         print("Choose an option to work with:")

@@ -10,8 +10,8 @@ import app.models.media as media_model
 class MediaService:
     media_groups = []
 
-    def __init__(self, group_media_list: List[group_model.Group]):
-        self.media_groups = group_media_list
+    def __init__(self, groups_with_medias: List[group_model.Group]):
+        self.media_groups = groups_with_medias
 
     def get_groups_by_type(self, param: group_type.GroupType):
         return [group for group in self.media_groups if group.group_type == param]
