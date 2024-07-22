@@ -1,3 +1,6 @@
+from typing import List
+
+import app.models.group as group_model
 import app.models.group as models
 
 
@@ -10,6 +13,14 @@ def read_file(file_path):
 def save_file(file_path, lines):
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write("\n".join(lines))
+
+
+def generate_writable_media_list(media_groups: List[group_model.Group]):
+    writable_media_list = ["#EXTM3U"]
+    for group_item in media_groups:
+        for media_item in group_item.media_list:
+            writable_media_list.append(media_item.__repr__())
+    return writable_media_list
 
 
 def user_confirmation():
