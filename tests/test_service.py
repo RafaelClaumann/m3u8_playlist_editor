@@ -287,7 +287,9 @@ class Testing(unittest.TestCase):
 
         esportes_group = media_svc.media_groups[3]
         ids_to_remove = [item["id"] for item in to_remove]
-        media_svc.remove_media_from_group(esportes_group, ids_to_remove)
+        medias_to_remove = [esportes_group.media_list[index] for index in ids_to_remove]
+
+        media_svc.remove_media_from_group(esportes_group, medias_to_remove)
 
         # ensure the size of media_list was decreased correctly
         self.assertEqual(5, len(esportes_group.media_list))
@@ -302,16 +304,15 @@ class Testing(unittest.TestCase):
         parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
         media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
 
-        group_name = 'Coletânea | 007'
-        media_index = 0
+        collection_group = media_svc.media_groups[1]  # 'Coletânea | 007'
+        media_to_remove = collection_group.media_list[0]  # '007: Operação Skyfall'
 
-        collection_group = media_svc.media_groups[1]
-        media_svc.remove_media_from_group(collection_group, [media_index])
+        media_svc.remove_media_from_group(collection_group, [media_to_remove])
 
         # ensure the size of tvg-group(Coletânea | 007) media_list was decreased correctly
         self.assertEqual(0, len(collection_group.media_list))
         # ensure that tvg-group(Coletânea | 007) was maintained in groups list
-        self.assertTrue(any(group.tvg_group == group_name for group in media_svc.media_groups))
+        self.assertTrue(any(group.tvg_group == 'Coletânea | 007' for group in media_svc.media_groups))
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_all_medias_from_group(self, positional01):
@@ -320,8 +321,7 @@ class Testing(unittest.TestCase):
         media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
 
         esportes_group = media_svc.media_groups[3]
-        ids_to_remove = list(range(len(esportes_group.media_list)))
-        media_svc.remove_media_from_group(esportes_group, ids_to_remove)
+        media_svc.remove_media_from_group(esportes_group, esportes_group.media_list)
 
         # ensure groups list has 0 elements
         self.assertEqual(0, len(esportes_group.media_list))
