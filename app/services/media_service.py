@@ -27,9 +27,9 @@ class MediaService:
             self.media_groups.pop(index)
 
     @staticmethod
-    def remove_media_from_group(group: group_model.Group, media_to_remove: List[media_model.Media]):
+    def remove_media_from_group(group: group_model.Group, medias_to_remove: List[media_model.Media]):
         to_remove = []
-        for media in media_to_remove:
+        for media in medias_to_remove:
             to_remove.append(group.media_list.index(media))
 
         for index in sorted(to_remove, reverse=True):
