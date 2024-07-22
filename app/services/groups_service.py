@@ -54,6 +54,8 @@ class GroupsService:
         for idx in sorted(channels_indexes_to_remove, reverse=True):
             group_media.pop(idx)
 
+        group.total_occurrences = group.total_occurrences - len(channels_indexes_to_remove)
+
     def join_media_on_groups(self, media_items: List[media_model.Media]):
         for group_item in self.media_groups:
             for media_item in media_items:
