@@ -1,3 +1,4 @@
+import logging
 import re
 from typing import List
 
@@ -16,11 +17,13 @@ class MediaService:
 
     def remove_groups(self, groups_to_remove: List[group_model.Group]):
         for group_item in groups_to_remove:
+            logging.debug(f'removing group [ {group_item.tvg_group} ]')
             self.media_groups.remove(group_item)
 
     @staticmethod
     def remove_media_from_group(group: group_model.Group, media_to_remove: List[int]):
         for idx in sorted(media_to_remove, reverse=True):
+            logging.debug(f'removing media [ {group.media_list[idx].tvg_name} ]  from group [ {group.tvg_group} ]')
             group.media_list.pop(idx)
 
     def remove_low_quality_channels_from_all_groups(self):
@@ -35,6 +38,7 @@ class MediaService:
 
         for index, media_item in enumerate(group_media):
             if re.search(quality_pattern, f'tvg-name="{media_item.tvg_name}"'):
+                logging.debug(f'removing media [ {media_item.tvg_name} ]  from group [ {group.tvg_group} ]')
                 channels_indexes_to_remove.append(index)
 
         for idx in sorted(channels_indexes_to_remove, reverse=True):

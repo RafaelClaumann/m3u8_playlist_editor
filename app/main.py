@@ -1,13 +1,20 @@
+import argparse
 import os
 
 import app.services.media_service as media_svc_import
 import app.services.parse_service as parse_svc
 from app import helpers
 from config.config import Config
+from config.logging_config import configure_logging
 from view import channel_groups_menu, series_group_menu, movies_group_menu
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--debug', action='store_true')
+    args = parser.parse_args()
+    configure_logging(args.debug)
+
     raw_media_list = helpers.read_file(file_path=Config.INPUT_PLAYLIST_PATH)
     parsed_media_list = parse_svc.parse_raw_list(raw_list=raw_media_list)
     media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)

@@ -1,2 +1,6 @@
 [run]
-omit = tests/*, app/helpers.py, app/main.py, app/models/group.py
+omit =  app/config/*,
+        app/models/*,
+        app/helpers.py,
+        app/main.py,
+        tests/*
