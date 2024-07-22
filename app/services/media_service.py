@@ -30,7 +30,8 @@ class MediaService:
     def remove_media_from_group(group: group_model.Group, medias_to_remove: List[media_model.Media]):
         to_remove = []
         for media in medias_to_remove:
-            to_remove.append(group.media_list.index(media))
+            media_index = group.media_list.index(media)
+            to_remove.append(media_index)
 
         for index in sorted(to_remove, reverse=True):
             logging.debug(f'removing media [ {group.media_list[index].tvg_name} ]  from group [ {group.tvg_group} ]')
