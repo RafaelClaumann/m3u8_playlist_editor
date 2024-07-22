@@ -22,12 +22,12 @@ def show_menu(media_svc: media_svc_import.MediaService):
         # SHOW SERIES GROUPS
         if choice == '1':
             print("Groups found in the channel list:")
-            series_groups = media_svc.get_groups_by_type(param=group_type.GroupType.MOVIES)
+            series_groups = media_svc.get_groups_by_type(param=group_type.GroupType.SERIES)
             helpers.print_groups_with_indexes(groups=series_groups)
 
         # SHOW SERIES FROM A GROUP
         if choice == '2':
-            series_groups = media_svc.get_groups_by_type(param=group_type.GroupType.MOVIES)
+            series_groups = media_svc.get_groups_by_type(param=group_type.GroupType.SERIES)
             helpers.print_groups_with_indexes(groups=series_groups)
 
             print("Choose one group to show your media names.")
@@ -37,7 +37,7 @@ def show_menu(media_svc: media_svc_import.MediaService):
 
         # REMOVE ONE OR MORE SERIES GROUPS
         if choice == '3':
-            series_groups = media_svc.get_groups_by_type(param=group_type.GroupType.MOVIES)
+            series_groups = media_svc.get_groups_by_type(param=group_type.GroupType.SERIES)
             helpers.print_groups_with_indexes(groups=series_groups)
 
             print("Choose one or more groups to be removed, use the number displayed at left of the group title.")
@@ -54,7 +54,7 @@ def show_menu(media_svc: media_svc_import.MediaService):
 
         # REMOVE SERIES FROM A GROUP
         if choice == '4':
-            series_groups = media_svc.get_groups_by_type(param=group_type.GroupType.MOVIES)
+            series_groups = media_svc.get_groups_by_type(param=group_type.GroupType.SERIES)
             helpers.print_groups_with_indexes(groups=series_groups)
 
             print("Choose one group to show your media names.")
