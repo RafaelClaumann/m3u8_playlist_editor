@@ -277,13 +277,24 @@ class Testing(unittest.TestCase):
         parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
         media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
 
+        to_remove = [
+            {"id": 2, "name": 'ESPN SD²'},
+            {"id": 5, "name": 'BAND SPORTS FHD'},
+            {"id": 6, "name": 'BAND SPORTS H265'},
+            {"id": 7, "name": 'BAND SPORTS HD'},
+            {"id": 8, "name": 'BAND SPORTS HD²'}
+        ]
+
         esportes_group = media_svc.media_groups[3]
-        media_svc.remove_media_from_group(esportes_group, [5, 6, 7, 8, 9])
+        ids_to_remove = [item["id"] for item in to_remove]
+        media_svc.remove_media_from_group(esportes_group, ids_to_remove)
 
         # ensure the size of media_list was decreased correctly
         self.assertEqual(5, len(esportes_group.media_list))
         # ensure that group esportes was maintained in groups list
         self.assertTrue(any(group.tvg_group == "ESPORTES" for group in media_svc.media_groups))
+        # ensure that names from to_remove are not in media_list
+        self.assertTrue(all(item["name"] not in esportes_group.media_list for item in to_remove))
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_medias_from_group_with_one_element(self, positional01):
