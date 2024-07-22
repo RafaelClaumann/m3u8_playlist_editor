@@ -4,6 +4,7 @@ from typing import List
 
 import app.models.group as group_model
 import app.models.group_type as group_type
+import app.models.media as media_model
 
 
 class MediaService:
@@ -25,10 +26,14 @@ class MediaService:
         logging.debug(f'Removed groups with tvg_group in {remove_set}')
 
     @staticmethod
-    def remove_media_from_group(group: group_model.Group, media_to_remove: List[int]):
-        for idx in sorted(media_to_remove, reverse=True):
-            logging.debug(f'removing media [ {group.media_list[idx].tvg_name} ]  from group [ {group.tvg_group} ]')
-            group.media_list.pop(idx)
+    def remove_media_from_group(group: group_model.Group, media_to_remove: List[media_model.Media]):
+        to_remove = []
+        for media in media_to_remove:
+            to_remove.append(group.media_list.index(media))
+
+        for index in sorted(to_remove, reverse=True):
+            logging.debug(f'removing media [ {group.media_list[index].tvg_name} ]  from group [ {group.tvg_group} ]')
+            group.media_list.pop(index)
 
     def remove_low_quality_channels_from_all_groups(self):
         for group in self.media_groups:
