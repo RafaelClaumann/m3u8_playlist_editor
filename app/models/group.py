@@ -1,6 +1,9 @@
+import app.models.group_type as group_type_import
+
+
 class Group:
     def __init__(self,
-                 group_type: str = None,
+                 group_type: group_type_import.GroupType = None,
                  tvg_group: str = None,
                  media_list: list = None,
                  first_occurrence: int = None,

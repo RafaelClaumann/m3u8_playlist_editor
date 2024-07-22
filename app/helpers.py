@@ -37,6 +37,6 @@ def print_groups_with_indexes(groups: list):
 
 
 def print_group_media_with_indexes(group: models.Group):
-    for index, tvg_name in enumerate(group.media_list):
-        print(f"[{index}] - {tvg_name}")
+    for index, media_item in enumerate(group.media_list):
+        print(f"[{index}] - {media_item.tvg_name}")
     print()
