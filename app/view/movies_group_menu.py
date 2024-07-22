@@ -66,8 +66,9 @@ def show_menu(media_svc: media_svc_import.MediaService):
             input_str = input("Type numbers separated by comma: ")
             media_ids = list(map(int, input_str.strip().split(',')))
 
+            to_remove = [chosen_group.media_list[index] for index in media_ids]
             if helpers.user_confirmation():
-                media_svc.remove_media_from_group(group=chosen_group, media_to_remove=media_ids)
+                media_svc.remove_media_from_group(group=chosen_group, media_to_remove=to_remove)
                 print()
                 helpers.print_group_media_with_indexes(group=chosen_group)
             else:
