@@ -225,7 +225,7 @@ class Testing(unittest.TestCase):
         self.assertTrue(all(group.tvg_group != esportes_group.tvg_group for group in media_svc.media_groups))
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
-    def test_remove_multiple_group(self, positional01):
+    def test_remove_multiple_groups(self, positional01):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
         media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
@@ -258,6 +258,18 @@ class Testing(unittest.TestCase):
 
         # ensure that tvg-group(Séries | Max) aren't in groups list
         self.assertFalse(any(group.tvg_group == max_series_group_name for group in media_svc.media_groups))
+
+    @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
+    def test_remove_all_groups(self, positional01):
+        raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
+        parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
+        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
+
+        groups_to_remove = media_svc.media_groups
+        media_svc.remove_groups(groups_to_remove)
+
+        # ensure groups list has 0 elements
+        self.assertEqual(0, len(media_svc.media_groups))
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_medias_from_group(self, positional01):
