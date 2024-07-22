@@ -301,3 +301,16 @@ class Testing(unittest.TestCase):
         self.assertEqual(0, len(collection_group.media_list))
         # ensure that tvg-group(Coletânea | 007) was maintained in groups list
         self.assertTrue(any(group.tvg_group == group_name for group in media_svc.media_groups))
+
+    @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
+    def test_remove_all_medias_from_group(self, positional01):
+        raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
+        parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
+        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
+
+        esportes_group = media_svc.media_groups[3]
+        ids_to_remove = list(range(len(esportes_group.media_list)))
+        media_svc.remove_media_from_group(esportes_group, ids_to_remove)
+
+        # ensure groups list has 0 elements
+        self.assertEqual(0, len(esportes_group.media_list))
