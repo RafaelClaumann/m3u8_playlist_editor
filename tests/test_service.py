@@ -6,7 +6,6 @@ import app.services.groups_service as group_svc_import
 import app.services.media_service as media_svc_import
 from app import helpers
 from app.config.config import Config
-from app.services import services as svc
 
 
 class Testing(unittest.TestCase):
@@ -172,8 +171,6 @@ class Testing(unittest.TestCase):
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_low_quality_from_a_group(self, positional01):
-        svcs = svc.Services("fake_input_playlist_path")
-
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
         media_svc = media_svc_import.MediaService(raw_media_list=raw_media_list)
         group_svc = group_svc_import.GroupsService(raw_media_list=raw_media_list)
@@ -198,7 +195,7 @@ class Testing(unittest.TestCase):
         # ensure that no one low quality channel can be found in esportes group
         self.assertFalse(any(tvg_name in low_quality_esportes for tvg_name in esportes_group.media_list))
         # ensure that esportes group still exists in group list after low quality channels deletion
-        self.assertTrue(any(group.tvg_group == "ESPORTES" for group in svcs.get_groups_list()))
+        self.assertTrue(any(group.tvg_group == "ESPORTES" for group in group_svc.media_groups))
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_low_quality_from_a_group_that_contains_only_low_quality(self, positional01):
