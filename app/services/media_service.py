@@ -13,8 +13,8 @@ class MediaService:
     def __init__(self, groups_with_medias: List[group_model.Group]):
         self.media_groups = groups_with_medias
 
-    def get_groups_by_type(self, param: group_type.GroupType):
-        return [group for group in self.media_groups if group.group_type == param]
+    def get_groups_by_type(self, desired_type: group_type.GroupType):
+        return [group for group in self.media_groups if group.group_type == desired_type]
 
     def remove_groups(self, groups_to_remove: List[group_model.Group]):
         to_remove = []

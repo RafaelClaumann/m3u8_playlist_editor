@@ -24,12 +24,12 @@ def show_menu(media_svc: media_svc_import.MediaService):
         # SHOW CHANNELS GROUPS
         if choice == '1':
             print("Groups found in the channels list:")
-            channels_groups = media_svc.get_groups_by_type(param=group_type.GroupType.CHANNELS)
+            channels_groups = media_svc.get_groups_by_type(desired_type=group_type.GroupType.CHANNELS)
             helpers.print_groups_with_indexes(groups=channels_groups)
 
         # SHOW CHANNELS FROM A GROUP
         if choice == '2':
-            channels_groups = media_svc.get_groups_by_type(param=group_type.GroupType.CHANNELS)
+            channels_groups = media_svc.get_groups_by_type(desired_type=group_type.GroupType.CHANNELS)
             helpers.print_groups_with_indexes(groups=channels_groups)
 
             print("Choose one group to show your media names.")
@@ -48,7 +48,7 @@ def show_menu(media_svc: media_svc_import.MediaService):
 
         # REMOVE LOW QUALITY CHANNELS FROM A SPECIFIC GROUP
         if choice == '4':
-            channels_groups = media_svc.get_groups_by_type(param=group_type.GroupType.CHANNELS)
+            channels_groups = media_svc.get_groups_by_type(desired_type=group_type.GroupType.CHANNELS)
             helpers.print_groups_with_indexes(groups=channels_groups)
 
             print("Choose one group to remove channels with H265, HD², SD² or SD in their title.")
@@ -64,7 +64,7 @@ def show_menu(media_svc: media_svc_import.MediaService):
 
         # REMOVE ONE OR MORE CHANNEL GROUPS
         if choice == '5':
-            channels_groups = media_svc.get_groups_by_type(param=group_type.GroupType.CHANNELS)
+            channels_groups = media_svc.get_groups_by_type(desired_type=group_type.GroupType.CHANNELS)
             helpers.print_groups_with_indexes(groups=channels_groups)
 
             print("Choose one or more groups to be removed, use the number displayed at left of the group title.")
@@ -81,7 +81,7 @@ def show_menu(media_svc: media_svc_import.MediaService):
 
         # REMOVE CHANNELS FROM A GROUP
         if choice == '6':
-            channels_groups = media_svc.get_groups_by_type(param=group_type.GroupType.CHANNELS)
+            channels_groups = media_svc.get_groups_by_type(desired_type=group_type.GroupType.CHANNELS)
             helpers.print_groups_with_indexes(groups=channels_groups)
 
             print("Choose one group to show your media names.")

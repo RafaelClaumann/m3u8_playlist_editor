@@ -22,12 +22,12 @@ def show_menu(media_svc: media_svc_import.MediaService):
         # SHOW MOVIES GROUPS
         if choice == '1':
             print("Groups found in the movies list:")
-            movies_groups = media_svc.get_groups_by_type(param=group_type.GroupType.MOVIES)
+            movies_groups = media_svc.get_groups_by_type(desired_type=group_type.GroupType.MOVIES)
             helpers.print_groups_with_indexes(groups=movies_groups)
 
         # SHOW MOVIES FROM A GROUP
         if choice == '2':
-            movies_groups = media_svc.get_groups_by_type(param=group_type.GroupType.MOVIES)
+            movies_groups = media_svc.get_groups_by_type(desired_type=group_type.GroupType.MOVIES)
             helpers.print_groups_with_indexes(groups=movies_groups)
 
             print("Choose one group to show your media names.")
@@ -37,7 +37,7 @@ def show_menu(media_svc: media_svc_import.MediaService):
 
         # REMOVE ONE OR MORE MOVIES GROUPS
         if choice == '3':
-            movies_groups = media_svc.get_groups_by_type(param=group_type.GroupType.MOVIES)
+            movies_groups = media_svc.get_groups_by_type(desired_type=group_type.GroupType.MOVIES)
             helpers.print_groups_with_indexes(groups=movies_groups)
 
             print("Choose one or more groups to be removed, use the number displayed at left of the group title.")
@@ -54,7 +54,7 @@ def show_menu(media_svc: media_svc_import.MediaService):
 
         # REMOVE MOVIES FROM A GROUP
         if choice == '4':
-            movies_groups = media_svc.get_groups_by_type(param=group_type.GroupType.MOVIES)
+            movies_groups = media_svc.get_groups_by_type(desired_type=group_type.GroupType.MOVIES)
             helpers.print_groups_with_indexes(groups=movies_groups)
 
             print("Choose one group to show your media names.")
