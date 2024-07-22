@@ -16,9 +16,13 @@ class MediaService:
         return [group for group in self.media_groups if group.group_type == param]
 
     def remove_groups(self, groups_to_remove: List[group_model.Group]):
-        for group_item in groups_to_remove:
-            logging.debug(f'removing group [ {group_item.tvg_group} ]')
-            self.media_groups.remove(group_item)
+        remove_set = set(group.tvg_group for group in groups_to_remove)
+        self.media_groups = [
+            group for group in self.media_groups
+            if group.tvg_group not in remove_set
+        ]
+
+        logging.debug(f'Removed groups with tvg_group in {remove_set}')
 
     @staticmethod
     def remove_media_from_group(group: group_model.Group, media_to_remove: List[int]):
