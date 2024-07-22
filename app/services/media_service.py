@@ -47,12 +47,12 @@ class MediaService:
         channels_indexes_to_remove = []
         quality_pattern = r'tvg-name="([^"]*(\bHD²|SD|SD²|H265)[^"]*)"'
 
-        for index, media_item in enumerate(group_media):
-            if re.search(quality_pattern, f'tvg-name="{media_item.tvg_name}"'):
-                logging.debug(f'removing media [ {media_item.tvg_name} ]  from group [ {group.tvg_group} ]')
+        for index, media in enumerate(group_media):
+            if re.search(quality_pattern, f'tvg-name="{media.tvg_name}"'):
+                logging.debug(f'removing media [ {media.tvg_name} ]  from group [ {group.tvg_group} ]')
                 channels_indexes_to_remove.append(index)
 
-        for idx in sorted(channels_indexes_to_remove, reverse=True):
-            group_media.pop(idx)
+        for index in sorted(channels_indexes_to_remove, reverse=True):
+            group_media.pop(index)
 
         group.total_occurrences = group.total_occurrences - len(channels_indexes_to_remove)
