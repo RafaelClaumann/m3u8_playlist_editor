@@ -1,11 +1,14 @@
+from typing import List
+
 import app.models.group_type as group_type_import
+import app.models.media as media_model
 
 
 class Group:
     def __init__(self,
                  group_type: group_type_import.GroupType = None,
                  tvg_group: str = None,
-                 media_list: list = None,
+                 media_list: List[media_model.Media] = None,
                  first_occurrence: int = None,
                  last_occurrence: int = None,
                  total_occurrences: int = None
