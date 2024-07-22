@@ -6,9 +6,9 @@ import app.models.group_type as group_type
 import app.models.media as media_model
 
 
-def parse_raw_list(raw_list: List[str]):
-    media_elements = __parse_media_list(raw_media_list=raw_list)
-    media_groups = __parse_and_sort_media_groups(raw_media_list=raw_list)
+def parse_raw_list(raw_media_list: List[str]):
+    media_elements = __parse_media_list(raw_media_list=raw_media_list)
+    media_groups = __parse_and_sort_media_groups(raw_media_list=raw_media_list)
     __join_media_on_groups(media_elements=media_elements, media_groups=media_groups)
 
     return media_groups
