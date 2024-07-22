@@ -2,8 +2,8 @@ import re
 import unittest
 from unittest.mock import patch, mock_open
 
-import app.services.groups_service as group_svc_import
 import app.services.media_service as media_svc_import
+import app.services.parse_service as parse_service
 from app import helpers
 from app.config.config import Config
 
@@ -127,44 +127,43 @@ class Testing(unittest.TestCase):
     )
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
-    def test_remove_all_low_quality_channels(self, positional01):
+    def test_remove_all_low_quality_channels(self, mock_channels_list):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
-        media_svc = media_svc_import.MediaService(raw_media_list=raw_media_list)
-        group_svc = group_svc_import.GroupsService(raw_media_list=raw_media_list)
-        group_svc.join_media_on_groups(media_items=media_svc.media_items)
+        parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
+        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
 
         # before changes were made
-        esportes_group = group_svc.media_groups[3]
+        esportes_group = media_svc.media_groups[3]
         self.assertTrue(5, esportes_group.first_occurrence)
         self.assertTrue(47, esportes_group.last_occurrence)
         self.assertTrue(10, esportes_group.total_occurrences)
 
-        free_group = group_svc.media_groups[4]
+        free_group = media_svc.media_groups[4]
         self.assertTrue(49, free_group.first_occurrence)
         self.assertTrue(53, free_group.last_occurrence)
         self.assertTrue(3, free_group.total_occurrences)
 
-        variedades_group = group_svc.media_groups[9]
+        variedades_group = media_svc.media_groups[9]
         self.assertTrue(15, variedades_group.first_occurrence)
         self.assertTrue(33, variedades_group.last_occurrence)
         self.assertTrue(10, variedades_group.total_occurrences)
 
         # changes were made
-        group_svc.remove_low_quality_channels_from_all_groups()
+        media_svc.remove_low_quality_channels_from_all_groups()
 
         # after changes were made
         self.assertTrue(5, esportes_group.first_occurrence)
         self.assertTrue(47, esportes_group.last_occurrence)
         self.assertTrue(3, esportes_group.total_occurrences)
 
-        self.assertTrue(9, group_svc.media_groups)
-        self.assertEqual(0, len(group_svc.media_groups[4].media_list))
+        self.assertTrue(9, media_svc.media_groups)
+        self.assertEqual(0, len(media_svc.media_groups[4].media_list))
 
         self.assertTrue(15, variedades_group.first_occurrence)
         self.assertTrue(33, variedades_group.last_occurrence)
         self.assertTrue(4, variedades_group.total_occurrences)
 
-        for group in group_svc.media_groups:
+        for group in media_svc.media_groups:
             for media in group.media_list:
                 quality_pattern = r'tvg-name="([^"]*(\bHD²|SD|SD²|H265)[^"]*)"'
                 self.assertIsNone(re.search(quality_pattern, media.tvg_name))
@@ -172,15 +171,14 @@ class Testing(unittest.TestCase):
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_low_quality_from_a_group(self, positional01):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
-        media_svc = media_svc_import.MediaService(raw_media_list=raw_media_list)
-        group_svc = group_svc_import.GroupsService(raw_media_list=raw_media_list)
-        group_svc.join_media_on_groups(media_items=media_svc.media_items)
+        parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
+        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
 
-        esportes_group = group_svc.media_groups[3]
-        group_svc.remove_low_quality_channels_from_group(esportes_group)
+        esportes_group = media_svc.media_groups[3]
+        media_svc.remove_low_quality_channels_from_group(esportes_group)
 
         # ensure that groups_list size still the same
-        self.assertEqual(10, len(group_svc.media_groups))
+        self.assertEqual(10, len(media_svc.media_groups))
         # ensure that esportes group have 6(low quality) channels removed
         self.assertEqual(4, esportes_group.total_occurrences)
 
@@ -195,18 +193,17 @@ class Testing(unittest.TestCase):
         # ensure that no one low quality channel can be found in esportes group
         self.assertFalse(any(tvg_name in low_quality_esportes for tvg_name in esportes_group.media_list))
         # ensure that esportes group still exists in group list after low quality channels deletion
-        self.assertTrue(any(group.tvg_group == "ESPORTES" for group in group_svc.media_groups))
+        self.assertTrue(any(group.tvg_group == "ESPORTES" for group in media_svc.media_groups))
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_low_quality_from_a_group_that_contains_only_low_quality(self, positional01):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
-        media_svc = media_svc_import.MediaService(raw_media_list=raw_media_list)
-        group_svc = group_svc_import.GroupsService(raw_media_list=raw_media_list)
-        group_svc.join_media_on_groups(media_items=media_svc.media_items)
+        parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
+        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
 
-        free_group = group_svc.media_groups[4]
+        free_group = media_svc.media_groups[4]
         free_channels = free_group.media_list
-        group_svc.remove_low_quality_channels_from_group(free_group)
+        media_svc.remove_low_quality_channels_from_group(free_group)
 
         # ensure that group free aren't in groups list
         self.assertTrue(not any(media.tvg_group == "FREE" for media in free_group.media_list))
@@ -216,84 +213,79 @@ class Testing(unittest.TestCase):
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_esportes_group(self, positional01):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
-        media_svc = media_svc_import.MediaService(raw_media_list=raw_media_list)
-        group_svc = group_svc_import.GroupsService(raw_media_list=raw_media_list)
-        group_svc.join_media_on_groups(media_items=media_svc.media_items)
+        parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
+        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
 
-        esportes_group = group_svc.media_groups[3]
-        group_svc.remove_groups([esportes_group])
+        esportes_group = media_svc.media_groups[3]
+        media_svc.remove_groups([esportes_group])
 
         # ensure groups list has decreased in one element
-        self.assertEqual(9, len(group_svc.media_groups))
+        self.assertEqual(9, len(media_svc.media_groups))
         # ensure that group esportes aren't in groups list
-        self.assertTrue(all(group.tvg_group != esportes_group.tvg_group for group in group_svc.media_groups))
+        self.assertTrue(all(group.tvg_group != esportes_group.tvg_group for group in media_svc.media_groups))
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_multiple_group(self, positional01):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
-        media_svc = media_svc_import.MediaService(raw_media_list=raw_media_list)
-        group_svc = group_svc_import.GroupsService(raw_media_list=raw_media_list)
-        group_svc.join_media_on_groups(media_items=media_svc.media_items)
+        parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
+        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
 
-        twenty_four_movies_group = group_svc.media_groups[0]
+        twenty_four_movies_group = media_svc.media_groups[0]
         twenty_four_movies_group_name = twenty_four_movies_group.tvg_group
 
-        free_group = group_svc.media_groups[4]
+        free_group = media_svc.media_groups[4]
         free_group_name = free_group.tvg_group
 
-        amazon_series_group = group_svc.media_groups[6]
+        amazon_series_group = media_svc.media_groups[6]
         amazon_series_group_name = amazon_series_group.tvg_group
 
-        max_series_group = group_svc.media_groups[7]
+        max_series_group = media_svc.media_groups[7]
         max_series_group_name = max_series_group.tvg_group
 
-        group_svc.remove_groups([twenty_four_movies_group, free_group, amazon_series_group, max_series_group])
+        media_svc.remove_groups([twenty_four_movies_group, free_group, amazon_series_group, max_series_group])
 
         # ensure groups list has decreased in five elements
-        self.assertEqual(6, len(group_svc.media_groups))
+        self.assertEqual(6, len(media_svc.media_groups))
 
         # ensure that tvg-group(24H FILMES) aren't in groups list
-        self.assertFalse(any(group.tvg_group == twenty_four_movies_group_name for group in group_svc.media_groups))
+        self.assertFalse(any(group.tvg_group == twenty_four_movies_group_name for group in media_svc.media_groups))
 
         # ensure that tvg-group(FREE) aren't in groups list
-        self.assertFalse(any(group.tvg_group == free_group_name for group in group_svc.media_groups))
+        self.assertFalse(any(group.tvg_group == free_group_name for group in media_svc.media_groups))
 
         # ensure that tvg-group(Séries | Amazon Prime Vídeo) aren't in groups list
-        self.assertFalse(any(group.tvg_group == amazon_series_group_name for group in group_svc.media_groups))
+        self.assertFalse(any(group.tvg_group == amazon_series_group_name for group in media_svc.media_groups))
 
         # ensure that tvg-group(Séries | Max) aren't in groups list
-        self.assertFalse(any(group.tvg_group == max_series_group_name for group in group_svc.media_groups))
+        self.assertFalse(any(group.tvg_group == max_series_group_name for group in media_svc.media_groups))
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_medias_from_group(self, positional01):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
-        media_svc = media_svc_import.MediaService(raw_media_list=raw_media_list)
-        group_svc = group_svc_import.GroupsService(raw_media_list=raw_media_list)
-        group_svc.join_media_on_groups(media_items=media_svc.media_items)
+        parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
+        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
 
-        esportes_group = group_svc.media_groups[3]
-        group_svc.remove_media_from_group(esportes_group, [5, 6, 7, 8, 9])
+        esportes_group = media_svc.media_groups[3]
+        media_svc.remove_media_from_group(esportes_group, [5, 6, 7, 8, 9])
 
         # ensure the size of media_list was decreased correctly
         self.assertEqual(5, len(esportes_group.media_list))
         # ensure that group esportes was maintained in groups list
-        self.assertTrue(any(group.tvg_group == "ESPORTES" for group in group_svc.media_groups))
+        self.assertTrue(any(group.tvg_group == "ESPORTES" for group in media_svc.media_groups))
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_medias_from_group_with_one_element(self, positional01):
         raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
-        media_svc = media_svc_import.MediaService(raw_media_list=raw_media_list)
-        group_svc = group_svc_import.GroupsService(raw_media_list=raw_media_list)
-        group_svc.join_media_on_groups(media_items=media_svc.media_items)
+        parsed_media_list = parse_service.parse_raw_list(raw_list=raw_media_list)
+        media_svc = media_svc_import.MediaService(group_media_list=parsed_media_list)
 
         group_name = 'Coletânea | 007'
-        media_name = "007: Operação Skyfall"
         media_index = 0
 
-        collection_group = group_svc.media_groups[1]
-        group_svc.remove_media_from_group(collection_group, [media_index])
+        collection_group = media_svc.media_groups[1]
+        media_svc.remove_media_from_group(collection_group, [media_index])
 
-        # ensure the size of media_list was decreased correctly
+        # ensure the size of tvg-group(Coletânea | 007) media_list was decreased correctly
         self.assertEqual(0, len(collection_group.media_list))
         # ensure that tvg-group(Coletânea | 007) was maintained in groups list
-        self.assertTrue(any(group.tvg_group == group_name for group in group_svc.media_groups))
+        self.assertTrue(any(group.tvg_group == group_name for group in media_svc.media_groups))
