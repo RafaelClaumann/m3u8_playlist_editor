@@ -17,6 +17,7 @@ class MediaService:
         return [group for group in self.media_groups if group.group_type == desired_type]
 
     def add_group(self, group: group_model.Group):
+        logging.debug(f'adding a group [ {group.tvg_group} ]')
         self.media_groups.append(group)
 
     def remove_groups(self, groups_to_remove: List[group_model.Group]):
