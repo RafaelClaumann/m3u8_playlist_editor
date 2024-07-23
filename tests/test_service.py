@@ -2,6 +2,8 @@ import re
 import unittest
 from unittest.mock import patch, mock_open
 
+import app.models.group as group_model
+import app.models.group_type as group_type
 import app.services.media_service as media_svc_import
 import app.services.parse_service as parse_service
 from app import helpers
@@ -125,6 +127,39 @@ class Testing(unittest.TestCase):
         '#EXTINF:-1 tvg-name="The Boys S04E02" tvg-logo="serie.png" tvg-group="Séries | Amazon Prime Vídeo",The Boys S04E02\n'
         'http://watch.com/series/theboys.s04.e02.mp4\n'
     )
+
+    @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
+    def test_add_new_groups(self, positional01):
+        raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
+        parsed_media_list = parse_service.parse_raw_list(raw_media_list=raw_media_list)
+        media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
+
+        group_names = ['Channels', 'Movies | Description', 'Series | Description']
+
+        media_svc.add_group(
+            group_model.Group(
+                group_type=parse_service.define_group_type(group_names[0]),
+                tvg_group=group_names[0]
+            )
+        )
+        media_svc.add_group(
+            group_model.Group(
+                group_type=parse_service.define_group_type(group_names[1]),
+                tvg_group=group_names[1]
+            )
+        )
+        media_svc.add_group(
+            group_model.Group(
+                group_type=parse_service.define_group_type(group_names[2]),
+                tvg_group=group_names[2]
+            )
+        )
+
+        self.assertEqual(13, len(media_svc.media_groups))
+        self.assertEqual(group_type.GroupType.CHANNELS, media_svc.media_groups[10].group_type)
+        self.assertEqual(group_type.GroupType.MOVIES, media_svc.media_groups[11].group_type)
+        self.assertEqual(group_type.GroupType.SERIES, media_svc.media_groups[12].group_type)
+        self.assertTrue(all(any(group.tvg_group == name for group in media_svc.media_groups) for name in group_names))
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_all_low_quality_channels(self, mock_channels_list):
