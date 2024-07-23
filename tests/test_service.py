@@ -2,12 +2,12 @@ import re
 import unittest
 from unittest.mock import patch, mock_open
 
+import app.config.config as config
+import app.helpers as helpers
 import app.models.group as group_model
 import app.models.group_type as group_type
 import app.services.media_service as media_svc_import
 import app.services.parse_service as parse_service
-from app import helpers
-from app.config.config import Config
 
 
 class Testing(unittest.TestCase):
@@ -130,7 +130,7 @@ class Testing(unittest.TestCase):
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_add_new_groups(self, positional01):
-        raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
+        raw_media_list = helpers.read_file(config.Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_media_list=raw_media_list)
         media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
@@ -166,7 +166,7 @@ class Testing(unittest.TestCase):
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_all_low_quality_channels(self, mock_channels_list):
-        raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
+        raw_media_list = helpers.read_file(config.Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_media_list=raw_media_list)
         media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
@@ -208,7 +208,7 @@ class Testing(unittest.TestCase):
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_low_quality_from_a_group(self, positional01):
-        raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
+        raw_media_list = helpers.read_file(config.Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_media_list=raw_media_list)
         media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
@@ -235,7 +235,7 @@ class Testing(unittest.TestCase):
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_low_quality_from_a_group_that_contains_only_low_quality(self, positional01):
-        raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
+        raw_media_list = helpers.read_file(config.Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_media_list=raw_media_list)
         media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
@@ -250,7 +250,7 @@ class Testing(unittest.TestCase):
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_esportes_group(self, positional01):
-        raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
+        raw_media_list = helpers.read_file(config.Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_media_list=raw_media_list)
         media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
@@ -264,7 +264,7 @@ class Testing(unittest.TestCase):
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_multiple_groups(self, positional01):
-        raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
+        raw_media_list = helpers.read_file(config.Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_media_list=raw_media_list)
         media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
@@ -299,7 +299,7 @@ class Testing(unittest.TestCase):
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_all_groups(self, positional01):
-        raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
+        raw_media_list = helpers.read_file(config.Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_media_list=raw_media_list)
         media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
@@ -311,7 +311,7 @@ class Testing(unittest.TestCase):
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_medias_from_group(self, positional01):
-        raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
+        raw_media_list = helpers.read_file(config.Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_media_list=raw_media_list)
         media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
@@ -338,7 +338,7 @@ class Testing(unittest.TestCase):
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_medias_from_group_with_one_element(self, positional01):
-        raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
+        raw_media_list = helpers.read_file(config.Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_media_list=raw_media_list)
         media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
@@ -354,7 +354,7 @@ class Testing(unittest.TestCase):
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_all_medias_from_group(self, positional01):
-        raw_media_list = helpers.read_file(Config.INPUT_PLAYLIST_PATH)
+        raw_media_list = helpers.read_file(config.Config.INPUT_PLAYLIST_PATH)
         parsed_media_list = parse_service.parse_raw_list(raw_media_list=raw_media_list)
         media_svc = media_svc_import.MediaService(groups_with_medias=parsed_media_list)
 
