@@ -1,8 +1,7 @@
 import os
 
-import helpers as helpers
-from config.config import Config
-
+import app.config.config as config
+import app.helpers as helpers
 import app.models.group_type as group_type
 import app.services.media_service as media_svc_import
 
@@ -79,6 +78,6 @@ def show_menu(media_svc: media_svc_import.MediaService):
             break
 
         channels = helpers.generate_writable_media_list(media_groups=media_svc.media_groups)
-        helpers.save_file(Config.OUTPUT_PLAYLIST_PATH, channels)
+        helpers.save_file(config.Config.OUTPUT_PLAYLIST_PATH, channels)
 
     os.system('clear')
