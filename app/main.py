@@ -1,10 +1,10 @@
 import argparse
 import os
 
-import app.models.group as group_model
-import app.services.media_service as media_svc_import
-import app.services.parse_service as parse_svc
-from app import helpers
+import helpers
+import models.group as group_model
+import services.media_service as media_svc_import
+import services.parse_service as parse_svc
 from config.config import Config
 from config.logging_config import configure_logging
 from view import channel_groups_menu, series_group_menu, movies_group_menu

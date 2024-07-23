@@ -2,12 +2,12 @@ import re
 import unittest
 from unittest.mock import patch, mock_open
 
-import app.config.config as config
-import app.helpers as helpers
-import app.models.group as group_model
-import app.models.group_type as group_type
-import app.services.media_service as media_svc_import
-import app.services.parse_service as parse_service
+import config.config as config
+import helpers as helpers
+import models.group as group_model
+import models.group_type as group_type
+import services.media_service as media_svc_import
+import services.parse_service as parse_service
 
 
 class Testing(unittest.TestCase):

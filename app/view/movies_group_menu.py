@@ -1,9 +1,9 @@
 import os
 
-import app.config.config as config
-import app.helpers as helpers
-import app.models.group_type as group_type
-import app.services.media_service as media_svc_import
+import config.config as config
+import helpers as helpers
+import models.group_type as group_type
+import services.media_service as media_svc_import
 
 
 def show_menu(media_svc: media_svc_import.MediaService):

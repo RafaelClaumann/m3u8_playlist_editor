@@ -1,9 +1,9 @@
 import re
 from typing import List
 
-import app.models.group as group_model
-import app.models.group_type as group_type
-import app.models.media as media_model
+import models.group as group_model
+import models.group_type as group_type
+import models.media as media_model
 
 
 def parse_raw_list(raw_media_list: List[str]):

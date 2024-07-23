@@ -1,7 +1,7 @@
 from typing import List
 
-import app.models.group as group_model
-import app.models.group as models
+import models.group as group_model
+import models.group as models
 
 
 def read_file(file_path):
