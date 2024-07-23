@@ -16,6 +16,9 @@ class MediaService:
     def get_groups_by_type(self, desired_type: group_type.GroupType):
         return [group for group in self.media_groups if group.group_type == desired_type]
 
+    def add_group(self, group: group_model.Group):
+        self.media_groups.append(group)
+
     def remove_groups(self, groups_to_remove: List[group_model.Group]):
         to_remove = []
         for group in groups_to_remove:
