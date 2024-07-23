@@ -155,11 +155,14 @@ class Testing(unittest.TestCase):
             )
         )
 
+        channels_groups = media_svc.get_groups_by_type(group_type.GroupType.CHANNELS)
+        movies_groups = media_svc.get_groups_by_type(group_type.GroupType.MOVIES)
+        series_groups = media_svc.get_groups_by_type(group_type.GroupType.SERIES)
+
         self.assertEqual(13, len(media_svc.media_groups))
-        self.assertEqual(group_type.GroupType.CHANNELS, media_svc.media_groups[10].group_type)
-        self.assertEqual(group_type.GroupType.MOVIES, media_svc.media_groups[11].group_type)
-        self.assertEqual(group_type.GroupType.SERIES, media_svc.media_groups[12].group_type)
-        self.assertTrue(all(any(group.tvg_group == name for group in media_svc.media_groups) for name in group_names))
+        self.assertTrue(any(group.tvg_group == group_names[0] for group in channels_groups))
+        self.assertTrue(any(group.tvg_group == group_names[1] for group in movies_groups))
+        self.assertTrue(any(group.tvg_group == group_names[2] for group in series_groups))
 
     @patch("builtins.open", new_callable=mock_open, read_data=mock_channels_list)
     def test_remove_all_low_quality_channels(self, mock_channels_list):
