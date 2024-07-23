@@ -1,6 +1,7 @@
 import argparse
 import os
 
+import app.models.group as group_model
 import app.services.media_service as media_svc_import
 import app.services.parse_service as parse_svc
 from app import helpers
@@ -24,6 +25,7 @@ def main():
         print(" 1. Channels")
         print(" 2. Movies/Vod")
         print(" 3. Series")
+        print(" 4. Create new group")
         print("-1. Exit")
 
         choice = input("Enter the number of the desired option: ")
@@ -40,6 +42,16 @@ def main():
         if choice == '3':
             os.system('clear')
             series_group_menu.show_menu(media_svc=media_svc)
+
+        if choice == '4':
+            os.system('clear')
+            tvg_group = input("Type the tvg-group name: ")
+            media_svc.add_group(
+                group_model.Group(
+                    group_type=parse_svc.define_group_type(tvg_group),
+                    tvg_group=tvg_group
+                )
+            )
 
         if choice == '-1':
             print("Exiting...")

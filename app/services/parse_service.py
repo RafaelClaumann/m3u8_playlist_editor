@@ -46,7 +46,7 @@ def __parse_and_sort_media_groups(raw_media_list: List[str]):
 
         enriched_groups.append(
             group_model.Group(
-                group_type=__define_group_type(tvg_group),
+                group_type=define_group_type(tvg_group),
                 tvg_group=tvg_group,
                 first_occurrence=first_occurrence,
                 last_occurrence=last_occurrence,
@@ -57,7 +57,7 @@ def __parse_and_sort_media_groups(raw_media_list: List[str]):
     return enriched_groups
 
 
-def __define_group_type(tvg_group: str):
+def define_group_type(tvg_group: str):
     channels_type_pattern = r'\|'
     series_type_pattern = r"((Series|Séries).*\|.*)"
     movies_type_pattern = r'((Filmes|Movies|Coletânea|Collection|Shows|Concerts|Vod|Especiais|Specials).*\|.*)'
