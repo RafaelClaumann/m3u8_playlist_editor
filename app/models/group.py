@@ -6,6 +6,7 @@ import models.media as media_model
 
 class Group:
     def __init__(self,
+                 id: int = None,
                  group_type: group_type_import.GroupType = None,
                  tvg_group: str = None,
                  media_list: List[media_model.Media] = None,
@@ -13,6 +14,7 @@ class Group:
                  last_occurrence: int = None,
                  total_occurrences: int = None
                  ):
+        self.id = id
         self.group_type = group_type
         self.tvg_group = tvg_group
         self.media_list = media_list if media_list is not None else []
