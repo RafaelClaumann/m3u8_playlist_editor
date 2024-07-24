@@ -65,7 +65,7 @@ class Database:
 
     def insert_group(self, group: Group):
         statement = """
-        INSERT INTO group_table (group_type, tvg_group, first_occurrence, last_occurrence, total_occurrences) 
+        INSERT INTO group_table (group_type, tvg_group, first_occurrence, last_occurrence, total_occurrences)
         VALUES (?, ?, ?, ?, ?)
         """
 
@@ -271,7 +271,7 @@ class Database:
 
     def delete_low_quality_channels_from_group(self, group_id):
         statement = """
-        DELETE 
+        DELETE
         FROM    media_table
         WHERE   (tvg_name LIKE '%HD²%' OR
                  tvg_name LIKE '%SD%' OR
