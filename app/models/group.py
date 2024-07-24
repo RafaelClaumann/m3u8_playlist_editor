@@ -1,7 +1,7 @@
 from typing import List
 
-from app.models.group_type import GroupType
-from app.models.media import Media
+from models.group_type import GroupType
+from models.media import Media
 
 
 class Group:
