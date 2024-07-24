@@ -1,10 +1,8 @@
-# database_operations.py
-
 import sqlite3
 
-import app.models.group
-import app.models.group_type
-import app.models.media
+from models.group import Group
+from models.group_type import GroupType
+from models.media import Media
 
 
 class Database:
@@ -58,14 +56,14 @@ class Database:
         self.connection.commit()
 
     def populate_group_types(self):
-        for group_type in app.models.group_type.GroupType:
+        for group_type in GroupType:
             try:
                 self.cursor.execute("INSERT INTO group_type (name) VALUES (?)", (group_type.name,))
             except sqlite3.IntegrityError:
                 pass
         self.connection.commit()
 
-    def insert_group(self, group: app.models.group.Group):
+    def insert_group(self, group: Group):
         statement = """
         INSERT INTO group_table (group_type, tvg_group, first_occurrence, last_occurrence, total_occurrences) 
         VALUES (?, ?, ?, ?, ?)
@@ -110,7 +108,7 @@ class Database:
         groups = [dict(row) for row in rows]
         return groups
 
-    def update_group(self, group: app.models.group.Group):
+    def update_group(self, group: Group):
         statement = """
         UPDATE  group_table
         SET     group_type = ?,
@@ -148,7 +146,7 @@ class Database:
             print(f"Error [delete_group]: {e}")
             return None
 
-    def insert_media(self, media: app.models.media.Media, group_id: int):
+    def insert_media(self, media: Media, group_id: int):
         statement = """
             INSERT INTO media_table (ext_inf, tvg_name, tvg_id, tvg_logo, tvg_group, catchup, catchup_days, media_url, group_id)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
@@ -197,7 +195,7 @@ class Database:
         medias = [dict(row) for row in rows]
         return medias
 
-    def update_media(self, media: app.models.media.Media):
+    def update_media(self, media: Media):
         statement = """
         UPDATE  media_table
         SET     ext_inf = ?,
@@ -251,7 +249,7 @@ class Database:
         medias = [dict(row) for row in rows]
         return medias
 
-    def fetch_groups_by_type(self, group_type: app.models.group_type.GroupType):
+    def fetch_groups_by_type(self, group_type: GroupType):
         try:
             self.cursor.execute("SELECT * FROM group_table WHERE group_type = ?", (group_type.value,))
             rows = self.cursor.fetchall()
