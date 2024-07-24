@@ -94,7 +94,8 @@ class Database:
             return None
 
         if row:
-            return dict(row)
+            group = dict(row)
+            return Group(**group)
         return None
 
     def fetch_groups(self):
@@ -105,7 +106,7 @@ class Database:
             print(f"Error [fetch_groups]: {e}")
             return None
 
-        groups = [dict(row) for row in rows]
+        groups = [Group(**dict(row)) for row in rows]
         return groups
 
     def update_group(self, group: Group):
@@ -181,7 +182,8 @@ class Database:
             return None
 
         if row:
-            return dict(row)
+            media = dict(row)
+            return Media(**media)
         return None
 
     def fetch_medias(self):
@@ -192,7 +194,7 @@ class Database:
             print(f"Error fetching [fetch_medias]: {e}")
             return None
 
-        medias = [dict(row) for row in rows]
+        medias = [Media(**dict(row)) for row in rows]
         return medias
 
     def update_media(self, media: Media):
@@ -246,7 +248,7 @@ class Database:
             print(f"Error [fetch_media_by_group_id]: {e}")
             return None
 
-        medias = [dict(row) for row in rows]
+        medias = [Media(**dict(row)) for row in rows]
         return medias
 
     def fetch_groups_by_type(self, group_type: GroupType):
@@ -257,7 +259,7 @@ class Database:
             print(f"Error [fetch_groups_by_type]: {e}")
             return None
 
-        groups = [dict(row) for row in rows]
+        groups = [Group(**dict(row)) for row in rows]
         return groups
 
     def delete_media_by_group_id(self, group_id):
