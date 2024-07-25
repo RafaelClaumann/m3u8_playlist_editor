@@ -24,7 +24,7 @@ class Group:
 
     def __repr__(self):
         return (f"Group("
-                f"group_id={self.id},"
+                f"id={self.id},"
                 f"group_type={self.group_type},"
                 f"tvg_group={self.tvg_group},"
                 f"media_list={self.media_list},"
