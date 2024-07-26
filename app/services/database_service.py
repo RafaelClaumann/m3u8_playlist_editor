@@ -147,6 +147,17 @@ class Database:
             print(f"Error [delete_group]: {e}")
             return None
 
+    def fetch_groups_by_type(self, group_type: GroupType):
+        try:
+            self.cursor.execute("SELECT * FROM group_table WHERE group_type = ?", (group_type.value,))
+            rows = self.cursor.fetchall()
+        except Exception as e:
+            print(f"Error [fetch_groups_by_type]: {e}")
+            return None
+
+        groups = [Group(**dict(row)) for row in rows]
+        return groups
+
     def insert_media(self, media: Media, group_id: int):
         statement = """
             INSERT INTO media_table (ext_inf, tvg_name, tvg_id, tvg_logo, tvg_group, catchup, catchup_days, media_url, group_id)
@@ -251,17 +262,6 @@ class Database:
         medias = [Media(**dict(row)) for row in rows]
         return medias
 
-    def fetch_groups_by_type(self, group_type: GroupType):
-        try:
-            self.cursor.execute("SELECT * FROM group_table WHERE group_type = ?", (group_type.value,))
-            rows = self.cursor.fetchall()
-        except Exception as e:
-            print(f"Error [fetch_groups_by_type]: {e}")
-            return None
-
-        groups = [Group(**dict(row)) for row in rows]
-        return groups
-
     def delete_media_by_group_id(self, group_id):
         try:
             self.cursor.execute("DELETE FROM media WHERE group_id = ?", (group_id,))
@@ -269,6 +269,15 @@ class Database:
             return self.cursor.rowcount
         except Exception as e:
             print(f"Error [delete_media_by_group_id]: {e}")
+            return None
+
+    def delete_media_by_group_and_media_id(self, group_id, media_id):
+        try:
+            self.cursor.execute("DELETE FROM media_table WHERE group_id = ? AND id = ?", (group_id, media_id))
+            self.connection.commit()
+            return self.cursor.rowcount
+        except Exception as e:
+            print(f"Error [delete_media_by_group_and_media_id]: {e}")
             return None
 
     def delete_low_quality_channels_from_group(self, group_id):
@@ -306,13 +315,4 @@ class Database:
             return self.cursor.rowcount
         except Exception as e:
             print(f"Error [delete_all_low_quality_channels]: {e}")
-            return None
-
-    def delete_media_by_group_and_media_id(self, group_id, media_id):
-        try:
-            self.cursor.execute("DELETE FROM media_table WHERE group_id = ? AND id = ?", (group_id, media_id))
-            self.connection.commit()
-            return self.cursor.rowcount
-        except Exception as e:
-            print(f"Error [delete_media_by_group_and_media_id]: {e}")
             return None
