@@ -69,7 +69,7 @@ def main():
 
         if choice == '2':
             os.system('clear')
-            movies_group_menu.show_menu(media_svc=media_svc)
+            movies_group_menu.show_menu(db)
 
         if choice == '3':
             os.system('clear')

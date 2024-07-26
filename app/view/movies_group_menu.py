@@ -1,12 +1,12 @@
 import os
 
-import config.config as config
-import helpers as helpers
-import models.group_type as group_type
-import services.media_service as media_svc_import
+import helpers
+from config.config import Config
+from models.group_type import GroupType
+from services.database_service import DatabaseService
 
 
-def show_menu(media_svc: media_svc_import.MediaService):
+def show_menu(db: DatabaseService):
     while True:
         print("Choose an option:")
         print(" 1. Show movies groups")
@@ -20,56 +20,56 @@ def show_menu(media_svc: media_svc_import.MediaService):
 
         # SHOW MOVIES GROUPS
         if choice == '1':
-            print("Groups found in the movies list:")
-            movies_groups = media_svc.get_groups_by_type(desired_type=group_type.GroupType.MOVIES)
-            helpers.print_groups_with_indexes(groups=movies_groups)
+            print("Groups of movies found in the list:")
+            groups = db.fetch_groups_by_type(GroupType.MOVIES)
+            helpers.print_groups_with_ids(groups)
 
         # SHOW MOVIES FROM A GROUP
         if choice == '2':
-            movies_groups = media_svc.get_groups_by_type(desired_type=group_type.GroupType.MOVIES)
-            helpers.print_groups_with_indexes(groups=movies_groups)
+            groups = db.fetch_groups_by_type(GroupType.MOVIES)
+            helpers.print_groups_with_ids(groups)
 
-            print("Choose one group to show your media names.")
+            print("Choose one group to show your media items.")
             input_str = input("Type the group number: ")
-            chosen_group = movies_groups[int(input_str)]
-            helpers.print_group_media_with_indexes(group=chosen_group)
+            media_items = db.fetch_media_by_group_id(group_id=int(input_str))
+            helpers.print_media_with_ids(media_items)
 
         # REMOVE ONE OR MORE MOVIES GROUPS
         if choice == '3':
-            movies_groups = media_svc.get_groups_by_type(desired_type=group_type.GroupType.MOVIES)
-            helpers.print_groups_with_indexes(groups=movies_groups)
+            groups = db.fetch_groups_by_type(GroupType.MOVIES)
+            helpers.print_groups_with_ids(groups)
 
             print("Choose one or more groups to be removed, use the number displayed at left of the group title.")
             input_str = input("Type numbers separated by comma: ")
-            ids = list(map(int, input_str.strip().split(',')))
+            group_ids = list(map(int, input_str.strip().split(',')))
 
-            groups_to_remove = [movies_groups[idx] for idx in ids]
             if helpers.user_confirmation():
-                media_svc.remove_groups(groups_to_remove=groups_to_remove)
-                print()
-                helpers.print_groups_with_indexes(groups=groups_to_remove)
+                counter = 0
+                for group_id in group_ids:
+                    affected_rows = db.delete_group(group_id)
+                    counter += affected_rows
+                print(f"Total number of groups removed [ {counter} ].\n")
             else:
                 print()
 
         # REMOVE MOVIES FROM A GROUP
         if choice == '4':
-            movies_groups = media_svc.get_groups_by_type(desired_type=group_type.GroupType.MOVIES)
-            helpers.print_groups_with_indexes(groups=movies_groups)
+            groups = db.fetch_groups_by_type(GroupType.MOVIES)
+            helpers.print_groups_with_ids(groups)
 
-            print("Choose one group to show your media names.")
+            print("Choose one group to show your media items.")
             input_str = input("Type the group number: ")
-            chosen_group = movies_groups[int(input_str)]
-            helpers.print_group_media_with_indexes(group=chosen_group)
+            media_items = db.fetch_media_by_group_id(group_id=int(input_str))
+            helpers.print_media_with_ids(media_items)
 
-            print("Choose one or more medias to remove from group.")
+            print("Choose one or more medias to be remove from a group, use the number displayed at left of the media title.")
             input_str = input("Type numbers separated by comma: ")
             media_ids = list(map(int, input_str.strip().split(',')))
 
-            to_remove = [chosen_group.media_list[index] for index in media_ids]
             if helpers.user_confirmation():
-                media_svc.remove_media_from_group(group=chosen_group, medias_to_remove=to_remove)
+                for media_id in media_ids:
+                    db.delete_media(media_id)
                 print()
-                helpers.print_group_media_with_indexes(group=chosen_group)
             else:
                 print()
 
@@ -77,7 +77,8 @@ def show_menu(media_svc: media_svc_import.MediaService):
             print("Returning... \n")
             break
 
-        channels = helpers.generate_writable_media_list(media_groups=media_svc.media_groups)
-        helpers.save_file(config.Config.OUTPUT_PLAYLIST_PATH, channels)
+        media_reprs = [repr(media) for media in db.fetch_medias()]
+        media_reprs.insert(0, "#EXTM3U")
+        helpers.save_file(Config.OUTPUT_PLAYLIST_PATH, media_reprs)
 
     os.system('clear')
