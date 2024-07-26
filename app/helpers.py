@@ -1,6 +1,7 @@
 from typing import List
 
 from models.group import Group
+from models.media import Media
 
 
 def read_file(file_path):
@@ -35,7 +36,19 @@ def print_groups_with_indexes(groups: list):
     print()
 
 
+def print_groups_with_ids(groups: List[Group]):
+    for group in groups:
+        print(f"[{group.id}] - {group.tvg_group}")
+    print()
+
+
 def print_group_media_with_indexes(group: Group):
     for index, media_item in enumerate(group.media_list):
         print(f"[{index}] - {media_item.tvg_name}")
+    print()
+
+
+def print_media_with_ids(medias: List[Media]):
+    for media in medias:
+        print(f"[{media.id}] - {media.tvg_name}")
     print()
