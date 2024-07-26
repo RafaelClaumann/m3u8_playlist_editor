@@ -5,28 +5,24 @@ from models.group_type import GroupType
 from models.media import Media
 
 
-class Database:
+class DatabaseService:
 
-    def __init__(self):
-        self.connection = sqlite3.connect(':memory:')
-        self.connection.row_factory = sqlite3.Row
+    def __init__(self, database_connection: sqlite3.Connection):
+        self.connection = database_connection
         self.cursor = self.connection.cursor()
         self.create_tables()
         self.populate_group_types()
 
-    def __del__(self):
-        self.connection.close()
-
     def create_tables(self):
         self.cursor.execute("""
-        CREATE TABLE group_type (
+        CREATE TABLE IF NOT EXISTS group_type (
             id INTEGER PRIMARY KEY,
             name TEXT NOT NULL UNIQUE
         )
         """)
 
         self.cursor.execute("""
-        CREATE TABLE group_table (
+        CREATE TABLE IF NOT EXISTS group_table (
             id INTEGER PRIMARY KEY,
             group_type INTEGER,
             tvg_group TEXT,
@@ -38,7 +34,7 @@ class Database:
         """)
 
         self.cursor.execute("""
-        CREATE TABLE media_table (
+        CREATE TABLE IF NOT EXISTS media_table (
             id INTEGER PRIMARY KEY,
             ext_inf TEXT,
             tvg_name TEXT,

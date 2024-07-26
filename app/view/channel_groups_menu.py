@@ -3,10 +3,10 @@ import os
 import helpers
 from config.config import Config
 from models.group_type import GroupType
-from services.database_service import Database
+from services.database_service import DatabaseService
 
 
-def show_menu(db: Database):
+def show_menu(db: DatabaseService):
     while True:
         print("Choose an option:")
         print(" 1. Show channels groups")

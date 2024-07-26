@@ -7,13 +7,14 @@ import services.parse_service as parse_svc
 from app.models.group import Group
 from app.models.media import Media
 from config.config import Config
+from config.database_connection import DatabaseConnection
 from config.logging_config import configure_logging
-from services.database_service import Database
+from services.database_service import DatabaseService
 from services.media_service import MediaService
 from view import channel_groups_menu, series_group_menu, movies_group_menu
 
 
-def insert_database_data(groups: List[Group], database: Database):
+def insert_data(groups: List[Group], database: DatabaseService):
     for group in groups:
         grp = Group(
             group_type=group.group_type,
@@ -47,8 +48,9 @@ def main():
     parsed_media_list = parse_svc.parse_raw_list(raw_media_list=raw_media_list)
     media_svc = MediaService(groups_with_medias=parsed_media_list)
 
-    db = Database()
-    insert_database_data(groups=media_svc.media_groups, database=db)
+    connection = DatabaseConnection()
+    db = DatabaseService(database_connection=connection.db_connection)
+    insert_data(groups=media_svc.media_groups, database=db)
 
     while True:
         print("Choose an option to work with:")
