@@ -73,7 +73,7 @@ def main():
 
         if choice == '3':
             os.system('clear')
-            series_group_menu.show_menu(media_svc=media_svc)
+            series_group_menu.show_menu(db)
 
         if choice == '-1':
             print("Exiting...")
