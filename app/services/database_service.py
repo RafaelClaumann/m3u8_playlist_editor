@@ -262,7 +262,7 @@ class Database:
         medias = [Media(**dict(row)) for row in rows]
         return medias
 
-    def delete_media_by_group_id(self, group_id):
+    def delete_media_by_group_id(self, group_id: int):
         try:
             self.cursor.execute("DELETE FROM media WHERE group_id = ?", (group_id,))
             self.connection.commit()
@@ -271,7 +271,7 @@ class Database:
             print(f"Error [delete_media_by_group_id]: {e}")
             return None
 
-    def delete_media_by_group_and_media_id(self, group_id, media_id):
+    def delete_media_by_group_and_media_id(self, group_id, media_id: int):
         try:
             self.cursor.execute("DELETE FROM media_table WHERE group_id = ? AND id = ?", (group_id, media_id))
             self.connection.commit()
@@ -280,7 +280,7 @@ class Database:
             print(f"Error [delete_media_by_group_and_media_id]: {e}")
             return None
 
-    def delete_low_quality_channels_from_group(self, group_id):
+    def delete_low_quality_channels_from_group(self, group_id: int):
         statement = """
         DELETE
         FROM    media_table
