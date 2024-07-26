@@ -134,11 +134,16 @@ class DatabaseService:
             return None
 
     def delete_group(self, group_id: int):
+        counter = 0
         try:
             self.cursor.execute("DELETE FROM media_table WHERE group_id = ?", (group_id,))
+            counter += self.cursor.rowcount
+            
             self.cursor.execute("DELETE FROM group_table WHERE id = ?", (group_id,))
+            counter += self.cursor.rowcount
+
             self.connection.commit()
-            return self.cursor.rowcount
+            return counter
         except Exception as e:
             print(f"Error [delete_group]: {e}")
             return None
