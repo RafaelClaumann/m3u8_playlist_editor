@@ -138,7 +138,7 @@ class DatabaseService:
         try:
             self.cursor.execute("DELETE FROM media_table WHERE group_id = ?", (group_id,))
             counter += self.cursor.rowcount
-            
+
             self.cursor.execute("DELETE FROM group_table WHERE id = ?", (group_id,))
             counter += self.cursor.rowcount
 
