@@ -12,12 +12,12 @@ class Testing(unittest.TestCase):
         self.db_connection.row_factory = sqlite3.Row
         self.cursor = self.db_connection.cursor()
 
-        with open('00_schema.sql', 'r', encoding='utf-8') as file:
+        with open('tests/00_schema.sql', 'r', encoding='utf-8') as file:
             schema = file.read()
         self.cursor.executescript(schema)
         self.db_connection.commit()
 
-        with open('01_data.sql', 'r', encoding='utf-8') as file:
+        with open('tests/01_data.sql', 'r', encoding='utf-8') as file:
             schema = file.read()
         self.cursor.executescript(schema)
         self.db_connection.commit()
