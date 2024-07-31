@@ -10,7 +10,6 @@ from config.config import Config
 from config.database_connection import DatabaseConnection
 from config.logging_config import configure_logging
 from services.database_service import DatabaseService
-from services.media_service import MediaService
 from view import channel_groups_menu, series_group_menu, movies_group_menu
 
 
@@ -45,12 +44,11 @@ def main():
     configure_logging(args.debug)
 
     raw_media_list = helpers.read_file(file_path=Config.INPUT_PLAYLIST_PATH)
-    parsed_media_list = parse_svc.parse_raw_list(raw_media_list=raw_media_list)
-    media_svc = MediaService(groups_with_medias=parsed_media_list)
+    media_groups = parse_svc.parse_raw_list(raw_media_list=raw_media_list)
 
     connection = DatabaseConnection()
     db = DatabaseService(database_connection=connection.db_connection)
-    insert_data(groups=media_svc.media_groups, database=db)
+    insert_data(groups=media_groups, database=db)
 
     while True:
         print("Choose an option to work with:")
