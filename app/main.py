@@ -5,7 +5,7 @@ import helpers
 import services.parse_service as parse_svc
 from config.database_connection import DatabaseConnection
 from config.file_path_config import FilePathConfig
-from config.load_initial_data import load_data
+from config.load_database_data import load_data
 from config.logging_config import configure_logging
 from services.database_service import DatabaseService
 from view import channel_groups_menu, series_group_menu, movies_group_menu
