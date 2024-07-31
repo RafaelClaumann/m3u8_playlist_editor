@@ -1,7 +1,7 @@
 import os
 
 import helpers
-from config.config import Config
+from config.file_path_config import FilePathConfig
 from models.group_type import GroupType
 from services.database_service import DatabaseService
 
@@ -79,6 +79,6 @@ def show_menu(db: DatabaseService):
 
         media_reprs = [repr(media) for media in db.fetch_medias()]
         media_reprs.insert(0, "#EXTM3U")
-        helpers.save_file(Config.OUTPUT_PLAYLIST_PATH, media_reprs)
+        helpers.save_file(FilePathConfig.OUTPUT_PLAYLIST_PATH, media_reprs)
 
     os.system('clear')
