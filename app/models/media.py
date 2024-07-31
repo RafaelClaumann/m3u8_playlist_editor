@@ -1,5 +1,6 @@
 class Media:
     def __init__(self,
+                 id: int = None,
                  ext_inf: str = None,
                  tvg_name: str = None,
                  tvg_id: int = None,
@@ -7,8 +8,10 @@ class Media:
                  tvg_group: str = None,
                  catchup: str = None,
                  catchup_days: int = None,
-                 media_url: str = None
+                 media_url: str = None,
+                 group_id: int = None
                  ):
+        self.id = id
         self.ext_inf = ext_inf
         self.tvg_name = tvg_name
         self.tvg_id = tvg_id
@@ -17,6 +20,7 @@ class Media:
         self.catchup = catchup
         self.catchup_days = catchup_days
         self.media_url = media_url
+        self.group_id = group_id
 
     def __repr__(self):
         attributes = [
