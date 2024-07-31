@@ -55,7 +55,6 @@ def main():
         print(" 1. Channels")
         print(" 2. Movies/Vod")
         print(" 3. Series")
-        print(" 4. Create new group")
         print("-1. Exit")
 
         choice = input("Enter the number of the desired option: ")
