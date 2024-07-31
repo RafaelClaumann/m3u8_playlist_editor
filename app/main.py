@@ -6,7 +6,7 @@ import helpers
 import services.parse_service as parse_svc
 from app.models.group import Group
 from app.models.media import Media
-from config.config import Config
+from config.file_path_config import FilePathConfig
 from config.database_connection import DatabaseConnection
 from config.logging_config import configure_logging
 from services.database_service import DatabaseService
@@ -43,7 +43,7 @@ def main():
     args = parser.parse_args()
     configure_logging(args.debug)
 
-    raw_media_list = helpers.read_file(file_path=Config.INPUT_PLAYLIST_PATH)
+    raw_media_list = helpers.read_file(file_path=FilePathConfig.INPUT_PLAYLIST_PATH)
     media_groups = parse_svc.parse_raw_list(raw_media_list=raw_media_list)
 
     connection = DatabaseConnection()
